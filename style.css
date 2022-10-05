@@ -1,0 +1,111 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Pretendard, sans-serif;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+hr {
+    color: black;
+    border: 0;
+    height: 1px;
+    /* border: 2px solid black; */
+}
+button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+.header_wrap {
+    width: 1060px;
+    height: 50px;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    align-items: center;
+}
+.header_wrap li {
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 600px;
+}
+.header_wrap > h1 img {
+    height: 17px;
+}
+.header_wrap > .menu-btn {
+    width: 17px;
+    height: 14px;
+}
+main {
+    width: 1060px;
+    /* margin: 0 auto; */
+}
+main > article {
+    padding: 60px 0;
+    text-align: center;
+}
+.ad-boxs {
+    width: 100vw;
+    height: 304px;
+    background-color: rebeccapurple;
+    position: relative;
+}
+.ad-boxs > .ad__left_button {
+    position: absolute;
+    top: 120px;
+    left: 72px;
+    z-index: 3;
+    background-color: white;
+    width: 30px;
+    height: 60px;
+    border-radius: 30px;
+    opacity: 40%;
+}
+.ad-boxs > .ad__right_button {
+    position: absolute;
+    top: 120px;
+    right: 72px;
+    z-index: 3;
+    background-color: white;
+    width: 30px;
+    height: 60px;
+    border-radius: 30px;
+    opacity: 40%;
+}
+.ad__lists {
+    width: 100vw;
+    height: 300px;
+    background-color: brown; 
+    position: absolute;
+    z-index: 1;
+}
+.ad__info {
+    width: 330px;
+    height: 146px;
+    background-color: aquamarine;
+    position: absolute;
+    top: 130px;
+    left: 34px;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.insight__button {
+    display: flex;
+    flex-direction: row;
+}
+article {
+    align-content: center;
+    background-color: yellow;
+}

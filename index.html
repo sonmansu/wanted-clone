@@ -10,29 +10,38 @@
 </head>
 <body>
     <header>
-        <div class="header_wrap">
-            <img class="menu-btn" src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=undefined&q=75" alt="메뉴버튼">
-            <h1><a href="https://www.wanted.co.kr/"><img src="https://img-lb.inews24.com/image_gisa/202108/1624429243976_1_090517.jpg" alt="원티드 로고"></a></h1>
+        <div class="header-wrap">
+            <div class="left-btns-wrap">
+                <button class="menu-btn">
+                    <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=undefined&q=75" alt="메뉴버튼">
+                </button>
+                <h1><a href="https://www.wanted.co.kr/"><img class="logo-img" src="https://img-lb.inews24.com/image_gisa/202108/1624429243976_1_090517.jpg" alt="원티드 로고"></a></h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#">채용</a></li>
                     <li><a href="#">이벤트</a></li>
                     <li><a href="#">직군별 연봉</a></li>
                     <li><a href="#">이력서</a></li>
-                    <li><a href="#">커뮤니티</a></li>
+                    <li><a href="#">커뮤니티
+                        <em class="footnote">New</em>
+                        </a>
+                    </li>
                     <li><a href="#">프리랜서</a></li>
-                    <li><a href="#">AI 합격예측</a></li>
+                    <li><a href="#">AI 합격예측<em class="footnote">Beta</em></a></li>
                 </ul>
             </nav>
-            <button><svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18"><defs><path id="qt2dnsql4a" d="M15.727 17.273a.563.563 0 10.796-.796l-4.875-4.875-.19-.165a.563.563 0 00-.764.028 5.063 5.063 0 111.261-2.068.562.562 0 101.073.338 6.188 6.188 0 10-1.943 2.894l4.642 4.644z"></path></defs><g fill="none" fill-rule="evenodd"><use fill="#333" fill-rule="nonzero" stroke="#333" stroke-width=".3" xlink:href="#qt2dnsql4a"></use></g></svg></button>
-            
-            <button>회원가입/로그인</button>
-            <button>기업 서비스</button>
+            <div class="right-btns-wrap">
+                <button class="search-btn"><img class="" src="https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/96/000000/external-magnifying-glass-interface-royyan-wijaya-detailed-outline-royyan-wijaya.png" alt="검색 버튼"/></button>
+                <button class="login-btn">회원가입/로그인</button>
+                <div class="vertical-line"></div>
+                <a href="#" class="corp-service-btn">기업 서비스</a>
+            </div>
         </div>
     </header>
     <hr>
     <main role="main">
-        <article class="ad-boxs">
+        <div class="ad-boxs">
             <button class="ad__left_button"><</button>
             <div class="ad__lists"></div>
             <button class="ad__right_button"><img src="" alt="right button"></button>
@@ -42,8 +51,8 @@
                 <hr>
                 <button>바로가기 ></button>
             </div>
-        </article>
-        <article class="insight">
+        </div>
+        <section class="insight">
             <h2>나에게 필요한 커리어 인사이트</h2>
             <div class="insight__button">
                 <button><img src="" alt="left button"></button>
@@ -76,7 +85,75 @@
                     </li>
                 </ul>
             </div>
-        </article>
+        </section>
+        <section class="insight">
+            <h2>나에게 필요한 커리어 인사이트</h2>
+            <div class="insight__button">
+                <button><img src="" alt="left button"></button>
+                <ul>
+                    <li><button>커리어 고민</button></li>
+                    <li><button>IT/기술</button></li>
+                    <li><button>리더십</button></li>
+                    <li><button>인간관계</button></li>
+                    <li><button>라이프스타일</button></li>
+                    <li><button>조직문화</button></li>
+                    <li><button>회사생활</button></li>
+                    <li><button>취업/이직</button></li>
+                    <li><button>데이터</button></li>
+                </ul>
+                <button><img src="" alt="right button"></button>
+                <button><img src="" alt="더보기 버튼"></button>
+            </div>
+            <div class="insight__list">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="insight__content"></div>
+                            <div class="insight__title">돈이란 무엇인가?</div>
+                            <div class="insight__desc">돈을 번다는 것은 무엇인가? 내가 생각하는 돈의 본질은 이타주의로 누군가의 삶을 개선시키</div>
+                            <div class="insight__writier">
+                                <button><img src="youtube.com" alt="유튜브 버튼"></button>
+                                <span>기업가 최현일</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="insight">
+            <h2>나에게 필요한 커리어 인사이트</h2>
+            <div class="insight__button">
+                <button><img src="" alt="left button"></button>
+                <ul>
+                    <li><button>커리어 고민</button></li>
+                    <li><button>IT/기술</button></li>
+                    <li><button>리더십</button></li>
+                    <li><button>인간관계</button></li>
+                    <li><button>라이프스타일</button></li>
+                    <li><button>조직문화</button></li>
+                    <li><button>회사생활</button></li>
+                    <li><button>취업/이직</button></li>
+                    <li><button>데이터</button></li>
+                </ul>
+                <button><img src="" alt="right button"></button>
+                <button><img src="" alt="더보기 버튼"></button>
+            </div>
+            <div class="insight__list">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="insight__content"></div>
+                            <div class="insight__title">돈이란 무엇인가?</div>
+                            <div class="insight__desc">돈을 번다는 것은 무엇인가? 내가 생각하는 돈의 본질은 이타주의로 누군가의 삶을 개선시키</div>
+                            <div class="insight__writier">
+                                <button><img src="youtube.com" alt="유튜브 버튼"></button>
+                                <span>기업가 최현일</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer>
 

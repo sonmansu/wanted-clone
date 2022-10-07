@@ -51,10 +51,71 @@ let careerInsights = {
         `LS그룹 정영재`,
         `서울대학교 신제구, mySUNI임창현`
     ]
+};
+let articles = {
+    'imgs': [
+        'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2429%2Ffca14c2b.jpg&w=800&q=75',
+        `https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2437%2F30d52ee0.jpg&w=800&q=75`,
+        `https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2430%2Fd892e109.jpg&w=800&q=75`,
+        `https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2436%2F5a2f347a.jpg&w=800&q=75`,
+    ],
+    'titles': [
+        `LG전자ㅣ애플에서 8년은 일하는 방법을 가르쳐 준 시간`,
+        `스타트업에서는 어떤 방식으로 시니어를 채용해야 할까?`,
+        `IP 확장 그리고 글로벌 진출로 세계 선구자가 되다`,
+        `리걸 테크 산업을 이끌어 나가는 로앤컴퍼니 AI 팀`,
+    ],
+    'tags': [
+        `#데이터 `,
+        `#HR`,
+        `#미디어 #콘텐츠 제작 #회사E생활`,
+        `#개발 #IT/기술 #취업/이직`,
+    ],
+    'icons': [
+        `https://image.wanted.co.kr/optimize?src=https%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fstatic%2Ficon%2Fios%2Ficon120.png&w=60&q=90`,
+        `https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90`,
+        `https://image.wanted.co.kr/optimize?src=https%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fstatic%2Ficon%2Fios%2Ficon120.png&w=60&q=90`,
+        `https://image.wanted.co.kr/optimize?src=https%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fstatic%2Ficon%2Fios%2Ficon120.png&w=60&q=90`,
+    ],
+}
+let vods = {
+    'imgs': [
+        'https://image.wanted.co.kr/optimize?src=http%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210224%2F8%2F90123633.jpg&w=800&q=75',
+        `https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210713%2F1%2F22621559.jpg&w=800&q=75`,
+        `https://image.wanted.co.kr/optimize?src=http%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210521%2F7%2F68765761.jpg&w=800&q=75`,
+        `https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2436%2F5a2f347a.jpg&w=800&q=75`,
+        // `https://image.wanted.co.kr/optimize?src=http%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210512%2F2%2F32385576.jpg&w=800&q=75`,
+    ],
+    'playtimes': [
+        `1:34:40`,
+        `1:29:15`,
+        `1:25:16`,
+        `39:34`,
+    ],
+    'authors': [
+        `노무법인 예담HR컨설팅 장내석`,
+        `리더의대화연구소 서수한`,
+        `인터비즈 팀장클럽 김진영`,
+        `애프터모멘트 박창선`
+    ],
+    'titles': [
+        `함께 일하고 싶은 리더가 되는 질문법`,
+        `팀장으로 산다는 건`,
+        `리걸 테크 산업을 이끌어 나가는 로앤컴퍼니 AI 팀`,
+        `터지는 콘텐츠는 이렇게 만듭니다 Part 3 : 위트와 무리수레벨 조절하기 - 박창선`,
+    ],
+    'descs': [
+        `모춘&대오의 퇴사 후 무자본 창업기`,
+        `일잘러의 무기는 테크닉일까, 마인드셋일까 : Live Talk #26`,
+        `팀장으로 산다는 건 : Live Talk #30`,
+        `터지는 콘텐츠는 이렇게 만듭니다 : Wanted How To`,
+    ],
 }
 
+
 let $sectionContentsUl = document.querySelector('.section-contents__ul');
-// console.log('$sectionContentsUl :>> ', $sectionContentsUl);
+let $sectionContentsUlArticle = document.querySelector('.section-contents__ul--article');
+let $sectionContentsUlVod = document.querySelector('.section-contents__ul--vod');
 
 function paintInsightContents() {
     for (let i = 0; i < careerInsights.imgs.length; i++) {
@@ -100,5 +161,38 @@ function paintInsightContents() {
 
     // });    
 }
-
+function paintArticleContents() {
+    for (let i = 0; i < articles.imgs.length; i++) {
+        const $li = `
+        <li class="section-contents__li">
+            <a href="#">
+                <div class="section-contents__thumb"><img src=${articles.imgs[i]}" alt="콘텐츠 썸네일"></div>
+                <div class="section-contents__title">${articles.titles[i]}</div>
+                <div class="section-contents__tags">${articles.tags[i]}</div>
+            </a>
+        </li>
+        `
+        $sectionContentsUlArticle.insertAdjacentHTML('beforeend', $li);
+    }
+}
+function paintVodContents() {
+    for (let i = 0; i < vods.imgs.length; i++) {
+        const $li = `
+        <li class="section-contents__li">
+            <a href="#">
+                <div class="section-contents__thumb">
+                    <img src=${vods.imgs[i]}" alt="콘텐츠 썸네일">
+                    <span class=section-contents__playtime>${vods.playtimes[i]}</span>
+                </div>
+                <div class="section-contents__author">${vods.authors[i]}</div>
+                <div class="section-contents__title">${vods.titles[i]}</div>
+                <div class="section-contents__desc">${vods.descs[i]}</div>
+            </a>
+        </li>
+        `
+        $sectionContentsUlVod.insertAdjacentHTML('beforeend', $li);
+    }
+}
 paintInsightContents();
+paintArticleContents();
+paintVodContents();

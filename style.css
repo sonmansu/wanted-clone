@@ -250,28 +250,37 @@ main {
     display: grid;
     /* @todo - 오른쪽에 여백이 좀 더 많이 남는 이유 몰겠음 */
     grid-template-columns: repeat(4, 1fr);
-    /* column-gap: 10px; */
-    margin: 0 auto;
+    column-gap: 10px;
+    row-gap: 50px;
+    /* margin: 0 auto; */
+}
+.section-contents__ul--event {
+    grid-template-columns: 1fr 1fr;
 }
 .section-contents__li {
     /* display: flex; */
-    width: 240px;
+    /* width: 240px; */
     background-color: chartreuse;
-    margin: 0px 10px 50px 10px;
+    /* margin: 0px 10px 50px 10px; */
 }
 .section-contents__thumb {
-    width: 240px;
+    /* width: 240px; */
+    width: 100%;
     height: 168px;
     padding-bottom: 0;
     /* background-color: black; */
     margin-bottom: 17px;
     background: black;
     outline: solid 1px rgba(0,0,0,0.05);
-    border-radius: 2px;
+    border-radius: 4px;
     overflow: hidden;
     /* playtime을 위로 올리기 위함 */
     position: relative;
     top: 0;
+}
+.section-contents__thumb--big {
+    height: 273px;
+    margin-bottom: 8px;
 }
 .section-contents__thumb > img {
     /* @야매 - 높이값이 꽉 채워졌음 좋겠는데 안채워짐, height값 직접 지정해줬움,, => 100%로 맞춰주니까 됨 */
@@ -442,3 +451,28 @@ main {
     height: 20px;
     color: aliceblues;
 } */
+.section-contents__kinds {
+    height: 20px;
+    margin-bottom: 8px;
+}
+.section-contents__kinds__span {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: white;
+    margin-right: 5px;
+}
+.section-contents__kinds__span--network {
+    border-color: #a149e4;
+    color: #a149e4;
+}
+.section-contents__kinds__span--article {
+    border-color: #ff9100;
+    color: #ff9100;
+}
+.section-contents__kinds__span--online {
+    background-color: black;
+    color: white;
+}

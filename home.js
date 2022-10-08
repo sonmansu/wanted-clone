@@ -111,11 +111,32 @@ let vods = {
         `터지는 콘텐츠는 이렇게 만듭니다 : Wanted How To`,
     ],
 }
+let events = {
+    'imgs': [
+        `https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2421%2F7065bb13.jpg&w=1200&q=100`,
+        `https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2404%2F54ecb586.jpg&w=1200&q=100`,
+
+    ],
+    'kinds': [
+        ['온라인', '네트워킹'],
+        ['아티클']
+    ],
+    'titles': [
+        `10월 원티드살롱(평가보상편)`,
+        `인터뷰ㅣ여성 IT리더들의 성장 경험을 공유합니다!`
+    ],
+}
+let eventKindClass = {
+    '온라인': 'section-contents__kinds__span--online',
+    '네트워킹': 'section-contents__kinds__span--network',
+    '아티클': 'section-contents__kinds__span--article',
+}
 
 
 let $sectionContentsUl = document.querySelector('.section-contents__ul');
 let $sectionContentsUlArticle = document.querySelector('.section-contents__ul--article');
 let $sectionContentsUlVod = document.querySelector('.section-contents__ul--vod');
+let $sectionContentsUlEvent = document.querySelector('.section-contents__ul--event');
 
 function paintInsightContents() {
     for (let i = 0; i < careerInsights.imgs.length; i++) {
@@ -193,6 +214,32 @@ function paintVodContents() {
         $sectionContentsUlVod.insertAdjacentHTML('beforeend', $li);
     }
 }
+function paintEventContents() {
+    for (let i = 0; i < events.imgs.length; i++) {
+        let $spans = ``;
+        for (let j = 0; j < events.kinds[i].length; j++) {
+            let eventKind = events.kinds[i][j]
+            if (eventKind === '온라인')
+                $spans += `<span class="section-contents__kinds__span ${eventKindClass[eventKind]}"><i class="xi-central-signal"></i> ${eventKind}</span>`;
+            else $spans += `<span class="section-contents__kinds__span ${eventKindClass[eventKind]}">${eventKind}</span>`;
+        }
+        const $li = `
+        <li class="section-contents__li">
+            <a href="#">
+                <div class="section-contents__thumb section-contents__thumb--big">
+                    <img src=${events.imgs[i]}" alt="콘텐츠 썸네일">
+                </div>
+                <div class="section-contents__kinds">
+                    ${$spans}
+                </div>
+                <div class="section-contents__title">${events.titles[i]}</div>
+            </a>
+        </li>
+        `
+        $sectionContentsUlEvent.insertAdjacentHTML('beforeend', $li);
+    }
+}
 paintInsightContents();
 paintArticleContents();
 paintVodContents();
+paintEventContents();

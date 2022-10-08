@@ -241,8 +241,7 @@ main {
 .section-contents {
     background-color: bisque;
     width: 1060px;
-    /* height: 764pxㅇ렁
-    ㅣ; */
+    /* height: 764px */
 }
 .section-contents__ul {
     background-color: blueviolet;
@@ -426,3 +425,20 @@ main {
 .section-contents__desc--1line {
     -webkit-line-clamp: 1;
 }
+.contents-recommend-btn {
+    background: linear-gradient(to right, #0D95FA, 10%, #2263F4, 80%, #01B5E6);
+    width: 1060px;
+    height: 64px;
+    border-radius: 64px;
+    margin: 0 auto;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+/* .contents-recommend-btn > img {
+    height: 20px;
+    color: aliceblues;
+} */

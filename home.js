@@ -186,7 +186,7 @@ function paintVodContents() {
                 </div>
                 <div class="section-contents__author">${vods.authors[i]}</div>
                 <div class="section-contents__title">${vods.titles[i]}</div>
-                <div class="section-contents__desc">${vods.descs[i]}</div>
+                <div class="section-contents__desc section-contents__desc--1line">${vods.descs[i]}</div>
             </a>
         </li>
         `

@@ -476,3 +476,51 @@ main {
     background-color: black;
     color: white;
 }
+
+
+.section-subscribe {
+    height: 278px;
+    background-color: #F7F7F7;
+    padding: 60px 0 60px 0;
+    box-sizing: border-box;
+}
+.section-subscribe-wrap {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+}
+.section-subscribe-left {
+    width: 50%;
+}
+.section-subscribe__text-big {
+    font-size: 30px;
+    font-weight: 700;
+}
+.section-subscribe__text-small {
+    margin-top: 5px;
+    font-size: 14px;
+    color: grey;
+}
+.section-subscribe__btn {
+    width: 260px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #36f;
+    color: white;
+    margin-top: 25px;
+    text-align: center;
+    line-height: 50px;
+}
+.section-subscribe__btn:hover {
+    background-color: #002fdb;
+}
+.section-subscribe__bg-img {
+    /* width, height값 지정하지 않으면 사진 안뜸 */
+    width: 50%;
+    height: 158px;
+    background-image: url(https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fimage.wanted.co.kr%2Fuserweb%2Fcareerhome%2Ffirst-wantedplus-subscribe.png&w=800&q=90);
+    background-position: center;
+    background-size: cover;
+}

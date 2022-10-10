@@ -332,9 +332,10 @@ main {
     margin-bottom: 50px;
     /* margin: 0 auto; */
 }
-.section-contents__ul--event {
+.section-contents__ul--big {
     grid-template-columns: 1fr 1fr;
 }
+
 .section-contents__li {
     /* display: flex; */
     /* width: 240px; */

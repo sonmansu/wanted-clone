@@ -175,6 +175,11 @@ main {
     /* justify-content: center;  */
     align-items:center;
 }
+/* 양 옆에 카테고리 버튼 없을 때도 텍스트가 중앙 정렬되도록 하기 위해 추가 */ 
+.section-header {
+    width: 100%;
+    text-align: center;
+}
 .section-title {
     font-size: 22px;
     font-weight: 700;
@@ -462,7 +467,7 @@ main {
     display: grid;
     /* @todo - 오른쪽에 여백이 좀 더 많이 남는 이유 몰겠음 */
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 10px;
+    column-gap: 20px;
     row-gap: 50px;
     margin-bottom: 50px;
     /* margin: 0 auto; */
@@ -470,6 +475,7 @@ main {
 .section-contents__ul--big {
     grid-template-columns: 1fr 1fr;
 }
+
 .section-contents__thumb {
     /* width: 240px; */
     width: 100%;
@@ -574,6 +580,31 @@ main {
     font-size: 14px;
     font-weight: 500;
     color: #666666
+}
+.position-body > * {
+    margin-top: 10px;
+}
+/* Main - 요즘 뜨는 포지션 영역 */
+.section-contents__bookmark-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.position-body__pos-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+.position-body__corp-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+.position-body__locate {
+    font-size: 14px;
+    color: #999999;
+}
+.position-body__reward {
+    font-size: 14px;
+    font-weight: 500;
 }
 
 /** Footer **/

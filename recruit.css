@@ -275,3 +275,23 @@ main {
     height: 11px;
 }
 /** Main - slider 영역 끝 **/
+/** Main - 포지션 보러가기 버튼 영역 시작 **/
+/* .contents-recommend-btn { */
+.seek-job-btn {
+    background: linear-gradient(to right, #0D95FA, 10%, #2263F4, 80%, #01B5E6);
+    width: 1060px;
+    height: 64px;
+    border-radius: 64px;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin: 60px auto;
+}
+.seek-job-btn__img {
+    width: 28px;
+    margin-right: 20px;
+    color: white;
+}

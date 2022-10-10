@@ -511,6 +511,7 @@ main {
 .section-contents__desc--1line {
     -webkit-line-clamp: 1;
 }
+
 .contents-recommend-btn {
     background: linear-gradient(to right, #0D95FA, 10%, #2263F4, 80%, #01B5E6);
     width: 1060px;

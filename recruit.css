@@ -274,8 +274,7 @@ main {
 .section-slider__info__go-btn__img {
     height: 11px;
 }
-/** Main - slider 영역 끝 **/
-/** Main - 포지션 보러가기 버튼 영역 시작 **/
+/** Main - 포지션 보러가기 버튼 영역 **/
 /* .contents-recommend-btn { */
 .seek-job-btn {
     background: linear-gradient(to right, #0D95FA, 10%, #2263F4, 80%, #01B5E6);
@@ -289,6 +288,7 @@ main {
     justify-content: center;
     align-items: center;    
     margin: 60px auto;
+    cursor: pointer;
 }
 .seek-job-btn__img {
     width: 28px;
@@ -298,6 +298,7 @@ main {
 /** Main - wanted ai 포지션 매칭 **/
 .article-ai-job {
     height: 355px;
+    background: #f4f8fb;
     background-image: url(https://wanted-dev.static.wanted.co.kr/banner/Jobsfeed_ai_banner.png);
     background-size: cover;
     background-position: center;
@@ -306,6 +307,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 .article-ai-job__top {
     height: 180px;
@@ -347,4 +349,118 @@ main {
     font-weight: 700;
     text-align: center;
     line-height: 42px;
+    cursor: pointer;
+}
+/* Main - 경력 한눈에 모아보기 영역 */
+.article-career {
+    height: 150px;
+    background: linear-gradient(90deg, #ddebff, #B9D9FF);
+}
+.article-career-wrap {
+    width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.article-career-left__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    color: #5071dc;
+}
+.article-career-left__check-btn {
+    width: 119px;
+    height: 36px;
+    border-radius: 36px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #5071dc;
+    color: white;
+    cursor: pointer;
+}
+.article-career-right-bg-img {
+    width: 236px;
+    height: 150px;
+    background-image: url(https://static.wanted.co.kr/career_connect/banner.webp);
+    background-size: cover;
+}
+
+/** Footer **/
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding-bottom: 80px;
+}
+.footer-wrap {
+    width: 1060px;
+    margin: 0 auto;
+    /* background-color: yellow; 임시 */
+}
+.footer-top {
+    width: 1060px;
+    height: 39px;
+    padding: 20px 0;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+.footer-top__nav {
+    /* width: 100%; */
+    margin: 50px;
+    flex-grow: 3;
+    display: flex;
+    font-size: 15px;
+    font-weight: 500;
+    /* background-color: lightgreen; 임시 */
+}
+.footer-top__nav__ul > *{
+    margin-right: 50px;
+}
+.footer-top__sns {
+    /* background-color: #ff9100; 임시 */
+    display: flex;
+    flex-wrap: nowrap;
+}
+.footer-top__sns > a {
+    width: 20px;
+    margin-left: 14px;
+}
+.footer-bottom {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-bottom__texts {
+    font-size: 12px;
+    font-weight: 500;
+    color: grey;
+}
+.footer-bottom__texts > * {
+    margin-bottom: 7px;
+}
+.footer-bottom__country__select {
+    width: 250px;
+    height: 40px;
+    padding-left: 45px;
+    background-color: #F2F4F7;
+    appearance:none; /* 화살표 없애기 공통 */
+    font-size: 14px;
+    font-weight: 500;
+    color: grey;
+    border: none;
+}
+.footer-bottom__country__country-icon {
+    width: 24px;
+    position: relative;
+    top: 3px;
+    left: 45px;
+}
+.footer-bottom__country__down-icon {
+    width: 10px;
+    position: relative;
+    right: 25px;
 }

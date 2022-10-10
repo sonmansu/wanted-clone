@@ -544,6 +544,38 @@ main {
     border: 1px solid #002fdb;
 }
 
+/* Main - 테마로 모아보는 요즘 채용 섹션 **/
+.section-contents__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+.section-contents__subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #939393;
+    margin-top: 8px;
+}
+.theme-job__list {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* 여기다 넣으면 적용이 안됨  */
+/* .theme-job__list > * {  
+    margin: 8px 8px 0 0;
+} */
+.theme-job__list img { /* @q 이거 왜 > img 로 쓰면 테두리 선이 사라지는거지?? */
+    margin: 8px 5px 0 0;
+    border: 1px solid rgba(0,0,0,.05);
+}
+.theme-job__more-btn {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666666
+}
+
 /** Footer **/
 .footer {
     border-top: 1px solid var(--border-color);

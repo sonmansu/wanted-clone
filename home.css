@@ -171,7 +171,8 @@ main {
     align-items:center;
 }
 .section-title {
-    /* margin-bottom: 20px; */
+    font-size: 22px;
+    font-weight: 700;
 }
 .section-title--button *{
     display: inline-block;
@@ -598,7 +599,7 @@ main {
     /* width, height값 지정하지 않으면 사진 안뜸 */
     width: 50%;
     height: 158px;
-    background-image: url(https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fimage.wanted.co.kr%2Fuserweb%2Fcareerhome%2Ffirst-wantedplus-subscribe.png&w=800&q=90);
+    background-image: url('https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fimage.wanted.co.kr%2Fuserweb%2Fcareerhome%2Ffirst-wantedplus-subscribe.png&w=800&q=90');
     background-position: center;
     background-size: cover;
 }

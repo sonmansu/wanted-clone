@@ -35,6 +35,11 @@ button {
 .rotate-180 {
     transform: rotate(180deg);
 }
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /** Header **/
 header {
     width: 100vw;
@@ -388,7 +393,36 @@ main {
     background-image: url(https://static.wanted.co.kr/career_connect/banner.webp);
     background-size: cover;
 }
-
+/** 내프로필, 매치업 바로가기 네비게이션 영역 **/
+.nav-shortcut {
+    padding:100px 0 85px 0;
+}
+.nav-shortcut__list {
+    width: 1060px;
+    height: 80px;
+    font-size: 18px;
+    margin: 0 auto;
+}
+.nav-shortcut__profile-item {
+    width: 50%;
+    height: 80px;
+    background-color: #f2f5ff;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-right: 1px;
+}
+.nav-shortcut__match-item {
+    width: 50%;
+    height: 80px;
+    background-color: #f2fbf5;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.nav-shortcut__item-text {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
 /** Footer **/
 .footer {
     border-top: 1px solid var(--border-color);

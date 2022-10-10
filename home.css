@@ -32,6 +32,9 @@ button {
     background-color: var(--border-color);
     margin: 0 auto;
 }
+.rotate-180 {
+    transform: rotate(180deg);
+}
 /** Header **/
 header {
     width: 100vw;
@@ -302,9 +305,6 @@ main {
     border-radius: 39px;
     box-sizing: border-box;
     padding: 12px;
-}
-.rotate-180 {
-    transform: rotate(180deg);
 }
 .insight-categories__more-btn {
     border: 1px solid var(--border-color);

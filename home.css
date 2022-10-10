@@ -476,12 +476,14 @@ main {
     align-items: center;
     margin-bottom: 30px;
 }
-.section-title__all {
-    font-size: 14px;
+.section-subtitle {
+    font-size: 15px;
+    font-weight: 500;
     width: fit-content; /* 부모 가로폭 꽉 채우지 않고 내용물 폭에만 클릭되게 하기 위함 */
     margin: 5px auto 0 auto;
+    color: #767676;
 }
-.section-title__all__img {
+.section-subtitle {
     height: 10px;
 }
 .section-contents__tags {

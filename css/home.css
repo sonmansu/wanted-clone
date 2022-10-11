@@ -1,4 +1,42 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+/* Start of 원티드 로고 */
+@font-face {
+    font-family: "icomoon";
+    src: url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.eot?8et930");
+    src: url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.eot?8et930#iefix")
+            format("embedded-opentype"),
+        url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.woff2?8et930")
+            format("woff2"),
+        url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.ttf?8et930")
+            format("truetype"),
+        url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.woff?8et930")
+            format("woff"),
+        url("https://d1azc1qln24ryf.cloudfront.net/78252/wantedicon/icomoon.svg?8et930#icomoon")
+            format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: "icomoon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-logo:before {
+    /* .icon-logo { */
+    content: "\e992";
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+/* End of 원티드 로고 */
 
 :root {
     --border-color: #e1e2e3;
@@ -28,7 +66,7 @@ button {
 }
 .divider {
     width: 1060px;
-    height: 1px;
+    height: 0.5px;
     background-color: var(--border-color);
     margin: 0 auto;
 }
@@ -68,18 +106,19 @@ img {
 .header-wrap * {
     /* position: sticky; */
 }
-.left-btns-wrap *, .right-btns-wrap *{
-    display: inline-block;
-    /* height: 100%; */
-    /* position: sticky; */
+.left-btns-wrap,
+.right-btns-wrap {
+    display: flex;
+    align-items: center;
 }
-.logo-img {
+/* .logo-img {
     height: 17px;
     margin-left: 10px;
-}
+} */
 .menu-btn {
     width: 17px;
     height: 14px;
+    margin-right: 10px;
     /* 버튼 중앙정렬@q1 */
     /* display: inline-block; */
     /* height: 100%; */
@@ -102,11 +141,11 @@ img {
     box-sizing: border-box;
 }
 .header-nav-ul > li:hover {
-    border-bottom: 3px solid #DDDDDD;
+    border-bottom: 3px solid #dddddd;
     margin-bottom: -3px;
 }
 .header-nav-ul > li:active {
-    border-bottom: 3px solid #0869FD;
+    border-bottom: 3px solid #0869fd;
     margin-bottom: -3px;
 }
 .footnote {
@@ -127,17 +166,14 @@ img {
     width: 17px;
     height: 17px;
     margin-right: 15px;
-    /* 질문@q1 버튼 세로축 중앙 정렬 */
-    position: relative;
-    top: 3px;
 }
 .search-btn > img {
     max-width: 100%;
     max-height: 100%;
 }
 .vertical-line {
-    border-left : 1px solid var(--border-color);
-    height : 10px;
+    border-left: 1px solid var(--border-color);
+    height: 10px;
     margin: 0 20px;
 }
 .corp-service-btn {
@@ -168,13 +204,13 @@ main {
     display: flex;
     flex-direction: column;
     /* justify-content: center;  */
-    align-items:center;
+    align-items: center;
 }
 .section-title {
     font-size: 22px;
     font-weight: 700;
 }
-.section-title--button *{
+.section-title--button * {
     display: inline-block;
 }
 /** Main - slider 영역 시작 **/
@@ -183,27 +219,39 @@ main {
     /* height: 304px; */
     /* padding: 60px 0; */
     /* background-color: rebeccapurple; */
-    position: relative;
+    /* position: relative;
+    display: flex;
+    justify-content: center; */
 }
 .section-slider__list {
+    /* width: 100%; */
     /* width: 1060px; */
     /* display: flex; */
     /* justify-content: space-between; */
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* padding: 0 20% 0 0; */
+    box-sizing: border-box;
 }
+
 .section-slider__item {
+    background-color: red;
     width: 1060px;
-    height: 300px;
+    /* height: 300px; */
     /* margin: 0 10px; */
     border-radius: 4px;
     overflow: hidden;
     position: relative;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    /* margin: 0 20px 0 20px; */
     /* margin-left: 100px; */
-    /* margin: 0 10px; */
+    margin: 0 10px;
 }
 .section-slider__img {
-    width: 1060px;
-    height: 300px;
+    /* width: 1060px; */
+    /* height: 300px; */
     /* width: 100%; */
     object-fit: cover;
     z-index: 0;
@@ -214,7 +262,7 @@ main {
     transform: translateY(-50%);
     left: 10%;
     z-index: 3;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     width: 30px;
     height: 60px;
     border-radius: 30px;
@@ -230,24 +278,24 @@ main {
 .section-slider__info {
     width: 330px;
     height: 146px;
-    background-color: white; 
+    background-color: white;
     border-radius: 5px;
     position: absolute;
-    left: 20px; 
+    left: 20px;
     bottom: 20px;
     padding: 20px 0;
     box-sizing: border-box;
-    z-index: 1;    
+    z-index: 1;
 }
 .section-slider__info__title {
     padding: 0 20px;
     box-sizing: border-box;
-    overflow: hidden;    /* 부모 요소 범위를 넘어가는 자식 요소의 부분은 보이지 않도록 처리 */
+    overflow: hidden; /* 부모 요소 범위를 넘어가는 자식 요소의 부분은 보이지 않도록 처리 */
     text-overflow: ellipsis; /* 잘린 텍스트를 생략 부호(...)표시 함 */
-    display: -webkit-box;    
-     -webkit-line-clamp: 1; 
-     -webkit-box-orient: vertical;
-     margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
 }
 .section-slider__info__desc {
     padding: 0 20px;
@@ -324,7 +372,7 @@ main {
 .btn-gradient-bg {
     width: 80px;
     height: 40px; /* 39 px 주면 뒤에 내용물이 다 안가려짐 */
-    background: linear-gradient(90deg,#fff 21.82%,hsla(0,0%,100%,0));
+    background: linear-gradient(90deg, #fff 21.82%, hsla(0, 0%, 100%, 0));
     display: flex;
     position: absolute;
 }
@@ -332,7 +380,7 @@ main {
     left: auto;
     right: 0;
     /* background-color: red; */
-    background: linear-gradient(270deg,#fff 21.82%,hsla(0,0%,100%,0));
+    background: linear-gradient(270deg, #fff 21.82%, hsla(0, 0%, 100%, 0));
     justify-content: flex-end;
 }
 .arrow-btn-bg {
@@ -344,7 +392,7 @@ main {
     background-color: white;
     /* background: linear-gradient(90deg,#fff 21.82%,hsla(0,0%,100%,0)); */
     padding: 12px;
-    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
 }
 .arrow-btn-bg--right {
     /* left: auto;
@@ -356,7 +404,7 @@ main {
     padding: 9px;
     border: 1px solid var(--border-color);
     border-radius: 4px;
-    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
     color: grey;
 }
 .section-contents {
@@ -394,7 +442,7 @@ main {
     /* background-color: black; */
     margin-bottom: 17px;
     background: black;
-    outline: solid 1px rgba(0,0,0,0.05);
+    outline: solid 1px rgba(0, 0, 0, 0.05);
     border-radius: 4px;
     overflow: hidden;
     /* playtime을 위로 올리기 위함 */
@@ -417,9 +465,9 @@ main {
     font-weight: 700;
     margin-bottom: 8px;
     line-height: 1.5;
-    overflow: hidden;    /* 부모 요소 범위를 넘어가는 자식 요소의 부분은 보이지 않도록 처리 */
+    overflow: hidden; /* 부모 요소 범위를 넘어가는 자식 요소의 부분은 보이지 않도록 처리 */
     text-overflow: ellipsis; /* 잘린 텍스트를 생략 부호(...)표시 함 */
-    display: -webkit-box;    
+    display: -webkit-box;
     -webkit-line-clamp: 2; /* 라인 수 */
     -webkit-box-orient: vertical;
 }
@@ -446,10 +494,10 @@ main {
 .section-contents__writer__button {
     width: 30px;
     height: 30px;
-    border: 1px solid var(--border-color); 
+    border: 1px solid var(--border-color);
     border-radius: 30px;
     /* 이미지 삐져나온 부분 삭제 */
-    overflow: hidden; 
+    overflow: hidden;
 }
 .section-contents__writer__title {
     font-size: 13px;
@@ -457,7 +505,6 @@ main {
     color: grey;
     margin-left: 10px;
 }
-
 
 .insight-more-wrap {
     width: 1060px;
@@ -481,13 +528,12 @@ main {
     margin: 0 3px;
 }
 
-
 .section-recommend {
     height: 119px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
     /* background-color: blueviolet; */
-    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
     flex-direction: row;
     justify-content: center;
 }
@@ -507,7 +553,7 @@ main {
 .section-recommend__bg-img {
     width: 112px;
     height: 77px;
-    background-image: url('https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fimage.wanted.co.kr%2Fuserweb%2Fcareerhome%2Fcreator-application.png&w=224&q=90');
+    background-image: url("https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fimage.wanted.co.kr%2Fuserweb%2Fcareerhome%2Fcreator-application.png&w=224&q=90");
     background-position: center;
     background-size: cover;
     margin-left: 30px;
@@ -543,7 +589,7 @@ main {
     margin: 5px 0;
 }
 .section-contents__playtime {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     /* background-color: aqua; */
     color: white;
     font-size: 13px;
@@ -561,7 +607,7 @@ main {
 }
 
 .contents-recommend-btn {
-    background: linear-gradient(to right, #0D95FA, 10%, #2263F4, 80%, #01B5E6);
+    background: linear-gradient(to right, #0d95fa, 10%, #2263f4, 80%, #01b5e6);
     width: 1060px;
     height: 64px;
     border-radius: 64px;
@@ -571,7 +617,7 @@ main {
     font-weight: 700;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 /* .contents-recommend-btn > img {
     height: 20px;
@@ -603,10 +649,9 @@ main {
     color: white;
 }
 
-
 .section-subscribe {
     height: 278px;
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
     padding: 60px 0 60px 0;
     box-sizing: border-box;
 }
@@ -646,7 +691,7 @@ main {
     /* width, height값 지정하지 않으면 사진 안뜸 */
     width: 50%;
     height: 158px;
-    background-image: url('https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fimage.wanted.co.kr%2Fuserweb%2Fcareerhome%2Ffirst-wantedplus-subscribe.png&w=800&q=90');
+    background-image: url("https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fimage.wanted.co.kr%2Fuserweb%2Fcareerhome%2Ffirst-wantedplus-subscribe.png&w=800&q=90");
     background-position: center;
     background-size: cover;
 }
@@ -714,7 +759,7 @@ main {
     font-weight: 500;
     /* background-color: lightgreen; 임시 */
 }
-.footer-top__nav__ul > *{
+.footer-top__nav__ul > * {
     margin-right: 50px;
 }
 .footer-top__sns {
@@ -743,8 +788,8 @@ main {
     width: 250px;
     height: 40px;
     padding-left: 45px;
-    background-color: #F2F4F7;
-    appearance:none; /* 화살표 없애기 공통 */
+    background-color: #f2f4f7;
+    appearance: none; /* 화살표 없애기 공통 */
     font-size: 14px;
     font-weight: 500;
     color: grey;

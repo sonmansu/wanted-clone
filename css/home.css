@@ -279,25 +279,61 @@ main {
 
 /** Main - insight 영역 시작 **/
 .insight-categories {
-    width: 100%;
+    /* background-color: yellow; */
+    width: 1060px;
     height: 40px;
+
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+
     margin: 20px 0 30px 0;
     /* overflow: hidden; */
+    position: relative;
+}
+.insight-categories__left {
+    /* background-color: rebeccapurple; */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin-right: 10px;
+    position: relative;
+}
+.insight-categories__ul {
+    /* display: flex;
+    justify-content: space-between; */
+    /* background-color: red; */
+    width: 100%;
+    /* overflow: hidden; */
+    /* position: absolute; */
+    /* left: 0; */
 }
 .insight-categories__ul > li {
     /* background-color: #3F6FFF; */
     border: 1px solid var(--border-color);
     padding: 9px 22px;
     border-radius: 30px;
-    margin: 0 15px;
     box-sizing: border-box;
+    margin-right: 8px;
 }
 .insight-categories__text {
+    white-space: nowrap;
     font-size: 15px;
     font-weight: 600;
     color: grey;
+}
+.btn-gradient-bg {
+    width: 80px;
+    height: 40px; /* 39 px 주면 뒤에 내용물이 다 안가려짐 */
+    background: linear-gradient(90deg,#fff 21.82%,hsla(0,0%,100%,0));
+    display: flex;
+    position: absolute;
+}
+.btn-gradient-bg--right {
+    left: auto;
+    right: 0;
+    /* background-color: red; */
+    background: linear-gradient(270deg,#fff 21.82%,hsla(0,0%,100%,0));
+    justify-content: flex-end;
 }
 .arrow-btn-bg {
     border: 1px solid var(--border-color);
@@ -305,15 +341,22 @@ main {
     height: 39px;
     border-radius: 39px;
     box-sizing: border-box;
+    background-color: white;
+    /* background: linear-gradient(90deg,#fff 21.82%,hsla(0,0%,100%,0)); */
     padding: 12px;
     box-shadow: 0 1px 2px 1px rgba(0,0,0,0.05);
 }
+.arrow-btn-bg--right {
+    /* left: auto;
+    right: 39px; */
+}
 .insight-categories__more-btn {
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
     width: 39px;
     height: 39px;
     padding: 9px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.05);
     color: grey;
 }
 .section-contents {

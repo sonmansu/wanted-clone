@@ -1,4 +1,4 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 :root {
     --border-color: #e1e2e3;
@@ -73,7 +73,8 @@ img {
 .header-wrap * {
     /* position: sticky; */
 }
-.left-btns-wrap *, .right-btns-wrap *{
+.left-btns-wrap *,
+.right-btns-wrap * {
     display: inline-block;
     /* height: 100%; */
     /* position: sticky; */
@@ -107,11 +108,11 @@ img {
     box-sizing: border-box;
 }
 .header-nav-ul > li:hover {
-    border-bottom: 3px solid #DDDDDD;
+    border-bottom: 3px solid #dddddd;
     margin-bottom: -3px;
 }
 .header-nav-ul > li:active {
-    border-bottom: 3px solid #0869FD;
+    border-bottom: 3px solid #0869fd;
     margin-bottom: -3px;
 }
 .footnote {
@@ -141,8 +142,8 @@ img {
     max-height: 100%;
 }
 .vertical-line {
-    border-left : 1px solid var(--border-color);
-    height : 10px;
+    border-left: 1px solid var(--border-color);
+    height: 10px;
     margin: 0 20px;
 }
 .corp-service-btn {
@@ -173,9 +174,9 @@ main {
     display: flex;
     flex-direction: column;
     /* justify-content: center;  */
-    align-items:center;
+    align-items: center;
 }
-/* 양 옆에 카테고리 버튼 없을 때도 텍스트가 중앙 정렬되도록 하기 위해 추가 */ 
+/* 양 옆에 카테고리 버튼 없을 때도 텍스트가 중앙 정렬되도록 하기 위해 추가 */
 .section-header {
     width: 100%;
     text-align: center;
@@ -187,32 +188,29 @@ main {
 .section-title--thin {
     font-weight: normal;
 }
-.section-title--button *{
+.section-title--button * {
     display: inline-block;
 }
 /** Main - slider 영역 시작 **/
 .section-slider {
     width: 100vw;
-    /* height: 304px; */
-    /* padding: 60px 0; */
-    /* background-color: rebeccapurple; */
-    position: relative;
 }
 .section-slider__list {
-    /* width: 1060px; */
-    /* display: flex; */
-    /* justify-content: space-between; */
-}
-.section-slider__item {
     width: 1060px;
     height: 300px;
-    /* margin: 0 10px; */
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.section-slider__item {
+    background-color: red;
+    display: block;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
-    /* margin: 0 auto; */
-    /* margin-left: 100px; */
-    /* margin: 0 10px; */
+    margin: 0 10px;
 }
 .section-slider__img {
     width: 1060px;
@@ -225,9 +223,9 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 10%;
+    left: 5%;
     z-index: 3;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     width: 30px;
     height: 60px;
     border-radius: 30px;
@@ -237,30 +235,30 @@ main {
     width: 12px;
 }
 .section-slider__btn--right {
-    left: 90%;
-    /* right: 10%; */
+    left: auto;
+    right: 5%;
 }
 .section-slider__info {
     width: 330px;
     height: 146px;
-    background-color: white; 
+    background-color: white;
     border-radius: 5px;
     position: absolute;
-    left: 20px; 
+    left: 20px;
     bottom: 20px;
     padding: 20px 0;
     box-sizing: border-box;
-    z-index: 1;    
+    z-index: 1;
 }
 .section-slider__info__title {
     padding: 0 20px;
     box-sizing: border-box;
-    overflow: hidden;    /* 부모 요소 범위를 넘어가는 자식 요소의 부분은 보이지 않도록 처리 */
+    overflow: hidden; /* 부모 요소 범위를 넘어가는 자식 요소의 부분은 보이지 않도록 처리 */
     text-overflow: ellipsis; /* 잘린 텍스트를 생략 부호(...)표시 함 */
-    display: -webkit-box;    
-     -webkit-line-clamp: 1; 
-     -webkit-box-orient: vertical;
-     margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
 }
 .section-slider__info__desc {
     padding: 0 20px;
@@ -291,7 +289,7 @@ main {
 /** Main - 포지션 보러가기 버튼 영역 **/
 /* .contents-recommend-btn { */
 .seek-job-btn {
-    background: linear-gradient(to right, #0D95FA, 10%, #2263F4, 80%, #01B5E6);
+    background: linear-gradient(to right, #0d95fa, 10%, #2263f4, 80%, #01b5e6);
     width: 1060px;
     height: 64px;
     border-radius: 64px;
@@ -300,7 +298,7 @@ main {
     font-weight: 700;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     margin: 60px auto;
     cursor: pointer;
 }
@@ -368,7 +366,7 @@ main {
 /* Main - 경력 한눈에 모아보기 영역 */
 .article-career {
     height: 150px;
-    background: linear-gradient(90deg, #ddebff, #B9D9FF);
+    background: linear-gradient(90deg, #ddebff, #b9d9ff);
 }
 .article-career-wrap {
     width: 1060px;
@@ -404,7 +402,7 @@ main {
 }
 /** 내프로필, 매치업 바로가기 네비게이션 영역 **/
 .nav-shortcut {
-    padding:100px 0 85px 0;
+    padding: 100px 0 85px 0;
 }
 .nav-shortcut__list {
     width: 1060px;
@@ -484,7 +482,7 @@ main {
     /* background-color: black; */
     margin-bottom: 17px;
     background: black;
-    outline: solid 1px rgba(0,0,0,0.05);
+    outline: solid 1px rgba(0, 0, 0, 0.05);
     border-radius: 4px;
     overflow: hidden;
     /* playtime을 위로 올리기 위함 */
@@ -509,7 +507,7 @@ main {
     border-radius: 39px;
     box-sizing: border-box;
     padding: 12px;
-    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
 }
 .corp-body {
     height: 42px;
@@ -572,14 +570,15 @@ main {
 /* .theme-job__list > * {  
     margin: 8px 8px 0 0;
 } */
-.theme-job__list img { /* @q 이거 왜 > img 로 쓰면 테두리 선이 사라지는거지?? */
+.theme-job__list img {
+    /* @q 이거 왜 > img 로 쓰면 테두리 선이 사라지는거지?? */
     margin: 8px 5px 0 0;
-    border: 1px solid rgba(0,0,0,.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 .theme-job__more-btn {
     font-size: 14px;
     font-weight: 500;
-    color: #666666
+    color: #666666;
 }
 .position-body > * {
     margin-top: 10px;
@@ -635,7 +634,7 @@ main {
     font-weight: 500;
     /* background-color: lightgreen; 임시 */
 }
-.footer-top__nav__ul > *{
+.footer-top__nav__ul > * {
     margin-right: 50px;
 }
 .footer-top__sns {
@@ -664,8 +663,8 @@ main {
     width: 250px;
     height: 40px;
     padding-left: 45px;
-    background-color: #F2F4F7;
-    appearance:none; /* 화살표 없애기 공통 */
+    background-color: #f2f4f7;
+    appearance: none; /* 화살표 없애기 공통 */
     font-size: 14px;
     font-weight: 500;
     color: grey;

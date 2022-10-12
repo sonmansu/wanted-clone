@@ -230,8 +230,16 @@ main {
 .section-title--button * {
     display: inline-block;
 }
-/** Main - 직업 찾기 섹션 */
+/** Main - 직업 찾기 섹션 **/
+.search-section {
+    /* background-color: #999999; */
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
 .search-wrap {
+    /* background-color: yellowgreen; */
     border-bottom: 1px solid var(--border-color);
 }
 .search-job-box {

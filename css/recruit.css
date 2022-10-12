@@ -580,10 +580,10 @@ main {
     font-weight: 500;
     color: #666666;
 }
+/* Main - 요즘 뜨는 포지션 영역 */
 .position-body > * {
     margin-top: 10px;
 }
-/* Main - 요즘 뜨는 포지션 영역 */
 .section-contents__bookmark-icon {
     position: absolute;
     top: 8px;

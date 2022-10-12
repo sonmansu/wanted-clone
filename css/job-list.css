@@ -244,14 +244,14 @@ main {
     display: flex;
     align-items: center;
 }
-.search-job__text {
+.search-job-btn__text {
     font-size: 24px;
     margin-right: 16px;
 }
-.search-job__text--bold {
+.search-job-btn__text--bold {
     font-weight: 700;
 }
-.search-job__more-btn {
+.search-job-btn__more-btn {
     width: 26px;
     height: 26px;
     border-radius: 26px;
@@ -262,12 +262,12 @@ main {
     align-items: center;
     /* display: inline-block; */
 }
-.search-job-vertical-line {
-    width: 2.5px;
+.search-job-btn:first-child:after {
+    content: "|";
+    font-size: 28px;
     margin: 3px 24px;
-    background-color: red;
+    color: #ececec;
 }
-
 .search-filter-box {
     width: 1060px;
     margin: 10px auto 0 auto;
@@ -453,13 +453,17 @@ main {
     /* background-color: blueviolet; */
     width: 1060px;
     /* height: 301px; */
-    display: grid;
-    /* @todo - 오른쪽에 여백이 좀 더 많이 남는 이유 몰겠음 */
+
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
-    row-gap: 50px;
+    row-gap: 50px; */
     margin-bottom: 50px;
     /* margin: 0 auto; */
+}
+.section-contents__li {
+    padding: 10px;
+    box-sizing: border-box;
 }
 .section-contents__thumb {
     /* width: 240px; */

@@ -265,32 +265,40 @@ main {
 .search-job-vertical-line {
     width: 2.5px;
     margin: 3px 24px;
-    background-color: #ececec;
+    background-color: red;
 }
 
 .search-filter-box {
     width: 1060px;
     margin: 10px auto 0 auto;
     height: 40px;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
 }
-.search-filter__btn {
+.search-filter-btn {
     height: 40px;
     padding: 10px 15px;
-    /* box-sizing: border-box; */
     border: 1px solid #ececec;
     border-radius: 5px;
     font-size: 14px;
+    display: inline-flex;
+    align-items: center;
 }
-.search-filter__btn--right {
-    position: absolute;
-    right: 0;
-}
-.search-filter__selected-text {
+.search-filter-btn__selected-text {
     color: #3366ff;
     font-weight: 600;
     margin-left: 15px;
 }
+.search-filter-btn--margin-right {
+    padding-right: 5px;
+}
+.search-filter-btn__dropdown {
+    margin-left: 5px;
+    /* ? 머트리얼 아이콘 기본적으로 붙어있는 양 옆 패딩을 없애고 싶은데 방법을 모르겠다.*/
+    /* padding-right: 0;
+    margin-right: 0; */
+}
+
 .divider--margin {
     margin: 25px auto;
 }

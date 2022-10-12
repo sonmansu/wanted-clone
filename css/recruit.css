@@ -96,6 +96,7 @@ img {
     transform: translateY(-50%); */
 
     /* margin: 0 auto; */
+    cursor: pointer;
 }
 .menu-btn > img {
     max-width: 100%;
@@ -128,6 +129,7 @@ img {
 .login-btn {
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
 }
 .search-btn {
     width: 17px;
@@ -136,6 +138,7 @@ img {
     /* 질문@q1 버튼 세로축 중앙 정렬 */
     position: relative;
     top: 3px;
+    cursor: pointer;
 }
 .search-btn > img {
     max-width: 100%;
@@ -156,6 +159,7 @@ img {
     background-color: white;
     text-align: center;
     line-height: 30px;
+    cursor: pointer;
 }
 
 /** Main **/
@@ -230,6 +234,7 @@ main {
     height: 60px;
     border-radius: 30px;
     border: none;
+    cursor: pointer;
 }
 .section-slider__btn > img {
     width: 12px;
@@ -277,6 +282,7 @@ main {
     color: #3366ff;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .section-slider__info__go-btn__text {
     font-size: 14px;
@@ -477,7 +483,7 @@ main {
 .section-contents__thumb {
     /* width: 240px; */
     width: 100%;
-    height: 168px;
+    height: 187px;
     padding-bottom: 0;
     /* background-color: black; */
     margin-bottom: 17px;
@@ -508,6 +514,7 @@ main {
     box-sizing: border-box;
     padding: 12px;
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
 }
 .corp-body {
     height: 42px;
@@ -543,6 +550,7 @@ main {
     color: #002fdb;
     font-size: 15px;
     font-weight: 700;
+    cursor: pointer;
 }
 .corp-body__follow-btn:hover {
     border: 1px solid #002fdb;
@@ -579,6 +587,7 @@ main {
     font-size: 14px;
     font-weight: 500;
     color: #666666;
+    cursor: pointer;
 }
 /* Main - 요즘 뜨는 포지션 영역 */
 .position-body > * {

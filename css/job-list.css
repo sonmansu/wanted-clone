@@ -275,6 +275,10 @@ main {
     display: flex;
     justify-content: space-between;
 }
+.search-filter-btn:nth-child(2),
+.search-filter-btn:nth-child(3) {
+    margin-left: 5px;
+}
 .search-filter-btn {
     height: 40px;
     padding: 10px 15px;
@@ -289,7 +293,7 @@ main {
     font-weight: 600;
     margin-left: 15px;
 }
-.search-filter-btn--margin-right {
+.search-filter-btn--padding-right {
     padding-right: 5px;
 }
 .search-filter-btn__dropdown {

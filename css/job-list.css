@@ -522,3 +522,35 @@ main {
     font-size: 14px;
     font-weight: 500;
 }
+
+/** 하단 채용 공고 버튼 영역 **/
+.bottom-banner-btn {
+    width: 100vw; /* ? width 값 설정하지 않으면 1060px 로 맞춰져 있음 왜지 */
+    height: 70px;
+    background-color: #258bf7;
+    position: sticky;
+    bottom: 0;
+}
+.bottom-banner-btn-wrap {
+    width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom-banner-btn__text {
+    font-size: 20px;
+    color: white;
+    margin-left: 10px;
+}
+.bottom-banner-btn__more-btn {
+    width: 118px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    color: #258bf7;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 40px;
+}

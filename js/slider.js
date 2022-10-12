@@ -1,8 +1,9 @@
 $(function () {
   $('.section-slider__list').slick({
     centerMode: true,
-    // centerPadding: 30px,
-    centerPadding: '230px',
+    // centerPadding: '50px',
+    // centerPadding: '230px',
+    centerPadding: 0,
     centeredSlides: true,
     slide: 'div',		//슬라이드 되어야 할 태그 ex) div, li 
     infinite: true, 	//무한 반복 옵션	 
@@ -17,8 +18,6 @@ $(function () {
     vertical: false,		// 세로 방향 슬라이드 옵션
     prevArrow: `<button class="section-slider__btn"><img src="https://img.icons8.com/external-outline-stroke-bomsymbols-/91/000000/external-arrow-digital-design-outline-set-2-outline-stroke-bomsymbols-.png" alt="right button"></button>`,		// 이전 화살표 모양 설정
     nextArrow: `<button class="section-slider__btn section-slider__btn--right"><img class="rotate-180" src="https://img.icons8.com/external-outline-stroke-bomsymbols-/91/000000/external-arrow-digital-design-outline-set-2-outline-stroke-bomsymbols-.png" alt="left button"></button>`,		// 다음 화살표 모양 설정
-    //   prevArrow : "<button type='button' class='slick-prev'>Previous</button>",		// 이전 화살표 모양 설정
-    //   nextArrow : "<button type='button' class='slick-next'>Next</button>",		// 다음 화살표 모양 설정
     //   dotsClass : "slick-dots", 	//아래 나오는 페이지네이션(점) css class 지정
     draggable: true, 	//드래그 가능 여부 
 

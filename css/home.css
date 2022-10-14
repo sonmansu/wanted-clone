@@ -47,6 +47,9 @@ main {
     /* padding: 0 20% 0 0; */
     box-sizing: border-box;
 }
+/* .section-slider__list .slick-slide {
+    width: 1060px;
+} */
 .slick-center {
     width: 1060px;
 }

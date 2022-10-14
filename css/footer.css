@@ -1,0 +1,75 @@
+/** Footer **/
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding-bottom: 80px;
+}
+.footer-wrap {
+    width: 1060px;
+    margin: 0 auto;
+    /* background-color: yellow; 임시 */
+}
+.footer-top {
+    width: 1060px;
+    height: 39px;
+    padding: 20px 0;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+.footer-top__nav {
+    /* width: 100%; */
+    margin: 50px;
+    flex-grow: 3;
+    display: flex;
+    font-size: 15px;
+    font-weight: 500;
+    /* background-color: lightgreen; 임시 */
+}
+.footer-top__nav__ul > * {
+    margin-right: 50px;
+}
+.footer-top__sns {
+    /* background-color: #ff9100; 임시 */
+    display: flex;
+    flex-wrap: nowrap;
+}
+.footer-top__sns > a {
+    width: 20px;
+    margin-left: 14px;
+}
+.footer-bottom {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-bottom__texts {
+    font-size: 12px;
+    font-weight: 500;
+    color: grey;
+}
+.footer-bottom__texts > * {
+    margin-bottom: 7px;
+}
+.footer-bottom__country__select {
+    width: 250px;
+    height: 40px;
+    padding-left: 45px;
+    background-color: #f2f4f7;
+    appearance: none; /* 화살표 없애기 공통 */
+    font-size: 14px;
+    font-weight: 500;
+    color: grey;
+    border: none;
+}
+.footer-bottom__country__country-icon {
+    width: 24px;
+    position: relative;
+    top: 3px;
+    left: 45px;
+}
+.footer-bottom__country__down-icon {
+    width: 10px;
+    position: relative;
+    right: 25px;
+}

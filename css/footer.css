@@ -33,6 +33,7 @@
     /* background-color: #ff9100; 임시 */
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
 }
 .footer-top__sns > a {
     width: 20px;

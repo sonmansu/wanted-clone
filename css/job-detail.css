@@ -19,7 +19,6 @@
     box-sizing: border-box;
     position: sticky;
     top: 70px;
-    border-color: red;
 }
 .job-apply__title {
     font-size: 15px;

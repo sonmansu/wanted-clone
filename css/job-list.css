@@ -321,7 +321,7 @@ main {
 
 /** 하단 채용 공고 버튼 영역 **/
 .bottom-banner-btn {
-    width: 100vw; /* ? width 값 설정하지 않으면 1060px 로 맞춰져 있음 왜지 */
+    width: 100%; /* 100vw 이면 부모가 다른 영역과 달리 스크롤바 영역까지 먹고 있어서 중앙 정렬이 안됨 */
     height: 70px;
     background-color: #258bf7;
     position: sticky;

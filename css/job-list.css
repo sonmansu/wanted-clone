@@ -254,7 +254,7 @@ main {
     color: #999999;
 }
 
-/** Main - 검색된 포지션 리스트 */
+/** Main - 검색된 포지션 리스트 (중복코드) **/
 .section-contents {
     /* background-color: bisque; */
     width: 1060px;

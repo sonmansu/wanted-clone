@@ -321,3 +321,125 @@
     color: #333;
     margin: 0 20px;
 }
+
+/** Main - 검색된 포지션 리스트 (중복코드) **/
+.contents-box {
+    width: 1060px;
+    margin: 30px auto 80px;
+}
+.postions-title {
+    /* 새로추가 */
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 20px;
+}
+.section-contents {
+    /* background-color: bisque; */
+    width: 1060px;
+    /* height: 764px */
+}
+.section-contents__ul {
+    /* background-color: blueviolet; */
+    width: 1060px;
+    /* height: 301px; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 50px;
+    margin-bottom: 50px;
+    /* margin: 0 auto; */
+}
+.section-contents__thumb {
+    /* width: 240px; */
+    width: 100%;
+    height: 187px;
+    padding-bottom: 0;
+    /* background-color: black; */
+    margin-bottom: 17px;
+    background: black;
+    outline: solid 1px rgba(0, 0, 0, 0.05);
+    outline: solid 1px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    /* playtime을 위로 올리기 위함 */
+    position: relative;
+    top: 0;
+}
+.section-contents__thumb > img {
+    /* @야매 - 높이값이 꽉 채워졌음 좋겠는데 안채워짐, height값 직접 지정해줬움,, => 100%로 맞춰주니까 됨 */
+    /* height: 168px; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section-contents__bookmark-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.position-body > * {
+    margin-top: 10px;
+}
+.position-body__pos-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+.position-body__corp-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+.position-body__locate {
+    font-size: 14px;
+    color: #999999;
+}
+.position-body__reward {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/** 하단 채용 공고 버튼 영역 (중복코드) **/
+.bottom-banner-btn {
+    width: 100%; /* 100vw 이면 부모가 다른 영역과 달리 스크롤바 영역까지 먹고 있어서 중앙 정렬이 안됨 */
+    height: 70px;
+    background-color: #258bf7;
+    position: fixed; /* 새로추가) 영역을 차지안해야 해서 sticky에서 fixed로 변경 */
+    bottom: 0;
+}
+.bottom-banner-btn-wrap {
+    width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 새로추가 */
+.bottom-banner-btn-left-box {
+    display: flex;
+    align-items: center;
+}
+.bottom-banner-btn__icon {
+    font-size: 24px;
+    color: #fff;
+    /* vertical-align: middle; */
+}
+.icon-joblist_bottombar_reward::before {
+    content: "\e978";
+}
+/* 새로추가된 영역 끝 */
+.bottom-banner-btn__text {
+    font-size: 20px;
+    color: white;
+    margin-left: 10px;
+}
+.bottom-banner-btn__more-btn {
+    width: 118px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    color: #258bf7;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 40px;
+}

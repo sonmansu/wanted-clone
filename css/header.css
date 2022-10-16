@@ -183,6 +183,10 @@ button {
     border: 0;
     outline: 0;
     background-color: transparent;
+    cursor: pointer;
+}
+select {
+    appearance: none; /* 기본 화살표 없애기 */
 }
 .divider {
     width: 1060px;
@@ -196,16 +200,22 @@ button {
 /* .material-icons-outlined.md-16 {
     font-size: 16px;
 } */
+.hidden {
+    display: none !important;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.md-14 {
+    font-size: 14px;
+}
 .md-16 {
     font-size: 16px;
 }
 .md-18 {
     font-size: 18px;
 }
-.material-icons-round.md-14 {
-    font-size: 18px;
-}
-.material-icons-round.md-22 {
+.md-22 {
     font-size: 22px;
 }
 .material-icons-round.md-24 {

@@ -114,10 +114,10 @@ main {
     width: 1060px;
     height: 32px;
     margin: 0 auto 25px auto;
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .search-tag-slider-box .slick-slider {
     width: 100%;

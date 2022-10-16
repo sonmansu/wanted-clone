@@ -221,6 +221,17 @@ main {
     /* box-sizing: border-box;
     padding: 10px; */
 }
+.hiring-corp-item:hover .hiring-corp-item__title {
+    color: #258bf7;
+}
+.hiring-corp-item:hover .hiring-corp-item__bg-img {
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+.hiring-corp-item-bg-img-wrap {
+    height: 147px;
+    overflow: hidden;
+}
 .hiring-corp-item__bg-img {
     height: 147px;
     background-image: url("https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1355%2F16906_2_0.__400_400.jpg&w=400&q=75");
@@ -240,14 +251,12 @@ main {
     padding: 40px 15px;
     /* padding: 15px; */
     box-sizing: border-box;
+    background-color: white;
 }
 .hiring-corp-item__title {
     font-size: 16px;
     font-weight: 600;
     margin: 4px 0;
-}
-.hiring-corp-item__title:hover {
-    color: #258bf7;
 }
 .hiring-corp-item__subtitle {
     font-size: 14px;

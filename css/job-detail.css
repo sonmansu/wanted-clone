@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: 20px 0 80px;
+    padding: 20px 0 60px;
 }
 
 /** 지원 정보 사이드바 **/
@@ -311,11 +311,11 @@
 /** 주의사항 영역 **/
 .job-info-warning-box {
     padding: 25px 30px;
+    padding-top: 25px;
     display: flex;
     align-items: center;
     background-color: #f3f5f8;
     border-radius: 3px;
-    margin-bottom: 55px;
 }
 .job-info-warning-content-box {
     width: 100%;

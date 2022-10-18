@@ -71,9 +71,7 @@ img {
     font-size: 14px;
     font-weight: 600;
 }
-.header-wrap * {
-    /* position: sticky; */
-}
+
 .left-btns-wrap,
 .right-btns-wrap {
     display: flex;
@@ -88,16 +86,6 @@ img {
     height: 14px;
     margin-right: 10px;
     cursor: pointer;
-    /* 버튼 중앙정렬@q1 */
-    /* display: inline-block; */
-    /* height: 100%; */
-    /* vertical-align: middle; */
-
-    /* position: relative;
-    top: 50%;
-    transform: translateY(-50%); */
-
-    /* margin: 0 auto; */
 }
 .menu-btn > img {
     max-width: 100%;
@@ -157,6 +145,104 @@ img {
     background-color: white;
     text-align: center;
     line-height: 30px;
+}
+/** 드롭다운 메뉴 영역 **/
+.dropdown-menu-box {
+    position: relative;
+    display: none;
+}
+/* ? 호버 시 다른 영역을 나타나게 하려면 어떻게 해야되지 */
+.menu-btn:hover + .dropdown-menu-box {
+    display: block;
+}
+/* 드롭다운 - 메인 카테고리 */
+.dropdown-main-category__list {
+    /* position: fixed; */
+    /* right: 0; */
+    width: 1100px;
+    margin: 0 auto;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+}
+.dropdown-main-category__item {
+    width: 218px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.42;
+    color: #333333;
+    background-color: aqua;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.dropdown-main-category__item:hover {
+    background-color: #f7f9fa;
+}
+.dropdown-main-category__item:hover > a {
+    color: #36f;
+}
+.dropdown-main-category__link {
+    display: block; /* item 영역 전체를 차지하게 하기 위해 inline -> block 변경 */
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+}
+
+/* 드롭다운 - 서브 카테고리 */
+.dropdown-subcategory-nav {
+    display: block;
+    /* width: 500px; */
+    height: 100vh;
+    background-color: orange;
+    max-height: 100vh;
+    left: calc((100% - 1100px) / 2 + 218px);
+    position: absolute;
+    top: 0;
+}
+.dropdown-sub-category__list {
+    /* background-color: #f7f9fa; */
+    /* background-color: yellow; */
+    background-color: yellow;
+    /* width: 100%; */
+    max-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.dropdown-sub-category__item {
+    border: 1px solid grey;
+    width: 218px;
+    height: 40px;
+    /* flex-grow: 1;
+    flex-shrink: 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    line-height: 1.42;
+    color: #333333;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.dropdown-sub-category__item:hover > a {
+    color: #36f;
+}
+.dropdown-sub-category__arrow-icon {
+    color: #36f;
+    display: none;
+    cursor: pointer;
+}
+.dropdown-sub-category__item:hover .dropdown-sub-category__arrow-icon {
+    display: inline-block;
+}
+.dropdown-sub-category__link {
+    display: block; /* item 영역 전체를 차지하게 하기 위해 inline -> block 변경 */
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
 }
 
 /** Default settings **/

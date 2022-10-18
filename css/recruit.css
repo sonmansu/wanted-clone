@@ -32,21 +32,20 @@ main {
     display: inline-block;
 }
 /** Main - slider 영역 시작 **/
+/** Main - slider 영역 시작 **/
 .section-slider {
     width: 100vw;
 }
 .section-slider__list {
-    width: 1060px;
     height: 300px;
     margin: 0 auto;
     position: relative;
     display: flex;
     box-sizing: border-box;
 }
-
 .section-slider__item {
-    background-color: red;
     display: block;
+    width: 1060px;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
@@ -63,21 +62,20 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 5%;
+    left: calc((100% - 1200px) / 2);
     z-index: 3;
     background-color: rgba(255, 255, 255, 0.4);
     width: 30px;
     height: 60px;
     border-radius: 30px;
     border: none;
-    cursor: pointer;
 }
 .section-slider__btn > img {
     width: 12px;
 }
 .section-slider__btn--right {
     left: auto;
-    right: 5%;
+    right: calc((100% - 1200px) / 2);
 }
 .section-slider__info {
     width: 330px;

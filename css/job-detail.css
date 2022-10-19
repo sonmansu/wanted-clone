@@ -553,6 +553,11 @@
     padding: 0 15px;
     box-sizing: border-box;
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 .login-modal__input:focus-visible {
     border: 1px solid #36f;
     outline: none;

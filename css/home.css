@@ -3,6 +3,8 @@ main {
     width: 100vw;
     padding-top: 20px;
 }
+
+/** 메인 슬라이더 영역 **/
 .section-wrap {
     width: 1060px;
     margin: 60px auto;

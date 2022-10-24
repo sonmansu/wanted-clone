@@ -1,0 +1,57 @@
+/** 드롭다운 메뉴 영역 **/
+.dropdown-menu-box {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+  /* background-color: pink; */
+  /* display: none; */
+}
+/* 드롭다운 - 메인 카테고리 */
+.dropdown-main-category__list {
+  /* position: fixed;
+      right: 0; */
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  max-height: calc(100vh - 50px);
+  background-color: white;
+  overflow: auto;
+}
+.dropdown-main-category__list {
+  -ms-overflow-style: none;
+}
+.dropdown-main-category__list::-webkit-scrollbar {
+  display: none;
+}
+.dropdown-main-category__item {
+  width: 200px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.42;
+  color: #333333;
+  /* background-color: aqua; */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.dropdown-main-category__item:hover {
+  background-color: #f7f9fa;
+}
+.dropdown-main-category__item:hover > a {
+  color: #36f;
+}
+.dropdown-main-category__link {
+  display: block; /* item 영역 전체를 차지하게 하기 위해 inline -> block 변경 */
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
+
+/* 드롭다운 - 서브 카테고리 */
+.dropdown-subcategory-nav {
+  /* display: block; */
+  /* width: 500px; */
+  /* height: 100vh; */
+  /* background-color: orange; */
+  max-height: 100vh;
+}

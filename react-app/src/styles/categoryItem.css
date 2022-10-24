@@ -1,0 +1,52 @@
+.dropdown-sub-category__list {
+  background-color: #f7f9fa;
+  /* background-color: yellow; */
+  /* width: 400px; */ /* js 로 width 계산해서 설정 */
+  max-height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  position: absolute;
+  left: calc((100% - 1100px) / 2 + 200px);
+  top: 0;
+}
+.dropdown-sub-category__item {
+  /* border: 1px solid grey; */
+  width: 200px;
+  height: 40px;
+  /* flex-grow: 1;
+        flex-shrink: 0; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  line-height: 1.42;
+  color: #333333;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.dropdown-sub-category__item:hover > a {
+  color: #36f;
+}
+.dropdown-sub-category__arrow-icon {
+  color: #36f;
+  display: none;
+  cursor: pointer;
+}
+.dropdown-sub-category__item:hover .dropdown-sub-category__arrow-icon {
+  display: inline-block;
+}
+.dropdown-sub-category__link {
+  display: block; /* item 영역 전체를 차지하게 하기 위해 inline -> block 변경 */
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}

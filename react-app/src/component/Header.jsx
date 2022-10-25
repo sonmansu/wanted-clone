@@ -4,35 +4,11 @@ import '../styles/header.css';
 
 const Header = () => {
   const [isMenuHover, setMenuHover] = useState(false);
-  // const onMoustover = e => {
-  //     const eventTarget = e.target;
-  //     // console.dir(eventTarget);
-
-  //     if (eventTarget.classList.contains('dropdown-main-category__link')) {
-  //         // console.log('a 태그 만짐');
-  //         $dropdownMenuSub.classList.remove(HIDDEN_CLASSNAME);
-  //         setSubCategoryListWidth();
-  //     }
-
-  //     const mainCategory = eventTarget.innerText;
-  //     if (mainCategory === '개발') {
-  //         // 개발에 관련된 sub category들을 subcategory list에 뿌려줌
-  //     }
-  // }
 
   const onMenuEnter = () => setMenuHover(true);
   const onDropdownLeave = () => {
     setMenuHover(false);
   };
-
-  // const onEnter = () => {
-  //   // console.log(refs.current.querySelector('.dropdown-menu-box ul').classList.remove('hidden'))
-
-  //   setToggle(true);
-  // };
-  // const onLeave = () => {
-  //   setToggle(false);
-  // };
 
   return (
     <header>

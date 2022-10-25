@@ -62,8 +62,11 @@ const Dropdown = ({ onDropdownLeave, isMenuHover }) => {
 
   return (
     <div
-      onMouseLeave={onDropdownLeave}
       className={isMenuHover ? 'dropdown-menu-box' : 'dropdown-menu-box hidden'}
+      onMouseLeave={() => {
+        onDropdownLeave();
+        setMainHover(false);
+      }}
     >
       <nav>
         <ul className="dropdown-main-category__list" onMouseOver={onMainOver}>
@@ -76,7 +79,7 @@ const Dropdown = ({ onDropdownLeave, isMenuHover }) => {
           className={
             isMenuHover && isMainHover
               ? 'dropdown-sub-category__list'
-              : 'hidden dropdown-sub-category__list'
+              : 'dropdown-sub-category__list hidden'
           }
         >
           {dropdownSubCategory}

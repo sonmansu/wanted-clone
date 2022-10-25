@@ -1,0 +1,17 @@
+.section-wrap-top {
+  width: 1060px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.section-subtitle {
+  height: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  width: fit-content; /* 부모 가로폭 꽉 채우지 않고 내용물 폭에만 클릭되게 하기 위함 */
+  margin: 5px auto 0 auto;
+  color: #767676;
+  cursor: pointer;
+}

@@ -136,17 +136,18 @@ const Main = () => {
     }
 
     return (
-        <main>
-            <TopBanner />
+        // <main>
+        {/* <TopBanner />
             <Section title='나에게 필요한 커리어 인사이트' contents={careerInsights} />
             <div className='divider'></div>
             <Section title='3분만에 읽는 Wanted+ 아티클' subtitle='아티클 전체보기' contents={articles} />
-            <Section title='직장인을 위한 Wanted+ VOD' subtitle='VOD 전체보기' contents={vods} />
-            {/* <LineBanner /> */}
-            <Section title='커리어 성장을 위한 맞춤 이벤트' subtitle='이벤트 전체보기' contents={events} />
-            {/* <SubscribeSection />
+            <Section title='직장인을 위한 Wanted+ VOD' subtitle='VOD 전체보기' contents={vods} /> */}
+            {/* <LineBanner /> */ }
+    {/* <Section title='커리어 성장을 위한 맞춤 이벤트' subtitle='이벤트 전체보기' contents={events} /> */ }
+    {/* <SubscribeSection />
             <RecruitmentSection /> */}
-        </main>
+        // </main>
+        
     )
 }
 

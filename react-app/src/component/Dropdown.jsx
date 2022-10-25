@@ -2,7 +2,7 @@ import React from 'react';
 import categoryList from '../mock/categoryList.json'; // json파일을 subCategory란 이름으로 불러옴
 import { useState, useEffect, useRef } from 'react';
 import '../styles/dropdown.css';
-import CategoryItem from '../component/CategoryItem';
+import SubcategoryItem from '../component/SubcategoryItem';
 
 const Dropdown = ({ onDropdownLeave, isMenuHover }) => {
   const { mainCategory, subCategory } = categoryList;
@@ -38,7 +38,7 @@ const Dropdown = ({ onDropdownLeave, isMenuHover }) => {
       if (subCategory[mainCategoryText]) {
         console.log('카테고리:', subCategory[mainCategoryText]);
         subCategoryList = subCategory[mainCategoryText]?.map((item) => (
-          <CategoryItem text={item.text} ref={subCategoryItemRef} />
+          <SubcategoryItem text={item.text} ref={subCategoryItemRef} />
         ));
         setDropdownSubCategory(subCategoryList);
         // setSubCategoryListWidth();

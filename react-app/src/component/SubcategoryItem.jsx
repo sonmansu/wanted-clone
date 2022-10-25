@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/categoryItem.css';
+import '../styles/subcategoryItem.css';
 
-const CategoryItem = ({ text }) => {
+const SubcategoryItem = ({ text }) => {
   return (
     <li className="dropdown-sub-category__item">
       <a href="#" className="dropdown-sub-category__link">
@@ -14,4 +14,4 @@ const CategoryItem = ({ text }) => {
   );
 };
 
-export default CategoryItem;
+export default SubcategoryItem;

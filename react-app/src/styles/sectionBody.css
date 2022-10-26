@@ -1,0 +1,11 @@
+.section-contents__ul {
+  /* background-color: blueviolet; */
+  width: 1060px;
+  /* height: 301px; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 50px;
+  margin-bottom: 50px;
+  /* margin: 0 auto; */
+}

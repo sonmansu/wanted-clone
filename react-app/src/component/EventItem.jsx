@@ -5,7 +5,7 @@ import EventKindItem from './EventKindItem';
 import '../styles/eventItem.css';
 
 const EventItem = ({ img, kinds, title }) => {
-  console.log(kinds);
+  // console.log(kinds);
   const eventKinds = kinds.map((kind) => <EventKindItem kind={kind} />);
   return (
     <li>

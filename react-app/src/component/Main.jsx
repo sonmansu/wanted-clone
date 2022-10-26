@@ -3,6 +3,7 @@ import SectionHeader from '../component/SectionHeader';
 import ArticleList from '../component/ArticleList';
 import '../styles/main.css';
 import VodList from './VodList';
+import LineBanner from './LineBanner';
 
 const Main = () => {
   return (
@@ -26,6 +27,7 @@ const Main = () => {
           <VodList />
         </div>
       </section>
+      <LineBanner kind="recommend" />
     </main>
   );
 };

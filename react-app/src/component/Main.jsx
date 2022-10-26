@@ -5,10 +5,12 @@ import VodList from './VodList';
 import LineBanner from './LineBanner';
 import EventList from './EventList';
 import '../styles/main.css';
+import SimpleSlider from './SlideBanner';
 
 const Main = () => {
   return (
     <main>
+      <SimpleSlider />
       <Section title="3분만에 읽는 Wanted+ 아티클" subtitle="아티클 전체보기">
         <ArticleList />
       </Section>

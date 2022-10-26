@@ -3,7 +3,6 @@
   width: 1060px;
   /* height: 301px; */
   display: grid;
-  /* @todo - 오른쪽에 여백이 좀 더 많이 남는 이유 몰겠음 */
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 50px;

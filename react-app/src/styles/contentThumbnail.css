@@ -9,9 +9,6 @@
   outline: solid 1px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   overflow: hidden;
-  /* playtime을 위로 올리기 위함 */
-  position: relative;
-  top: 0;
 }
 .section-contents__thumb > img {
   /* @야매 - 높이값이 꽉 채워졌음 좋겠는데 안채워짐, height값 직접 지정해줬움,, => 100%로 맞춰주니까 됨 */

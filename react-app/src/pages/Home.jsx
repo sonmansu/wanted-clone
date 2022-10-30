@@ -1,15 +1,15 @@
 import React from 'react';
 import Section from '../component/Section';
 import ArticleList from '../component/ArticleList';
-import VodList from './VodList';
-import LineBanner from './LineBanner';
-import EventList from './EventList';
-import '../styles/main.css';
-import SimpleSlider from './SlideBanner';
+import VodList from '../component/VodList';
+import LineBanner from '../component/LineBanner';
+import EventList from '../component/EventList';
+import SimpleSlider from '../component/SlideBanner';
+import '../styles/home.css';
 
-const Main = () => {
+const Home = () => {
   return (
-    <main>
+    <div>
       <SimpleSlider />
       <Section title="3분만에 읽는 Wanted+ 아티클" subtitle="아티클 전체보기">
         <ArticleList />
@@ -25,8 +25,8 @@ const Main = () => {
       >
         <EventList />
       </Section>
-    </main>
+    </div>
   );
 };
 
-export default Main;
+export default Home;

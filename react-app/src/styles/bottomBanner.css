@@ -1,0 +1,45 @@
+/** 하단 채용 공고 버튼 영역 (중복코드) **/
+.bottom-banner-btn {
+  width: 100%; /* 100vw 이면 부모가 다른 영역과 달리 스크롤바 영역까지 먹고 있어서 중앙 정렬이 안됨 */
+  height: 70px;
+  background-color: #258bf7;
+  position: fixed; /* 새로추가) 영역을 차지안해야 해서 sticky에서 fixed로 변경 */
+  bottom: 0;
+}
+.bottom-banner-btn-wrap {
+  width: 1060px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 새로추가 */
+.bottom-banner-btn-left-box {
+  display: flex;
+  align-items: center;
+}
+.bottom-banner-btn__icon {
+  font-size: 24px;
+  color: #fff;
+  /* vertical-align: middle; */
+}
+.icon-joblist_bottombar_reward::before {
+  content: '\e978';
+}
+/* 새로추가된 영역 끝 */
+.bottom-banner-btn__text {
+  font-size: 20px;
+  color: white;
+  margin-left: 10px;
+}
+.bottom-banner-btn__more-btn {
+  width: 118px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: white;
+  color: #258bf7;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+}

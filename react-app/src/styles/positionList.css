@@ -1,0 +1,27 @@
+.thumbnail-position-wrap {
+  position: relative;
+}
+.section-contents__bookmark-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.position-body > * {
+  margin-top: 10px;
+}
+.position-body__pos-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+.position-body__corp-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+.position-body__locate {
+  font-size: 14px;
+  color: #999999;
+}
+.position-body__reward {
+  font-size: 14px;
+  font-weight: 500;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import BottomBanner from '../component/BottomBanner';
 import '../styles/jobList.css';
 import { useParams } from 'react-router-dom';
+import PositionList from '../component/PositionList';
 
 const JobList = () => {
   const { mainId, subId } = useParams();
@@ -310,11 +311,11 @@ const JobList = () => {
               </li>
 
           </ul>  */}
-        <div className="section-contents">
+        {/* <div className="section-contents">
           <ul className="section-contents__ul section-contents__ul--position">
-            {/* <!-- js로 li들 삽입 --> */}
           </ul>
-        </div>
+        </div> */}
+        <PositionList />
       </section>
       <BottomBanner text="이제 밤새워 채용 공고 보지 마세요." />
     </div>

@@ -5,13 +5,15 @@ import ContentTitle from '../component/ContentTitle';
 import '../styles/sectionBody.css';
 import '../styles/positionList.css';
 import { priceToString } from '../utils/priceToString';
+import { Link } from 'react-router-dom';
 
 const PositionList = () => {
   const [positions, setPositions] = useState(positionText);
 
-  const positionList = positions.map((position, idx) => (
+  const positionList = positions.map((position) => (
     <PositionItem
-      key={idx}
+      key={position.id}
+      id={position.id}
       img={position.img}
       position={position.position}
       corp={position.corp}
@@ -23,10 +25,10 @@ const PositionList = () => {
   return <ul className="section-contents__ul">{positionList}</ul>;
 };
 
-const PositionItem = ({ img, position, corp, location, reward }) => {
+const PositionItem = ({ id, img, position, corp, location, reward }) => {
   return (
     <li>
-      <a href="#">
+      <Link to={`/jobDetail/${id}`}>
         <div className="thumbnail-position-wrap">
           <ContentThumbnail src={img} />
           <div className="section-contents__bookmark-icon">
@@ -60,7 +62,7 @@ const PositionItem = ({ img, position, corp, location, reward }) => {
             채용보상금 {priceToString(reward)}원
           </p>
         </div>
-      </a>
+      </Link>
     </li>
   );
 };

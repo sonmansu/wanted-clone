@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import Dropdown from './Dropdown';
 import '../styles/header.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuHover, setMenuHover] = useState(false);
@@ -21,13 +22,14 @@ const Header = () => {
             />
           </button>
           <h1>
-            <a
+            <Link
+              to="/"
               className="wanted-logo"
               onClick="location.href='home.html'"
               href="https://www.wanted.co.kr/"
             >
               <i className="icon-logo"></i>
-            </a>
+            </Link>
           </h1>
         </div>
         <nav>

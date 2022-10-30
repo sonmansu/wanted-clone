@@ -1,0 +1,336 @@
+.contents-wrap {
+  width: 1060px;
+  margin: 0 auto;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px 0 60px;
+}
+
+/** 지원 정보 사이드바 **/
+.job-apply-box {
+  width: 340px;
+  height: fit-content;
+  border: 1px solid #e1e2e3;
+  border-radius: 3px;
+  /* background-color: yellow; */
+  padding: 24px 20px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 70px;
+}
+.job-apply__title {
+  font-size: 15px;
+  font-weight: 600;
+}
+.job-apply__share-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e1e2e3;
+  border-radius: 20px;
+  position: absolute;
+  top: 24px;
+  right: 20px;
+}
+.job-apply-text-box-row {
+  margin: 24px 0px;
+  display: flex;
+  /* justify-content: space-between; */
+}
+.job-apply-text-box {
+  width: 50%;
+}
+.job-apply__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #999999;
+  margin-bottom: 8px;
+}
+.job-apply__contents {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.job-apply__btn {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  border: 1px solid #36f;
+  color: #36f;
+}
+.job-apply__btn--bg-col {
+  background-color: #36f;
+  color: white;
+}
+.job-apply__btn:first-child {
+  margin-bottom: 10px;
+}
+.job-apply-like-row {
+  margin-top: 24px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.job-apply-like-btn {
+  height: 30px;
+  padding: 0px 15px;
+  margin-right: 12px;
+  border: solid 1px #e1e2e3;
+  color: #e1e2e3;
+  border-radius: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+.job-apply-like-btn__text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-left: 10px;
+}
+.job-apply-liked-list-btn__list > li {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #fff;
+  border-radius: 26px;
+  margin-right: -10px;
+  background-size: cover;
+}
+/* 사진 넣는 부분. 나중에 js 로 넣는 걸로 대체할 예정 */
+.job-apply-liked-list-btn__list > li:first-child {
+  background-image: url('https://lh3.googleusercontent.com/a/AATXAJyptvBO9pOC55mAwO0IA3-llT_OIJ3QyPcS1-DN=s96-c'),
+    url('https://static.wanted.co.kr/images/userweb/profile_default.png');
+  background-size: cover;
+  z-index: 3;
+}
+.job-apply-liked-list-btn__list > li:nth-child(2) {
+  background-image: url('https://k.kakaocdn.net/dn/chOGWm/btrJ7se3l3K/eeQiZuGgc7rBHKj9RBRFk1/img_110x110.jpg'),
+    url('https://static.wanted.co.kr/images/userweb/profile_default.png');
+  z-index: 2;
+}
+.job-apply-liked-list-btn__list > li:nth-child(3) {
+  background-image: url('https://lh3.googleusercontent.com/a/ALm5wu2bYv18aK6_ahAXODnanhRHwCfEqvoUbqKJCBKA=s96-c'),
+    url('https://static.wanted.co.kr/images/userweb/profile_default.png');
+  z-index: 1;
+}
+
+/** 직업 정보 영역 **/
+.job-info-box {
+  width: calc(100% - 360px);
+  /* background-color: aquamarine; */
+}
+/** 직업 정보 스크롤 영역 **/
+.job-info__img-slider {
+  width: 700px;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 4px;
+  margin-bottom: 30px;
+}
+.job-info__img-box {
+  width: 700px;
+  height: 450px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+.job-info__img-box > img {
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/** 직업 정보 스크롤바 디자인 **/
+.job-info__img-slider::-webkit-scrollbar {
+  /* width: 10px; */
+  height: 10px;
+}
+.job-info__img-slider::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #b5b5b5;
+}
+
+/** 직업 정보 컨텐츠 영역 **/
+.job-info__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.job-info-subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.job-info-subtitle__corp-name {
+  font-weight: 600;
+  margin-right: 10px;
+}
+.job-info-subtitle__response {
+  height: 19px;
+  line-height: 19px;
+  font-size: 10px;
+  font-weight: 600;
+  border: 1px solid #36f;
+  padding: 0px 5px;
+  color: #36f;
+  border-radius: 2px;
+}
+.job-info-subtitle__locate::before {
+  content: '';
+  width: 1px;
+  height: 12px;
+  margin: 0 10px;
+  display: inline-block;
+  background-color: #e1e2e3;
+}
+.job-info-subtitle__locate {
+  color: #999999;
+}
+.job-info-tag-box {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.job-info__tag-item {
+  height: 30px;
+  line-height: 30px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #f3f5f8;
+  color: #333333;
+  padding: 0px 14px;
+  /* box-sizing: border-box; */
+  margin: 0px 6px 10px 0;
+  white-space: nowrap;
+}
+.job-info__description {
+  box-sizing: border-box;
+  padding-right: 20px;
+  line-height: 1.75;
+}
+
+/** 직업 정보 기술스택 영역 **/
+.job-info__skill-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.75;
+  color: #333333;
+  margin-top: 20px;
+}
+.job-info-skill-box {
+  display: flex;
+  grid-gap: 10px 8px;
+  margin-top: 5px;
+  margin-bottom: 60px;
+}
+.job-info__skill {
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #e4f4ec;
+  border-radius: 20px;
+  padding: 9px 14px;
+}
+
+.divider--width-100 {
+  width: 100%;
+}
+
+/** 직장 정보 및 위치 영역 **/
+.job-workplace-box {
+  margin: 20px 0 60px 0;
+}
+.job-workplace-row {
+  margin-bottom: 20px;
+}
+.job-workplace__title {
+  width: 80px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #999999;
+  display: inline-block;
+}
+.job-workplace__subtitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+.job-workplace__map-img {
+  width: 100%;
+}
+
+/** 회사 팔로우 버튼 영역 **/
+.job-info-corp-box {
+  border: 1px solid #e1e2e3;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.job-info-corp-left-box {
+  display: flex;
+  align-items: center;
+}
+.job-info-corp__logo {
+  width: 50px;
+  height: 50px;
+  background-image: url('https://static.wanted.co.kr/images/wdes/0_5.0852ff23.jpg');
+  background-size: contain;
+  margin-right: 15px;
+}
+.job-info-corp__corp-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+.job-info-corp__corp-kind {
+  font-size: 15px;
+  font-weight: 600;
+  color: #999999;
+}
+.job-info-corp__follow-btn {
+  height: 40px;
+  padding: 0 27px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid #e1e2e3;
+  border-radius: 25px;
+  color: #002fdb;
+}
+
+/** 주의사항 영역 **/
+.job-info-warning-box {
+  padding: 25px 30px;
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  background-color: #f3f5f8;
+  border-radius: 3px;
+}
+.job-info-warning-content-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.job-info-warning__text {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #333;
+  margin: 0 20px;
+}
+
+.postions-title {
+  /* 새로추가 */
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 20px;
+}

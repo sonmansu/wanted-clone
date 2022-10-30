@@ -1,8 +1,12 @@
 import React from 'react';
 import BottomBanner from '../component/BottomBanner';
 import '../styles/jobList.css';
+import { useParams } from 'react-router-dom';
 
 const JobList = () => {
+  const { mainId, subId } = useParams();
+  console.log(mainId, subId);
+
   return (
     <div>
       <section className="search-section">

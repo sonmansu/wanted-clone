@@ -1,18 +1,19 @@
 import React from 'react';
-import Section from '../component/Section';
-import ArticleList from '../component/ArticleList';
-import VodList from '../component/VodList';
-import LineBanner from '../component/LineBanner';
-import EventList from '../component/EventList';
-import SimpleSlider from '../component/SlideBanner';
+import Section from '../components/Section';
+import ArticleList from '../components/ArticleList';
+import VodList from '../components/VodList';
+import LineBanner from '../components/LineBanner';
+import EventList from '../components/EventList';
+import SlideBanner from '../components/SlideBanner';
 import '../styles/home.css';
+import ListContainer from '../components/ListContainer2';
 
 const Home = () => {
   return (
     <div>
-      <SimpleSlider />
+      <SlideBanner />
       <Section title="3분만에 읽는 Wanted+ 아티클" subtitle="아티클 전체보기">
-        <ArticleList />
+        <ListContainer listType="article" />
       </Section>
       <div className="divider"></div>
       <LineBanner kind="recommend" />

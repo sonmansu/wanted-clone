@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ContentThumbnail from '../component/ContentThumbnail';
-import ContentTitle from '../component/ContentTitle';
+import ContentThumbnail from './ContentThumbnail';
+import ContentTitle from './ContentTitle';
 import EventKindItem from './EventKindItem';
 import '../styles/eventItem.css';
 

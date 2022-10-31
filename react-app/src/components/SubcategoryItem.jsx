@@ -6,7 +6,9 @@ const SubcategoryItem = ({ mainId, subId, text }) => {
   return (
     <li className="dropdown-sub-category__item">
       <Link
-        to={`/jobList/${mainId}/${subId}`}
+        to={`/jobList${mainId === 0 ? '' : `/${mainId}`}${
+          subId === 0 ? '' : `/${subId}`
+        }`}
         className="dropdown-sub-category__link"
       >
         {text}

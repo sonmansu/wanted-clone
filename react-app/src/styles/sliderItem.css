@@ -1,0 +1,71 @@
+.section-slider__item {
+  /* background-color: red; */
+  display: block;
+  width: 1060px;
+  /* height: 300px; */
+  border-radius: 4px;
+  /* box-sizing: border-box; */
+  overflow: hidden;
+  position: relative;
+  /* position: absolute; */
+  /* margin: 0 auto; */
+  /* margin-left: 100px; */
+  margin: 0 10px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+}
+.section-slider__img {
+  /* width: 1060px; */
+  /* height: 300px; */
+  /* width: 100%; */
+  object-fit: cover;
+  z-index: 0;
+}
+.section-slider__info {
+  width: 330px;
+  height: 146px;
+  background-color: white;
+  border-radius: 5px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  padding: 20px 0;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.section-slider__info__title {
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* 부모 요소 범위를 넘어가는 자식 요소의 부분은 보이지 않도록 처리 */
+  text-overflow: ellipsis; /* 잘린 텍스트를 생략 부호(...)표시 함 */
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin-bottom: 5px;
+}
+.section-slider__info__desc {
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+}
+.divider--info {
+  width: 100%;
+  margin: 20px 0;
+}
+.section-slider__info__go-btn {
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: #3366ff;
+  display: flex;
+  align-items: center;
+}
+.section-slider__info__go-btn__text {
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+.section-slider__info__go-btn__img {
+  height: 11px;
+}

@@ -1,0 +1,31 @@
+.section-slider {
+  width: 100vw;
+}
+.section-slider__list {
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/** 버튼 **/
+.section-slider__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc((100% - 1200px) / 2);
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 30px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+}
+.section-slider__btn > img {
+  width: 12px;
+}
+.section-slider__btn--right {
+  left: auto;
+  right: calc((100% - 1200px) / 2);
+}

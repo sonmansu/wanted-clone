@@ -6,13 +6,14 @@ import LineBanner from '../components/LineBanner';
 import EventList from '../components/EventList';
 import SlideBanner from '../components/SlideBanner';
 import '../styles/home.css';
+import ListContainer from '../components/ListContainer2';
 
 const Home = () => {
   return (
     <div>
       <SlideBanner />
       <Section title="3분만에 읽는 Wanted+ 아티클" subtitle="아티클 전체보기">
-        <ArticleList />
+        <ListContainer listType="article" />
       </Section>
       <div className="divider"></div>
       <LineBanner kind="recommend" />

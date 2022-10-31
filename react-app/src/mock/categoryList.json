@@ -1,6 +1,6 @@
 {
   "mainCategory": [
-    { "mainId": "", "text": "직군 전체" },
+    { "mainId": 0, "text": "직군 전체" },
     { "mainId": 1, "text": "개발" },
     { "mainId": 2, "text": "경영·비즈니스" },
     { "mainId": 3, "text": "마케팅·광고" },
@@ -23,7 +23,7 @@
   ],
   "subCategory": {
     "1": [
-      { "subId": "", "text": "개발 전체" },
+      { "subId": 0, "text": "개발 전체" },
       { "subId": 1, "text": "웹 개발자" },
       { "subId": 2, "text": "서버 개발자" },
       { "subId": 3, "text": "소프트웨어 엔지니어" },
@@ -52,7 +52,7 @@
       { "subId": 26, "text": "IOS 개발자" }
     ],
     "3": [
-      { "subId": "", "text": "마케팅·광고 전체" },
+      { "subId": 0, "text": "마케팅·광고 전체" },
       { "subId": 1, "text": "마케터" },
       { "subId": 2, "text": "디지털 마케터" },
       { "subId": 3, "text": "콘텐츠 마케터" },
@@ -77,7 +77,7 @@
       { "subId": 22, "text": "Sports 전문가" }
     ],
     "2": [
-      { "subId": "", "text": "경영·비즈니스 전체" },
+      { "subId": 0, "text": "경영·비즈니스 전체" },
       { "subId": 1, "text": "서비스 기획자" },
       { "subId": 2, "text": "사업개발·기획자" },
       { "subId": 3, "text": "PM·PO" },
@@ -114,7 +114,7 @@
       { "subId": 34, "text": "지점장" }
     ],
     "10": [
-      { "subId": "", "text": "엔지니어링·설계 전체" },
+      { "subId": 0, "text": "엔지니어링·설계 전체" },
       { "subId": 1, "text": "기계 엔지니어" },
       { "subId": 2, "text": "전자 엔지니어" },
       { "subId": 3, "text": "전기 엔지니어" },

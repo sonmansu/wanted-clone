@@ -1,8 +1,8 @@
 import React from 'react';
-import BottomBanner from '../component/BottomBanner';
+import BottomBanner from '../components/BottomBanner';
 import '../styles/jobList.css';
 import { useParams } from 'react-router-dom';
-import PositionList from '../component/PositionList';
+import PositionList from '../components/PositionList';
 
 const JobList = () => {
   const { mainId, subId } = useParams();

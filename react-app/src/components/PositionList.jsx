@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import positionText from '../mock/positions.json';
-import ContentThumbnail from '../component/ContentThumbnail';
-import ContentTitle from '../component/ContentTitle';
+import ContentThumbnail from './ContentThumbnail';
+import ContentTitle from './ContentTitle';
 import '../styles/sectionBody.css';
 import '../styles/positionList.css';
 import { priceToString } from '../utils/priceToString';

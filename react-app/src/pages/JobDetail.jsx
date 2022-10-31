@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/jobDetail.css';
-import PositionList from '../component/PositionList';
-import BottomBanner from '../component/BottomBanner';
+import PositionList from '../components/PositionList';
+import BottomBanner from '../components/BottomBanner';
 
 const JobDetail = () => {
   return (

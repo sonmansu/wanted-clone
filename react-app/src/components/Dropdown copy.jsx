@@ -2,7 +2,7 @@ import React from 'react';
 import categoryList from '../mock/categoryList.json'; // json파일을 subCategory란 이름으로 불러옴
 import { useState, useEffect, useRef } from 'react';
 import '../styles/dropdown.css';
-import SubcategoryItem from '../component/SubcategoryItem';
+import SubcategoryItem from './SubcategoryItem';
 
 const Dropdown = ({ onDropdownLeave, isMenuHover }) => {
   const { mainCategory, subCategory } = categoryList;

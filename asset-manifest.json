@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wanted-clone/react-app/static/css/main.e3be318b.css",
-    "main.js": "/wanted-clone/react-app/static/js/main.fae40149.js",
+    "main.js": "/wanted-clone/react-app/static/js/main.cca1cc2f.js",
     "static/js/787.b701888c.chunk.js": "/wanted-clone/react-app/static/js/787.b701888c.chunk.js",
     "static/media/slick.svg": "/wanted-clone/react-app/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/wanted-clone/react-app/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -9,11 +9,11 @@
     "static/media/slick.woff": "/wanted-clone/react-app/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/wanted-clone/react-app/index.html",
     "main.e3be318b.css.map": "/wanted-clone/react-app/static/css/main.e3be318b.css.map",
-    "main.fae40149.js.map": "/wanted-clone/react-app/static/js/main.fae40149.js.map",
+    "main.cca1cc2f.js.map": "/wanted-clone/react-app/static/js/main.cca1cc2f.js.map",
     "787.b701888c.chunk.js.map": "/wanted-clone/react-app/static/js/787.b701888c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e3be318b.css",
-    "static/js/main.fae40149.js"
+    "static/js/main.cca1cc2f.js"
   ]
 }

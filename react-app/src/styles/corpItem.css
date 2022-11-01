@@ -1,0 +1,50 @@
+.hiring-corp-item {
+  /* width: 100%; */
+  /* width: 197px; */
+  height: 271px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  /* box-sizing: border-box;
+      padding: 10px; */
+}
+.hiring-corp-item:hover .hiring-corp-item__title {
+  color: #258bf7;
+}
+.hiring-corp-item:hover .hiring-corp-item__bg-img {
+  transform: scale(1.1);
+  transition: 0.8s;
+}
+.hiring-corp-item-bg-img-wrap {
+  height: 147px;
+  overflow: hidden;
+}
+.hiring-corp-item__bg-img {
+  height: 147px;
+}
+.hiring-corp-item__logo-img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--border-color);
+  background-size: contain;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 122px; /* 배경 이미지 높이값 - (로고 이미지 높이값 / 2) */
+  left: 15px;
+}
+.hiring-corp-item__text-box {
+  padding: 40px 15px;
+  /* padding: 15px; */
+  box-sizing: border-box;
+  background-color: white;
+}
+.hiring-corp-item__title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+.hiring-corp-item__subtitle {
+  font-size: 14px;
+  color: #999999;
+}

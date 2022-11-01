@@ -4,11 +4,27 @@ import '../styles/jobList.css';
 import { useParams } from 'react-router-dom';
 import PositionList from '../components/PositionList';
 import searchTagsText from '../mock/searchTags.json';
+import corpsText from '../mock/corps.json';
 import SearchTagItem from '../components/SearchTagItem';
+import CorpItem from '../components/CorpItem';
 
 const JobList = () => {
   const { mainId, subId } = useParams();
-  console.log(mainId, subId);
+  // console.log(mainId, subId);
+
+  const getHiringCorps = () => {
+    const hiringCorps = [];
+    const corpsArr = Object.values(corpsText);
+
+    for (let i = 0; i < corpsArr.length; i++) {
+      if (corpsArr[i].positionCnt > 0) {
+        hiringCorps.push(corpsArr[i]);
+      }
+      if (hiringCorps.length >= 5) break;
+    }
+    console.log(hiringCorps);
+    return hiringCorps;
+  };
 
   return (
     <div>
@@ -74,66 +90,14 @@ const JobList = () => {
         <div className="hiring-corp-box">
           <h3 className="hiring-corp-title">적극 채용 중인 회사</h3>
           <ul className="hiring-corp-list">
-            <li className="hiring-corp-item">
-              <a href="#">
-                <div className="hiring-corp-item-bg-img-wrap">
-                  <div className="hiring-corp-item__bg-img"></div>
-                </div>
-                <div className="hiring-corp-item__logo-img"></div>
-                <div className="hiring-corp-item__text-box">
-                  <h4 className="hiring-corp-item__title">로민</h4>
-                  <p className="hiring-corp-item__subtitle">11개 포지션</p>
-                </div>
-              </a>
-            </li>
-            <li className="hiring-corp-item">
-              <a href="#">
-                <div className="hiring-corp-item-bg-img-wrap">
-                  <div className="hiring-corp-item__bg-img"></div>
-                </div>
-                <div className="hiring-corp-item__logo-img"></div>
-                <div className="hiring-corp-item__text-box">
-                  <h4 className="hiring-corp-item__title">로민</h4>
-                  <p className="hiring-corp-item__subtitle">11개 포지션</p>
-                </div>
-              </a>
-            </li>
-            <li className="hiring-corp-item">
-              <a href="#">
-                <div className="hiring-corp-item-bg-img-wrap">
-                  <div className="hiring-corp-item__bg-img"></div>
-                </div>
-                <div className="hiring-corp-item__logo-img"></div>
-                <div className="hiring-corp-item__text-box">
-                  <h4 className="hiring-corp-item__title">로민</h4>
-                  <p className="hiring-corp-item__subtitle">11개 포지션</p>
-                </div>
-              </a>
-            </li>
-            <li className="hiring-corp-item">
-              <a href="#">
-                <div className="hiring-corp-item-bg-img-wrap">
-                  <div className="hiring-corp-item__bg-img"></div>
-                </div>
-                <div className="hiring-corp-item__logo-img"></div>
-                <div className="hiring-corp-item__text-box">
-                  <h4 className="hiring-corp-item__title">로민</h4>
-                  <p className="hiring-corp-item__subtitle">11개 포지션</p>
-                </div>
-              </a>
-            </li>
-            <li className="hiring-corp-item">
-              <a href="#">
-                <div className="hiring-corp-item-bg-img-wrap">
-                  <div className="hiring-corp-item__bg-img"></div>
-                </div>
-                <div className="hiring-corp-item__logo-img"></div>
-                <div className="hiring-corp-item__text-box">
-                  <h4 className="hiring-corp-item__title">로민</h4>
-                  <p className="hiring-corp-item__subtitle">11개 포지션</p>
-                </div>
-              </a>
-            </li>
+            {getHiringCorps().map((corp) => (
+              <CorpItem
+                name={corp.corpName}
+                cnt={corp.positionCnt}
+                logoImg={corp.logo}
+                thumbnail={corp.imgs[0]}
+              />
+            ))}
           </ul>
         </div>
         {/* <ul className="searched-corp-list">

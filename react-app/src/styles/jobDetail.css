@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 20px 0 60px;
+  padding: 0 0 60px;
 }
 
 /** 지원 정보 사이드바 **/
@@ -207,6 +207,11 @@
   box-sizing: border-box;
   padding-right: 20px;
   line-height: 1.75;
+}
+.job-info__description h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0 0;
 }
 
 /** 직업 정보 기술스택 영역 **/

@@ -14,11 +14,11 @@ const PositionList = () => {
     <PositionItem
       key={position.id}
       id={position.id}
-      img={position.img}
+      img={position.imgs[0]}
       position={position.position}
-      corp={position.corp}
+      corp={position.corpName}
       location={position.location}
-      reward={position.reward}
+      reward={position.rewards[0]}
     />
   ));
 

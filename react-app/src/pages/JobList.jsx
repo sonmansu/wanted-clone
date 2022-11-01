@@ -3,6 +3,8 @@ import BottomBanner from '../components/BottomBanner';
 import '../styles/jobList.css';
 import { useParams } from 'react-router-dom';
 import PositionList from '../components/PositionList';
+import searchTagsText from '../mock/searchTags.json';
+import SearchTagItem from '../components/SearchTagItem';
 
 const JobList = () => {
   const { mainId, subId } = useParams();
@@ -53,178 +55,9 @@ const JobList = () => {
           </div>
           <div className="divider divider--margin"></div>
           <div className="search-tag-slider-box">
-            <div>
-              <button className="search-tag">
-                <span className="search-tag__text">연봉이 최고의 복지</span>
-                <img
-                  className="search-tag__img"
-                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                  alt=""
-                />
-              </button>
-            </div>
-            <div>
-              <button className="search-tag">
-                <span className="search-tag__text">연봉이 최고의 복지</span>
-                <img
-                  className="search-tag__img"
-                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                  alt=""
-                />
-              </button>
-            </div>
-            <div>
-              <button className="search-tag">
-                <span className="search-tag__text">연봉이 최고의 복지</span>
-                <img
-                  className="search-tag__img"
-                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                  alt=""
-                />
-              </button>
-            </div>
-            <div>
-              <button className="search-tag">
-                <span className="search-tag__text">연봉이 최고의 복지</span>
-                <img
-                  className="search-tag__img"
-                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                  alt=""
-                />
-              </button>
-            </div>
-            <div>
-              <button className="search-tag">
-                <span className="search-tag__text">연봉이 최고의 복지</span>
-                <img
-                  className="search-tag__img"
-                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                  alt=""
-                />
-              </button>
-            </div>
-            <div>
-              <button className="search-tag">
-                <span className="search-tag__text">연봉이 최고의 복지</span>
-                <img
-                  className="search-tag__img"
-                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                  alt=""
-                />
-              </button>
-            </div>
-            <div>
-              <button className="search-tag">
-                <span className="search-tag__text">연봉이 최고의 복지</span>
-                <img
-                  className="search-tag__img"
-                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                  alt=""
-                />
-              </button>
-            </div>
-            <div>
-              <button className="search-tag">
-                <span className="search-tag__text">연봉이 최고의 복지</span>
-                <img
-                  className="search-tag__img"
-                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                  alt=""
-                />
-              </button>
-            </div>
-            <div>
-              <button className="search-tag">
-                <span className="search-tag__text">연봉이 최고의 복지</span>
-                <img
-                  className="search-tag__img"
-                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                  alt=""
-                />
-              </button>
-            </div>
-            <div>
-              <button className="search-tag">
-                <span className="search-tag__text">연봉이 최고의 복지</span>
-                <img
-                  className="search-tag__img"
-                  src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                  alt=""
-                />
-              </button>
-            </div>
-            <button className="search-tag">
-              <span>재택근무</span>
-              <img
-                className="search-tag__img"
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F5d873f3a-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                alt=""
-              />
-            </button>
-            <button className="search-tag">
-              <span>퇴사율 10% 이하</span>
-              <img
-                className="search-tag__img"
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F7d3cdb3c-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                alt=""
-              />
-            </button>
-            <button className="search-tag">
-              <span>연봉이 최고의 복지</span>
-              <img
-                className="search-tag__img"
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                alt=""
-              />
-            </button>
-            <button className="search-tag">
-              <span>재택근무</span>
-              <img
-                className="search-tag__img"
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F5d873f3a-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                alt=""
-              />
-            </button>
-            <button className="search-tag">
-              <span>퇴사율 10% 이하</span>
-              <img
-                className="search-tag__img"
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F7d3cdb3c-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                alt=""
-              />
-            </button>
-            <button className="search-tag">
-              <span>연봉이 최고의 복지</span>
-              <img
-                className="search-tag__img"
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F634f02e0-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                alt=""
-              />
-            </button>
-            <button className="search-tag">
-              <span>재택근무</span>
-              <img
-                className="search-tag__img"
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F5d873f3a-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                alt=""
-              />
-            </button>
-            <button className="search-tag">
-              <span>퇴사율 10% 이하</span>
-              <img
-                className="search-tag__img"
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F7d3cdb3c-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                alt=""
-              />
-            </button>
-            <button className="search-tag">
-              <span>퇴사율 10% 이하</span>
-              <img
-                className="search-tag__img"
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F7d3cdb3c-9f6e-11ec-b909-0242ac120002.png&w=50&q=75"
-                alt=""
-              />
-            </button>
+            {searchTagsText.map((tag) => (
+              <SearchTagItem text={tag.text} img={tag.img} bgCol={tag.bgCol} />
+            ))}
           </div>
         </div>
       </section>
@@ -311,10 +144,6 @@ const JobList = () => {
               </li>
 
           </ul>  */}
-        {/* <div className="section-contents">
-          <ul className="section-contents__ul section-contents__ul--position">
-          </ul>
-        </div> */}
         <PositionList />
       </section>
       <BottomBanner text="이제 밤새워 채용 공고 보지 마세요." />

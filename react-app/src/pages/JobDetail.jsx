@@ -2,107 +2,73 @@ import React from 'react';
 import '../styles/jobDetail.css';
 import PositionList from '../components/PositionList';
 import BottomBanner from '../components/BottomBanner';
+import { useParams } from 'react-router-dom';
+
+import positionDetailsText from '../mock/positionDetail.json';
+import corpsText from '../mock/corps.json';
+
+import { priceToString } from '../utils/priceToString';
 
 const JobDetail = () => {
+  const { jobId } = useParams();
+
+  const positionDetailObj = positionDetailsText[jobId];
+  const corpId = positionDetailObj.corpId;
+  const corpObj = corpsText[corpId];
+
   return (
     <div>
       <div class="contents-wrap">
         <div class="job-info-box">
           <div class="job-info__img-slider">
-            <div class="job-info__img-box">
-              <img
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Feh1mycy7nnltf5ah__1080_790.jpg&w=1000&q=75"
-                alt=""
-              />
-            </div>
-            <div class="job-info__img-box">
-              <img
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fdvcf627tgxatpg7v__1080_790.jpg&w=1000&q=75"
-                alt=""
-              />
-            </div>
-            <div class="job-info__img-box">
-              <img
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2F6kxgpommhvckijjr__1080_790.jpg&w=1000&q=75"
-                alt=""
-              />
-            </div>
-            <div class="job-info__img-box">
-              <img
-                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fvym9cwwcigp2tzbi__1080_790.jpg&w=1000&q=75"
-                alt=""
-              />
-            </div>
+            {positionDetailObj.imgs.map((imgSrc) => (
+              <div class="job-info__img-box">
+                <img src={imgSrc} alt="" />
+              </div>
+            ))}
           </div>
-          <h2 class="job-info__title">웹 프론트엔드 개발자(React)</h2>
+          <h2 class="job-info__title">{positionDetailObj.position}</h2>
           <div class="job-info-subtitle">
             <a href="#" class="job-info-subtitle__corp-name">
-              블루비커
+              {corpObj.corpName}
             </a>
-            <span class="job-info-subtitle__response">응답률 평균 이상</span>
-            <span class="job-info-subtitle__locate">서울.한국</span>
+            <span class="job-info-subtitle__response">
+              응답률 {positionDetailObj.response}
+            </span>
+            <span class="job-info-subtitle__locate">{corpObj.location}</span>
           </div>
           <ul class="job-info-tag-box">
-            <li class="job-info__tag-item">
-              <a class="job-info__tag">#인원급성장</a>
-            </li>
-            <li class="job-info__tag-item">
-              <a class="job-info__tag">#50명이하</a>
-            </li>
-            <li class="job-info__tag-item">
-              <a class="job-info__tag">#설립3년이하</a>
-            </li>
-            <li class="job-info__tag-item">
-              <a class="job-info__tag">#스톡옵션</a>
-            </li>
-            <li class="job-info__tag-item">
-              <a class="job-info__tag">#스타트업</a>
-            </li>
-            <li class="job-info__tag-item">
-              <a class="job-info__tag">#워크샵</a>
-            </li>
-            <li class="job-info__tag-item">
-              <a class="job-info__tag">#간식</a>
-            </li>
-            <li class="job-info__tag-item">
-              <a class="job-info__tag">#건강검진</a>
-            </li>
-            <li class="job-info__tag-item">
-              <a class="job-info__tag">#IT, 컨텐츠</a>
-            </li>
-            <li class="job-info__tag-item">
-              <a class="job-info__tag">#건강검진</a>
-            </li>
-            <li class="job-info__tag-item">
-              <a class="job-info__tag">#IT, 컨텐츠</a>
-            </li>
+            {positionDetailObj.tags.map((tag) => (
+              <li class="job-info__tag-item">
+                <a class="job-info__tag">{tag}</a>
+              </li>
+            ))}
           </ul>
-          <p class="job-info__description"></p>
+          <p
+            class="job-info__description"
+            dangerouslySetInnerHTML={{ __html: positionDetailObj.desc }}
+          ></p>
           <p class="job-info__skill-title">기술스택 ・ 툴</p>
           <div class="job-info-skill-box">
-            <span class="job-info__skill">Git</span>
-            <span class="job-info__skill">Azure</span>
-            <span class="job-info__skill">React</span>
-            <span class="job-info__skill">JavaScript</span>
-            <span class="job-info__skill">TypeScript</span>
-            <span class="job-info__skill">Redux</span>
-            <span class="job-info__skill">Next.js</span>
+            {positionDetailObj.skills.map((skill) => (
+              <span class="job-info__skill">{skill}</span>
+            ))}
           </div>
           <div class="divider divider--width-100"></div>
           <section class="job-workplace-box">
             <div class="job-workplace-row">
               <span class="job-workplace__title">마감일</span>
-              <span class="job-workplace__subtitle">상시</span>
+              <span class="job-workplace__subtitle">
+                {positionDetailObj.due}
+              </span>
             </div>
             <div class="job-workplace-row">
               <span class="job-workplace__title">근무지역</span>
-              <span class="job-workplace__subtitle">
-                서울 용산구 한강대로 366 트윈시티 남산 2 패스트파이브
-              </span>
+              <span class="job-workplace__subtitle">{corpObj.workplace}</span>
             </div>
             <img
               class="job-workplace__map-img"
-              src="https://cdn.inflearn.com/public/files/posts/0eb7153f-c7cf-4a57-90ca-575a05db05eb/20191216_100730.png"
+              src={corpObj.map}
               alt="직장 지도"
             />
           </section>
@@ -110,8 +76,8 @@ const JobDetail = () => {
             <button class="job-info-corp-left-box">
               <div class="job-info-corp__logo"></div>
               <div>
-                <p class="job-info-corp__corp-name">블루비커</p>
-                <p class="job-info-corp__corp-kind">IT, 컨텐츠</p>
+                <p class="job-info-corp__corp-name">{corpObj.corpName}</p>
+                <p class="job-info-corp__corp-kind">{corpObj.corpKind}</p>
               </div>
             </button>
             <button class="job-info-corp__follow-btn">팔로우</button>
@@ -172,11 +138,15 @@ const JobDetail = () => {
           <div class="job-apply-text-box-row">
             <div class="job-apply-text-box">
               <p class="job-apply__label">추천인</p>
-              <p class="job-apply__contents">500,000원</p>
+              <p class="job-apply__contents">
+                {priceToString(positionDetailObj.rewards[0])}원
+              </p>
             </div>
             <div class="job-apply-text-box">
               <p class="job-apply__label">지원자</p>
-              <p class="job-apply__contents">500,000원</p>
+              <p class="job-apply__contents">
+                {priceToString(positionDetailObj.rewards[0])}원
+              </p>
             </div>
           </div>
           <div>
@@ -191,13 +161,19 @@ const JobDetail = () => {
           <div class="job-apply-like-row">
             <button class="job-apply-like-btn">
               <span class="material-icons-outlined md-18">favorite</span>
-              <span class="job-apply-like-btn__text">9</span>
+              <span class="job-apply-like-btn__text">
+                {positionDetailObj.likeCnt}
+              </span>
             </button>
             <button class="job-apply-liked-list-btn">
               <ul class="job-apply-liked-list-btn__list">
-                <li></li>
-                <li></li>
-                <li></li>
+                {positionDetailObj.likedImgs.map((img) => (
+                  <li
+                    style={{
+                      backgroundImage: `url(${img}), url(${positionDetailObj.DefaultImg})`,
+                    }}
+                  ></li>
+                ))}
               </ul>
             </button>
           </div>
@@ -216,3 +192,4 @@ const JobDetail = () => {
 };
 
 export default JobDetail;
+// {positionDetailObj.likedImgs[0]}

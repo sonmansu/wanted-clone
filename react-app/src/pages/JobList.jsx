@@ -106,7 +106,6 @@ const JobList = () => {
                       <div></div>
                   </a>
               </li>
-
           </ul>  */}
         <PositionList />
       </section>

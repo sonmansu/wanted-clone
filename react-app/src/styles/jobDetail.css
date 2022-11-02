@@ -260,6 +260,8 @@
 }
 .job-workplace__map-img {
   width: 100%;
+  /* height 안주면 이미지 안뜸 */
+  height: 300px;
 }
 
 /** 회사 팔로우 버튼 영역 **/

@@ -8,6 +8,8 @@ import positionDetailsText from '../mock/positionDetail.json';
 import corpsText from '../mock/corps.json';
 
 import { priceToString } from '../utils/priceToString';
+import { RenderAfterNavermapsLoaded, NaverMap, Marker } from 'react-naver-maps'; // 패키지 불러오기
+import { NAVER_CLIENT_ID } from '../utils/credentials';
 
 const JobDetail = () => {
   const { jobId } = useParams();
@@ -15,6 +17,28 @@ const JobDetail = () => {
   const positionDetailObj = positionDetailsText[jobId];
   const corpId = positionDetailObj.corpId;
   const corpObj = corpsText[corpId];
+
+  function NaverMapAPI() {
+    const navermaps = window.naver.maps;
+
+    return (
+      <NaverMap
+        mapDivId={'maps-getting-started-uncontrolled'} // default: react-naver-map
+        className="job-workplace__map-img"
+        defaultCenter={{ lat: 37.554722, lng: 126.970833 }} // 지도 초기 위치
+        defaultZoom={13} // 지도 초기 확대 배율
+      >
+        <Marker
+          key={1}
+          position={new navermaps.LatLng(37.551229, 126.988205)}
+          animation={2}
+          onClick={() => {
+            alert('여기는 N서울타워입니다.');
+          }}
+        />
+      </NaverMap>
+    );
+  }
 
   return (
     <div>
@@ -66,11 +90,19 @@ const JobDetail = () => {
               <span class="job-workplace__title">근무지역</span>
               <span class="job-workplace__subtitle">{corpObj.workplace}</span>
             </div>
+            {/* <div id="map"></div>
             <img
-              class="job-workplace__map-img"
-              src={corpObj.map}
-              alt="직장 지도"
-            />
+              style={{ width: '100%', height: '400px' }}
+              src="https://naveropenapi.apigw-pub.fin-ntruss.com/map-static/v2/raster-cors?w=300&h=300&center=127.1054221,37.3591614&level=16&X-NCP-APIGW-API-KEY-ID=cwk6n4lxoe"
+              alt=""
+            ></img> */}
+            <RenderAfterNavermapsLoaded
+              ncpClientId={NAVER_CLIENT_ID} // 자신의 네이버 계정에서 발급받은 Client ID
+              error={<p>Maps Load Error</p>}
+              loading={<p>Maps Loading...</p>}
+            >
+              <NaverMapAPI className="job-workplace__map-img" />
+            </RenderAfterNavermapsLoaded>
           </section>
           <section class="job-info-corp-box">
             <button class="job-info-corp-left-box">

@@ -11,3 +11,82 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/** Default settings **/
+:root {
+  --border-color: #e1e2e3;
+  --blue-color: #36f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Pretendard, sans-serif;
+  /* color: #333333 */
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  /* object-fit: cover; */
+  /* width: 100%;
+  height: 100%; */
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+select {
+  appearance: none; /* 기본 화살표 없애기 */
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+/* .material-icons-outlined.md-16 {
+    font-size: 16px;
+} */
+.hidden {
+  display: none !important;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.md-14 {
+  font-size: 14px;
+}
+.md-16 {
+  font-size: 16px;
+}
+.md-18 {
+  font-size: 18px;
+}
+.md-22 {
+  font-size: 22px;
+}
+.material-icons-round.md-24 {
+  font-size: 24px;
+}
+.material-icons-round.md-36 {
+  font-size: 36px;
+}
+.material-icons-round.md-48 {
+  font-size: 48px;
+}
+/* input 기본 스타일 초기화 */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border: none;
+}

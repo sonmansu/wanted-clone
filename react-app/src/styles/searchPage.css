@@ -1,0 +1,25 @@
+.search-keyword-box {
+  height: 160px;
+  border-bottom: 1px solid #e1e2e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-keyword-text {
+  font-size: 48px;
+  color: #333;
+}
+
+.searched-box {
+  background-color: #f8f8f8;
+  min-height: 500px;
+}
+.position-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+.position-text > span {
+  margin-left: 10px;
+  font-weight: 400;
+}

@@ -3,6 +3,7 @@ import Layout from './Layout';
 import Home from './pages/Home';
 import JobList from './pages/JobList';
 import JobDetail from './pages/JobDetail';
+import SearchPage from './pages/SearchPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path=':mainId/:subId' element={<JobList />} />
         </Route>
         <Route path='/jobDetail/:jobId' element={<JobDetail />} />
+        <Route path='/search' element={<SearchPage />} />
       </Route>
     </Routes>
   );

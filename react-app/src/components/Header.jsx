@@ -3,7 +3,7 @@ import Dropdown from './Dropdown';
 import '../styles/header.css';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ onClickSearchBtn }) => {
   const [isMenuHover, setMenuHover] = useState(false);
 
   const onMenuEnter = () => setMenuHover(true);
@@ -65,14 +65,16 @@ const Header = () => {
           </ul>
         </nav>
         <div className="right-btns-wrap">
-          <button className="search-btn">
+          <button className="search-btn" onClick={onClickSearchBtn}>
             <img
               className=""
               src="https://img.icons8.com/external-royyan-wijaya-detailed-outline-royyan-wijaya/96/000000/external-magnifying-glass-interface-royyan-wijaya-detailed-outline-royyan-wijaya.png"
               alt="검색 버튼"
             />
           </button>
-          <button className="login-btn">회원가입/로그인</button>
+          <button className="login-btn" onClick={onClickSearchBtn}>
+            회원가입/로그인
+          </button>
           <div className="vertical-line"></div>
           <a href="#" className="corp-service-btn">
             기업 서비스

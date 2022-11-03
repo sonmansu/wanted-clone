@@ -3,10 +3,9 @@ import BottomBanner from '../components/BottomBanner';
 import '../styles/jobList.css';
 import { useParams } from 'react-router-dom';
 import PositionList from '../components/PositionList';
-import searchTagsText from '../mock/searchTags.json';
 import corpsText from '../mock/corps.json';
-import SearchTagItem from '../components/SearchTagItem';
 import CorpItem from '../components/CorpItem';
+import PositionFilter from '../components/PositionFilter';
 
 const JobList = () => {
   const { mainId, subId } = useParams();
@@ -46,35 +45,7 @@ const JobList = () => {
               </span>
             </button>
           </div>
-          <div className="search-filter-box">
-            <div>
-              <button className="search-filter-btn">
-                <span className="search-filter-btn__text">지역</span>
-                <span className="search-filter-btn__selected-text">서울</span>
-              </button>
-              <button className="search-filter-btn search-filter-btn--padding-right">
-                <span className="search-filter-btn__text">경력</span>
-                <span className="search-filter-btn__selected-text">전체</span>
-                <span className="material-icons">arrow_drop_down</span>
-              </button>
-              <button className="search-filter-btn search-filter-btn--padding-right">
-                <span className="search-filter-btn__text">기술스택</span>
-                <span className="material-icons">arrow_drop_down</span>
-              </button>
-            </div>
-            <button className="search-filter-btn search-filter-btn--padding-right">
-              <span className="search-filter-btn__text">응답률순</span>
-              <span className="material-icons search-filter-btn__dropdown">
-                arrow_drop_down
-              </span>
-            </button>
-          </div>
-          <div className="divider divider--margin"></div>
-          <div className="search-tag-slider-box">
-            {searchTagsText.map((tag) => (
-              <SearchTagItem text={tag.text} img={tag.img} bgCol={tag.bgCol} />
-            ))}
-          </div>
+          <PositionFilter />
         </div>
       </section>
       <section className="contents-box">

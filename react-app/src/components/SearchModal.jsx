@@ -1,9 +1,9 @@
 import React from 'react';
-import { useState } from 'react';
-import { useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/searchModal.css';
 import recommendTagsObj from '../mock/recommendTags.json';
+import { useMemo } from 'react';
 
 const SearchModal = ({ setSearchModalOn }) => {
   const [inputValue, setInputValue] = useState('');
@@ -29,7 +29,7 @@ const SearchModal = ({ setSearchModalOn }) => {
       console.log('contain');
     } else {
       console.log('not contain');
-      setSearchModalOn(false); // 이게 되네..
+      setSearchModalOn(false);
     }
   };
 
@@ -50,6 +50,7 @@ const SearchModal = ({ setSearchModalOn }) => {
     // console.log('randomtags', result);
     return result;
   };
+  const randomTags = useMemo(() => getRandomTags(), []);
 
   return (
     <div className="modal-window" onClick={onClickModalWindow}>
@@ -78,7 +79,7 @@ const SearchModal = ({ setSearchModalOn }) => {
             </div>
             <div className="recommend-tags-row">
               <ul>
-                {getRandomTags().map((tag) => (
+                {randomTags.map((tag) => (
                   <li className="recommend-tag__item">
                     <Link>{tag}</Link>
                   </li>

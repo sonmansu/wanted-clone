@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ContentThumbnail from './ContentThumbnail';
 import ContentTitle from './ContentTitle';
 import EventKindItem from './EventKindItem';
-import '../styles/eventItem.css';
+import 'styles/eventItem.css';
 
 const EventItem = ({ img, kinds, title }) => {
   // console.log(kinds);

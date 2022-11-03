@@ -5,8 +5,8 @@ import vodText from '../mock/vods.json';
 import positionText from '../mock/positions.json';
 
 import EventItem from './EventItem';
-import ArticleItem from './ArticleItem';
-import VodItem from './VodItem';
+import ArticleItem from './ListItems/ArticleItem';
+import VodItem from './ListItems/VodItem';
 import PositionList from './PositionList';
 
 const ListContainer = ({ listType }) => {
@@ -30,14 +30,17 @@ const ListContainer = ({ listType }) => {
           />
         ));
         console.log('useeffect list', list);
+        console.log('아티클');
         break;
       default:
     }
   }, []);
+
   console.log('before return');
   console.log('list :>> ', list);
   return (
-    <ul className="section-contents__ul section-contents__ul--big">{list}</ul>
+    <ul className="section-contents__ul">{list ? list : '없음'}</ul>
+    // <ul className="section-contents__ul section-contents__ul--big">{list}</ul>
   );
   console.log('after return :>> ', 'after return');
 };

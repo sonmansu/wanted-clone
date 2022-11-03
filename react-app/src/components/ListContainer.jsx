@@ -5,13 +5,12 @@ import vodText from '../mock/vods.json';
 import positionText from '../mock/positions.json';
 
 import EventItem from './EventItem';
-import ArticleItem from './ArticleItem';
-import VodItem from './VodItem';
+import ArticleItem from './ListItems/ArticleItem';
+import VodItem from './ListItems/VodItem';
 import PositionList from './PositionList';
 
 const ListContainer = ({ listType }) => {
   console.log(articleText);
-  const [array, setArray] = useState([]);
 
   const aaa = () => {
     let list;
@@ -46,7 +45,6 @@ const ListContainer = ({ listType }) => {
       //     setArray(positionText);
       //     break;
       default:
-        setArray([]);
     }
 
     return list;

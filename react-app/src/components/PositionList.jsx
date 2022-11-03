@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import positionText from '../mock/positions.json';
 import ContentThumbnail from './ContentThumbnail';
 import ContentTitle from './ContentTitle';
@@ -7,8 +7,26 @@ import '../styles/positionList.css';
 import { priceToString } from '../utils/priceToString';
 import { Link } from 'react-router-dom';
 
-const PositionList = () => {
+const PositionList = ({ searchKeyword, setPositionCnt }) => {
   const [positions, setPositions] = useState(positionText);
+  console.log('searchKeyword :>> ', searchKeyword);
+
+  useEffect(() => {
+    if (searchKeyword) {
+      const searchedList = positionText.filter((position) => {
+        let result = [
+          position['location'],
+          position['position'],
+          position['corpName'],
+        ].join('');
+        console.log('result', result);
+        return result.includes(searchKeyword);
+      });
+      console.log('searchedList', searchedList);
+      setPositions(searchedList);
+      setPositionCnt(searchedList.length);
+    }
+  }, [searchKeyword]); //searchKeyword 안넣어주면 리랜더링안됨
 
   const positionList = positions.map((position) => (
     <PositionItem

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import articleText from '../mock/articles.json';
-import ArticleItem from './ArticleItem';
+import ArticleItem from './ListItems/ArticleItem';
 import '../styles/sectionBody.css';
 
 const ArticleList = () => {

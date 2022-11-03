@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import vodText from '../mock/vods.json';
-import VodItem from './VodItem';
+import VodItem from './ListItems/VodItem';
 import '../styles/sectionBody.css';
 
 const VodList = () => {

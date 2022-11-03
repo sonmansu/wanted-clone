@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import ContentThumbnail from './ContentThumbnail';
-import ContentTitle from './ContentTitle';
-import '../styles/vodItem.css';
+import ContentThumbnail from '../ContentThumbnail';
+import ContentTitle from '../ContentTitle';
+import '../../styles/vodItem.css';
+import { Link } from 'react-router-dom';
 
 const VodItem = ({ img, playtime, author, title, desc }) => {
   return (
     <li>
-      <a href="#">
+      <Link href="#">
         <div className="thumbnail-playtime-wrap">
           <ContentThumbnail src={img} />
           <span className="section-contents__playtime">{playtime}</span>
@@ -16,7 +17,7 @@ const VodItem = ({ img, playtime, author, title, desc }) => {
         <div className="section-contents__desc section-contents__desc--1line">
           {desc}
         </div>
-      </a>
+      </Link>
     </li>
   );
 };

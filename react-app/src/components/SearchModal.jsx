@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { useRef } from 'react';
-import { useNavigate } from '../../node_modules/react-router-dom/dist/index';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/searchModal.css';
+import recommendTagsObj from '../mock/recommendTags.json';
 
 const SearchModal = ({ setSearchModalOn }) => {
   const [inputValue, setInputValue] = useState('');
@@ -31,6 +32,25 @@ const SearchModal = ({ setSearchModalOn }) => {
       setSearchModalOn(false); // 이게 되네..
     }
   };
+
+  const getRandomTags = () => {
+    const tags = [];
+    for (let key in recommendTagsObj) {
+      tags.push(...recommendTagsObj[key]);
+    }
+    const randomIdxArr = [];
+    while (true) {
+      const randomIdx = Math.floor(Math.random() * tags.length);
+      if (randomIdxArr.indexOf(randomIdx) === -1) {
+        randomIdxArr.push(randomIdx);
+      }
+      if (randomIdxArr.length === 5) break;
+    }
+    const result = randomIdxArr.map((idx) => tags[idx]);
+    // console.log('randomtags', result);
+    return result;
+  };
+
   return (
     <div className="modal-window" onClick={onClickModalWindow}>
       <div className="modal-bg">
@@ -48,6 +68,24 @@ const SearchModal = ({ setSearchModalOn }) => {
               autoFocus
             />
           </form>
+          <div className="search-tag-wrapper">
+            <div className="search-texts-row">
+              <h4 className="search-text">추천태그로 검색해보세요</h4>
+              <Link className="search-link-btn">
+                기업태그 홈 이동하기
+                <span class="material-icons-round">chevron_right</span>
+              </Link>
+            </div>
+            <div className="recommend-tags-row">
+              <ul>
+                {getRandomTags().map((tag) => (
+                  <li className="recommend-tag__item">
+                    <Link>{tag}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

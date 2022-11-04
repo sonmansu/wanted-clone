@@ -71,9 +71,9 @@ export default class InsightCategoriesSlider extends Component {
     };
     return (
       <Slider {...settings} className="section-slider__list">
-        {insightCategories.map((item) => (
-          <li class="insight-categories__item">
-            <button class="insight-categories__text">{item}</button>
+        {insightCategories.map((item, idx) => (
+          <li className="insight-categories__item" key={idx}>
+            <button className="insight-categories__text">{item}</button>
           </li>
         ))}
       </Slider>

@@ -1,17 +1,72 @@
 import React from 'react';
 import Section from '../components/Section';
-import ArticleList from '../components/ArticleList';
 import VodList from '../components/VodList';
 import LineBanner from '../components/LineBanner';
 import EventList from '../components/EventList';
 import SlideBanner from '../components/SlideBanner';
 import '../styles/home.css';
 import ListContainer from '../components/ListContainer2';
+import QuestionMarkIcon from 'assets/icons/QuestionMarkIcon';
+import BtnCircle from 'components/BtnCircle';
+import insightArr from 'mock/insights.json';
+import { Link } from 'react-router-dom';
+import InsightCategoriesSlider from 'components/InsightCategoriesSlider';
 
 const Home = () => {
   return (
     <div>
       <SlideBanner />
+      <section>
+        <div class="section-wrap">
+          <div class="section-title section-title--button">
+            <h2 class="section-title">나에게 필요한 커리어 인사이트</h2>
+            <button>
+              <QuestionMarkIcon size={24} />
+            </button>
+          </div>
+          <div class="insight-categories">
+            <div class="insight-categories__left">
+              <ul class="insight-categories__ul">
+                <InsightCategoriesSlider />
+              </ul>
+            </div>
+          </div>
+          <div class="section-contents">
+            <ul class="section-contents__ul">
+              {insightArr.map((obj) => (
+                <li class="section-contents__li">
+                  <Link>
+                    <div class="section-contents__thumb">
+                      <img src={obj.img} alt="콘텐츠 썸네일" />
+                    </div>
+                    <div class="section-contents__title">{obj.title}</div>
+                    <div class="section-contents__desc">{obj.desc}</div>
+                    <div class="section-contents__writer">
+                      <button class="section-contents__writer__button">
+                        <img src={obj.platformIcon} alt="유튜브 버튼" />
+                      </button>
+                      <span class="section-contents__writer__title">
+                        {obj.author}
+                      </span>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div class="insight-more-wrap">
+              <div class="insight-more-btn">
+                <span>더 많은 콘텐츠 보기</span>
+                <img
+                  class="insight-more-btn__img"
+                  src="https://img.icons8.com/external-outline-stroke-bomsymbols-/91/000000/external-arrow-digital-design-outline-set-2-outline-stroke-bomsymbols-.png"
+                  alt="더 많은 콘텐츠 보기 버튼"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Section title="3분만에 읽는 Wanted+ 아티클" subtitle="아티클 전체보기">
         <ListContainer listType="article" />
       </Section>

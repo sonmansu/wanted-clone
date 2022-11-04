@@ -16,6 +16,8 @@ code {
 :root {
   --border-color: #e1e2e3;
   --blue-color: #36f;
+
+  --base-bg-color: #f7f7f7;
 }
 * {
   margin: 0;

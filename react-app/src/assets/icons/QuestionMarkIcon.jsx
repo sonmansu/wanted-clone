@@ -9,16 +9,16 @@ export default function QuestionMarkIcon({ size }) {
           ></feColorMatrix>
         </filter>
       </defs>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <g>
           <g>
             <g transform="translate(-1080 -374) translate(1080 374)">
               <g>
                 <path
                   stroke="#999"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.2"
                   d="M9.421 13.334c-.736.277-1.535.43-2.368.43-3.706 0-6.71-3.005-6.71-6.711 0-3.707 3.004-6.71 6.71-6.71 1.853 0 3.53.75 4.745 1.965 1.214 1.214 1.965 2.892 1.965 4.745 0 1.853-.75 3.53-1.965 4.745"
                   transform="translate(1 1)"
                 ></path>
@@ -29,9 +29,9 @@ export default function QuestionMarkIcon({ size }) {
                 ></path>
                 <path
                   stroke="#999"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.2"
                   d="M5.04 5.655c0-1.08.901-1.958 2.013-1.958 1.11 0 2.013.877 2.013 1.958 0 1.08-1.007 1.957-2.013 1.957v.783"
                   transform="translate(1 1)"
                 ></path>
@@ -43,3 +43,7 @@ export default function QuestionMarkIcon({ size }) {
     </svg>
   );
 }
+
+QuestionMarkIcon.defaultProps = {
+  size: '28',
+};

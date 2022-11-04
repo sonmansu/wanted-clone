@@ -1,13 +1,12 @@
 import WantedAiIcon from 'assets/icons/WantedAiIcon';
 import AIIcon from 'assets/icons/AIIcon';
-import BuildingIcon from 'assets/icons/BuildingIcon';
 import QuestionMarkIcon from 'assets/icons/QuestionMarkIcon';
-import UserIcon from 'assets/icons/UserIcon';
 import LineBanner from 'components/LineBanner';
 import SlideBanner from 'components/SlideBanner';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/recruitPage.css';
+import Icon from 'assets/icons/SvgIcon';
 
 export default function RecruitPage() {
   return (
@@ -48,13 +47,13 @@ export default function RecruitPage() {
         <ul class="nav-shortcut__list">
           <li class="nav-shortcut__profile-item align-center">
             <button class="align-center">
-              <UserIcon size={28} />
+              <Icon size={28} icon="user" />
               <span class="nav-shortcut__item-text">내 프로필</span>
             </button>
           </li>
           <li class="nav-shortcut__match-item align-center">
             <Link class="align-center">
-              <BuildingIcon size={28} />
+              <Icon size={28} icon="building" />
               <span class="nav-shortcut__item-text">매치업</span>
             </Link>
           </li>

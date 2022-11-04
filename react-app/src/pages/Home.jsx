@@ -12,6 +12,7 @@ import insightArr from 'mock/insights.json';
 import { Link } from 'react-router-dom';
 import InsightCategoriesSlider from 'components/InsightCategoriesSlider';
 import InsightItem from 'components/ListItems/InsightItem';
+import Icon from 'assets/icons/SvgIcon';
 
 const Home = () => {
   return (

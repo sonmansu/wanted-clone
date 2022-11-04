@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/loginModal.css';
 
 const LoginModal = () => {
@@ -126,8 +127,8 @@ const LoginModal = () => {
           <p class="login-modal__safe-text">
             걱정마세요! 여러분의 지원 활동은 SNS에 노출되지 않습니다.
             <br />
-            회원가입 시<a href="#">개인정보 처리방침</a>과
-            <a href="#">이용약관</a>을 확인하였으며, 동의합니다.
+            회원가입 시<Link>개인정보 처리방침</Link>과<Link>이용약관</Link>을
+            확인하였으며, 동의합니다.
           </p>
         </div>
 

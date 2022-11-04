@@ -35,32 +35,30 @@ const Header = ({ onClickSearchBtn }) => {
         <nav>
           <ul className="header-nav-ul">
             <li>
-              <a href="#" onClick="location.href='recruit.html'">
-                채용
-              </a>
+              <Link to="/recruit">채용</Link>
             </li>
             <li>
-              <a href="#">이벤트</a>
+              <Link href="#">이벤트</Link>
             </li>
             <li>
-              <a href="#">직군별 연봉</a>
+              <Link href="#">직군별 연봉</Link>
             </li>
             <li>
-              <a href="#">이력서</a>
+              <Link href="#">이력서</Link>
             </li>
             <li>
-              <a href="#">
+              <Link href="#">
                 커뮤니티
                 <em className="footnote">New</em>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#">프리랜서</a>
+              <Link href="#">프리랜서</Link>
             </li>
             <li>
-              <a href="#">
+              <Link href="#">
                 AI 합격예측<em className="footnote">Beta</em>
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -76,9 +74,7 @@ const Header = ({ onClickSearchBtn }) => {
             회원가입/로그인
           </button>
           <div className="vertical-line"></div>
-          <a href="#" className="corp-service-btn">
-            기업 서비스
-          </a>
+          <Link className="corp-service-btn">기업 서비스</Link>
         </div>
       </div>
       <Dropdown onDropdownLeave={onDropdownLeave} isMenuHover={isMenuHover} />

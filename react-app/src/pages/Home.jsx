@@ -31,6 +31,12 @@ const Home = () => {
                 <InsightCategoriesSlider />
               </ul>
             </div>
+            <button class="insight-categories__more-btn">
+              <img
+                src="https://img.icons8.com/windows/32/000000/more.png"
+                alt="더보기 버튼"
+              />
+            </button>
           </div>
           <div class="section-contents">
             <ul class="section-contents__ul">

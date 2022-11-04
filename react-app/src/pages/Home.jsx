@@ -11,6 +11,7 @@ import BtnCircle from 'components/BtnCircle';
 import insightArr from 'mock/insights.json';
 import { Link } from 'react-router-dom';
 import InsightCategoriesSlider from 'components/InsightCategoriesSlider';
+import InsightItem from 'components/ListItems/InsightItem';
 
 const Home = () => {
   return (
@@ -34,23 +35,13 @@ const Home = () => {
           <div class="section-contents">
             <ul class="section-contents__ul">
               {insightArr.map((obj) => (
-                <li class="section-contents__li">
-                  <Link>
-                    <div class="section-contents__thumb">
-                      <img src={obj.img} alt="콘텐츠 썸네일" />
-                    </div>
-                    <div class="section-contents__title">{obj.title}</div>
-                    <div class="section-contents__desc">{obj.desc}</div>
-                    <div class="section-contents__writer">
-                      <button class="section-contents__writer__button">
-                        <img src={obj.platformIcon} alt="유튜브 버튼" />
-                      </button>
-                      <span class="section-contents__writer__title">
-                        {obj.author}
-                      </span>
-                    </div>
-                  </Link>
-                </li>
+                <InsightItem
+                  img={obj.img}
+                  title={obj.title}
+                  desc={obj.desc}
+                  platformIcon={obj.platformIcon}
+                  author={obj.author}
+                />
               ))}
             </ul>
             <div class="insight-more-wrap">

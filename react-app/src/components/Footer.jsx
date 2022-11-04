@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -14,68 +15,68 @@ const Footer = () => {
           <nav className="footer-top__nav">
             <ul className="footer-top__nav__ul">
               <li>
-                <a href="#">기업소개</a>
+                <Link>기업소개</Link>
               </li>
               <li>
-                <a href="#">이용약관</a>
+                <Link>이용약관</Link>
               </li>
               <li>
-                <a href="#">개인정보 처리방침</a>
+                <Link>개인정보 처리방침</Link>
               </li>
               <li>
-                <a href="#">고객센터</a>
+                <Link>고객센터</Link>
               </li>
             </ul>
           </nav>
           <div className="footer-top__sns">
-            <a href="#">
+            <Link>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_instagram.png&w=20&q=100"
                 alt=""
               />
-            </a>
-            <a href="#">
+            </Link>
+            <Link>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_youtube.png&w=25&q=100"
                 alt=""
               />
-            </a>
-            <a href="#">
+            </Link>
+            <Link>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_facebook.png&w=20&q=100"
                 alt=""
               />
-            </a>
-            <a href="#">
+            </Link>
+            <Link>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_blog.png&w=20&q=100"
                 alt=""
               />
-            </a>
-            <a href="">
+            </Link>
+            <Link>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_kakao.png&w=19&q=100"
                 alt=""
               />
-            </a>
-            <a href="#">
+            </Link>
+            <Link>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_post.png&w=20&q=100"
                 alt=""
               />
-            </a>
-            <a href="#">
+            </Link>
+            <Link>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_apple.png&w=17&q=100"
                 alt=""
               />
-            </a>
-            <a href="#">
+            </Link>
+            <Link>
               <img
                 src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fuserweb%2Fsocial_google.png&w=17&q=100"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="footer-bottom">

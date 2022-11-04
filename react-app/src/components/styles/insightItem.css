@@ -26,6 +26,10 @@
   /* 이미지 삐져나온 부분 삭제 */
   overflow: hidden;
 }
+.section-contents__writer__button > img {
+  width: 100%;
+  height: 100%;
+}
 .section-contents__writer__title {
   font-size: 13px;
   font-weight: 600;

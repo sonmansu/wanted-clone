@@ -20,16 +20,11 @@
   width: 39px;
   height: 39px;
   border-radius: 39px;
-  box-sizing: border-box;
   background-color: white;
-  /* background: linear-gradient(90deg,#fff 21.82%,hsla(0,0%,100%,0)); */
-  padding: 12px;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-}
-.arrow-btn-bg--right {
-  /* left: auto;
-      right: 39px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .arrow-btn-bg:hover {
   border-color: #aaa;

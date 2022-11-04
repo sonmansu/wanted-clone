@@ -196,16 +196,7 @@
   height: 100%;
   object-fit: cover;
 }
-.arrow-btn-bg {
-  border: 1px solid var(--border-color);
-  width: 39px;
-  height: 39px;
-  border-radius: 39px;
-  box-sizing: border-box;
-  padding: 12px;
-  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-}
+
 .corp-body {
   height: 42px;
   margin-top: 12px;

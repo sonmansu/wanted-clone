@@ -1,3 +1,4 @@
+import Icon from 'assets/icons/SvgIcon';
 import React from 'react';
 import '../styles/btnCircle.css';
 
@@ -6,22 +7,15 @@ const BtnCircle = ({ direction, onClick, style }) => {
     return (
       <div className="btn-gradient-bg" style={style}>
         <button className="arrow-btn-bg" onClick={onClick}>
-          <img
-            src="https://img.icons8.com/external-outline-stroke-bomsymbols-/91/000000/external-arrow-digital-design-outline-set-2-outline-stroke-bomsymbols-.png"
-            alt="left button"
-          />
+          <Icon size={18} icon="arrowLeft" />
         </button>
       </div>
     );
   } else {
     return (
       <div className="btn-gradient-bg btn-gradient-bg--right" style={style}>
-        <button className="arrow-btn-bg arrow-btn-bg--right" onClick={onClick}>
-          <img
-            className="rotate-180"
-            src="https://img.icons8.com/external-outline-stroke-bomsymbols-/91/000000/external-arrow-digital-design-outline-set-2-outline-stroke-bomsymbols-.png"
-            alt="right button"
-          />
+        <button className="arrow-btn-bg" onClick={onClick}>
+          <Icon size={18} icon="arrowRight" />
         </button>
       </div>
     );

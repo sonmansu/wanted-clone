@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/btnCircle.css';
 
-const BtnCircle = ({ direction }) => {
+const BtnCircle = ({ direction, onClick, style }) => {
   if (direction === 'left') {
     return (
-      <div class="btn-gradient-bg">
-        <button class="arrow-btn-bg">
+      <div className="btn-gradient-bg" style={style}>
+        <button className="arrow-btn-bg" onClick={onClick}>
           <img
             src="https://img.icons8.com/external-outline-stroke-bomsymbols-/91/000000/external-arrow-digital-design-outline-set-2-outline-stroke-bomsymbols-.png"
             alt="left button"
@@ -15,10 +15,10 @@ const BtnCircle = ({ direction }) => {
     );
   } else {
     return (
-      <div class="btn-gradient-bg btn-gradient-bg--right">
-        <button class="arrow-btn-bg arrow-btn-bg--right">
+      <div className="btn-gradient-bg btn-gradient-bg--right" style={style}>
+        <button className="arrow-btn-bg arrow-btn-bg--right" onClick={onClick}>
           <img
-            class="rotate-180"
+            className="rotate-180"
             src="https://img.icons8.com/external-outline-stroke-bomsymbols-/91/000000/external-arrow-digital-design-outline-set-2-outline-stroke-bomsymbols-.png"
             alt="right button"
           />

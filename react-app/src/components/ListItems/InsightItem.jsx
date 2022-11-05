@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/insightItem.css';
+import 'styles/insightItem.css';
 import { Link } from 'react-router-dom';
 import ContentThumbnail from 'components/ContentThumbnail';
 import ContentTitle from 'components/ContentTitle';

@@ -67,6 +67,10 @@
   color: grey;
   cursor: pointer;
 }
+.insight-categories__more-btn > img {
+  width: 100%;
+  height: 100%;
+}
 .section-contents {
   /* background-color: bisque; */
   width: 1060px;

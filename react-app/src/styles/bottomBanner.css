@@ -5,6 +5,7 @@
   background-color: #258bf7;
   position: fixed; /* 새로추가) 영역을 차지안해야 해서 sticky에서 fixed로 변경 */
   bottom: 0;
+  z-index: 1;
 }
 .bottom-banner-btn-wrap {
   width: 1060px;

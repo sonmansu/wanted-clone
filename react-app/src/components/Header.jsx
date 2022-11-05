@@ -3,7 +3,7 @@ import Dropdown from './Dropdown';
 import '../styles/header.css';
 import { Link } from 'react-router-dom';
 
-const Header = ({ onClickSearchBtn }) => {
+const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
   const [isMenuHover, setMenuHover] = useState(false);
 
   const onMenuEnter = () => setMenuHover(true);
@@ -38,25 +38,25 @@ const Header = ({ onClickSearchBtn }) => {
               <Link to="/recruit">채용</Link>
             </li>
             <li>
-              <Link href="#">이벤트</Link>
+              <Link>이벤트</Link>
             </li>
             <li>
-              <Link href="#">직군별 연봉</Link>
+              <Link>직군별 연봉</Link>
             </li>
             <li>
-              <Link href="#">이력서</Link>
+              <Link>이력서</Link>
             </li>
             <li>
-              <Link href="#">
+              <Link>
                 커뮤니티
                 <em className="footnote">New</em>
               </Link>
             </li>
             <li>
-              <Link href="#">프리랜서</Link>
+              <Link>프리랜서</Link>
             </li>
             <li>
-              <Link href="#">
+              <Link>
                 AI 합격예측<em className="footnote">Beta</em>
               </Link>
             </li>
@@ -70,7 +70,7 @@ const Header = ({ onClickSearchBtn }) => {
               alt="검색 버튼"
             />
           </button>
-          <button className="login-btn" onClick={onClickSearchBtn}>
+          <button className="login-btn" onClick={onClickLoginBtn}>
             회원가입/로그인
           </button>
           <div className="vertical-line"></div>

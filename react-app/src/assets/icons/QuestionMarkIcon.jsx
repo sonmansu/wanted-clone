@@ -1,6 +1,6 @@
 export default function QuestionMarkIcon({ size }) {
   return (
-    <svg width={size} height={size} class="" viewBox="0 0 17 17">
+    <svg width={size} height={size} viewBox="0 0 17 17">
       <defs>
         <filter id="bfoh3u0w3a">
           <feColorMatrix

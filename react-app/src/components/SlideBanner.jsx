@@ -19,7 +19,7 @@ function NextArrow(props) {
       onClick={onClick}
     >
       <img
-        class="rotate-180"
+        className="rotate-180"
         src="https://img.icons8.com/external-outline-stroke-bomsymbols-/91/000000/external-arrow-digital-design-outline-set-2-outline-stroke-bomsymbols-.png"
         alt="left button"
       />

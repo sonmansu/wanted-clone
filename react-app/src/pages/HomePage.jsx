@@ -18,28 +18,28 @@ const HomePage = () => {
     <div>
       <SlideBanner />
       <section>
-        <div class="section-wrap">
-          <div class="section-title section-title--button">
-            <h2 class="section-title">나에게 필요한 커리어 인사이트</h2>
+        <div className="section-wrap">
+          <div className="section-title section-title--button">
+            <h2 className="section-title">나에게 필요한 커리어 인사이트</h2>
             <button>
               <QuestionMarkIcon size={24} />
             </button>
           </div>
-          <div class="insight-categories">
-            <div class="insight-categories__left">
-              <ul class="insight-categories__ul">
+          <div className="insight-categories">
+            <div className="insight-categories__left">
+              <ul className="insight-categories__ul">
                 <InsightCategoriesSlider />
               </ul>
             </div>
-            <button class="insight-categories__more-btn">
+            <button className="insight-categories__more-btn">
               <img
                 src="https://img.icons8.com/windows/32/000000/more.png"
                 alt="더보기 버튼"
               />
             </button>
           </div>
-          <div class="section-contents">
-            <ul class="section-contents__ul">
+          <div className="section-contents">
+            <ul className="section-contents__ul">
               {insightArr.map((obj) => (
                 <InsightItem
                   img={obj.img}
@@ -50,11 +50,11 @@ const HomePage = () => {
                 />
               ))}
             </ul>
-            <div class="insight-more-wrap">
-              <div class="insight-more-btn">
+            <div className="insight-more-wrap">
+              <div className="insight-more-btn">
                 <span>더 많은 콘텐츠 보기</span>
                 <img
-                  class="insight-more-btn__img"
+                  className="insight-more-btn__img"
                   src="https://img.icons8.com/external-outline-stroke-bomsymbols-/91/000000/external-arrow-digital-design-outline-set-2-outline-stroke-bomsymbols-.png"
                   alt="더 많은 콘텐츠 보기 버튼"
                 />
@@ -78,67 +78,67 @@ const HomePage = () => {
       >
         <EventList />
       </Section>
-      <section class="section-subscribe">
-        <div class="section-wrap section-subscribe-wrap">
-          <div class="section-subscribe-left">
-            <p class="section-subscribe__text-big">
-              <span class="bold">wanted +</span>구독해야 하는 이유
+      <section className="section-subscribe">
+        <div className="section-wrap section-subscribe-wrap">
+          <div className="section-subscribe-left">
+            <p className="section-subscribe__text-big">
+              <span className="bold">wanted +</span>구독해야 하는 이유
             </p>
-            <p class="section-subscribe__text-small">
+            <p className="section-subscribe__text-small">
               구독자의 서류합격률이 비구독자보다 1.5배 높아요!
             </p>
-            <div class="section-subscribe__btn">
-              <i class="xi-check"></i>
+            <div className="section-subscribe__btn">
+              <i className="xi-check"></i>
               <span>첫 구독 0원 신청하기</span>
             </div>
           </div>
-          <div class="section-subscribe__bg-img"></div>
+          <div className="section-subscribe__bg-img"></div>
         </div>
       </section>
       <section>
-        <div class="section-wrap">
-          <h2 class="section-title">채용 정보를 찾고 계셨나요?</h2>
-          <ul class="section-recruit-ul">
-            <li class="section-recruit-ul__li">
+        <div className="section-wrap">
+          <h2 className="section-title">채용 정보를 찾고 계셨나요?</h2>
+          <ul className="section-recruit-ul">
+            <li className="section-recruit-ul__li">
               <Link>
-                <div class="section-recruit-ul__top">
+                <div className="section-recruit-ul__top">
                   <Icon size={32} icon="magnifyingGlass" />
                 </div>
-                <div class="section-recruit-ul__bottom">
-                  <span class="section-recruit-ul__text">채용공고</span>
+                <div className="section-recruit-ul__bottom">
+                  <span className="section-recruit-ul__text">채용공고</span>
                   <Icon size={16} icon="arrowRight" />
                 </div>
               </Link>
             </li>
-            <li class="section-recruit-ul__li">
+            <li className="section-recruit-ul__li">
               <Link>
-                <div class="section-recruit-ul__top">
+                <div className="section-recruit-ul__top">
                   <Icon size={32} icon="user" />
                 </div>
-                <div class="section-recruit-ul__bottom">
-                  <span class="section-recruit-ul__text">내 프로필</span>
+                <div className="section-recruit-ul__bottom">
+                  <span className="section-recruit-ul__text">내 프로필</span>
                   <Icon size={16} icon="arrowRight" />
                 </div>
               </Link>
             </li>
-            <li class="section-recruit-ul__li">
+            <li className="section-recruit-ul__li">
               <Link>
-                <div class="section-recruit-ul__top">
+                <div className="section-recruit-ul__top">
                   <Icon size={32} icon="building" />
                 </div>
-                <div class="section-recruit-ul__bottom">
-                  <span class="section-recruit-ul__text">매치업</span>
+                <div className="section-recruit-ul__bottom">
+                  <span className="section-recruit-ul__text">매치업</span>
                   <Icon size={16} icon="arrowRight" />
                 </div>
               </Link>
             </li>
-            <li class="section-recruit-ul__li">
+            <li className="section-recruit-ul__li">
               <Link>
-                <div class="section-recruit-ul__top">
+                <div className="section-recruit-ul__top">
                   <Icon size={32} icon="filter" />
                 </div>
-                <div class="section-recruit-ul__bottom">
-                  <span class="section-recruit-ul__text">직군별 연봉</span>
+                <div className="section-recruit-ul__bottom">
+                  <span className="section-recruit-ul__text">직군별 연봉</span>
                   <Icon size={16} icon="arrowRight" />
                 </div>
               </Link>

@@ -31,8 +31,13 @@ const PositionFilter = () => {
       </div>
       <div className="divider divider--margin"></div>
       <div className="search-tag-slider-box">
-        {searchTagsText.map((tag) => (
-          <SearchTagItem text={tag.text} img={tag.img} bgCol={tag.bgCol} />
+        {searchTagsText.map((tag, idx) => (
+          <SearchTagItem
+            key={idx}
+            text={tag.text}
+            img={tag.img}
+            bgCol={tag.bgCol}
+          />
         ))}
       </div>
     </div>

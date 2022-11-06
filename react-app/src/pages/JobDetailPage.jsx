@@ -43,49 +43,55 @@ const JobDetailPage = () => {
 
   return (
     <div>
-      <div class="contents-wrap">
-        <div class="job-info-box">
-          <div class="job-info__img-slider">
+      <div className="contents-wrap">
+        <div className="job-info-box">
+          <div className="job-info__img-slider">
             {positionDetailObj.imgs.map((imgSrc) => (
-              <div class="job-info__img-box">
+              <div className="job-info__img-box">
                 <img src={imgSrc} alt="" />
               </div>
             ))}
           </div>
-          <h2 class="job-info__title">{positionDetailObj.position}</h2>
-          <div class="job-info-subtitle">
-            <Link class="job-info-subtitle__corp-name">{corpObj.corpName}</Link>
+          <h2 className="job-info__title">{positionDetailObj.position}</h2>
+          <div className="job-info-subtitle">
+            <Link className="job-info-subtitle__corp-name">
+              {corpObj.corpName}
+            </Link>
             <ResponseLevelLabel text={positionDetailObj.response} />
-            <span class="job-info-subtitle__locate">{corpObj.location}</span>
+            <span className="job-info-subtitle__locate">
+              {corpObj.location}
+            </span>
           </div>
-          <ul class="job-info-tag-box">
+          <ul className="job-info-tag-box">
             {positionDetailObj.tags.map((tag) => (
-              <li class="job-info__tag-item">
-                <a class="job-info__tag">{tag}</a>
+              <li className="job-info__tag-item">
+                <a className="job-info__tag">{tag}</a>
               </li>
             ))}
           </ul>
           <p
-            class="job-info__description"
+            className="job-info__description"
             dangerouslySetInnerHTML={{ __html: positionDetailObj.desc }}
           ></p>
-          <p class="job-info__skill-title">기술스택 ・ 툴</p>
-          <div class="job-info-skill-box">
+          <p className="job-info__skill-title">기술스택 ・ 툴</p>
+          <div className="job-info-skill-box">
             {positionDetailObj.skills.map((skill) => (
-              <span class="job-info__skill">{skill}</span>
+              <span className="job-info__skill">{skill}</span>
             ))}
           </div>
-          <div class="divider divider--width-100"></div>
-          <section class="job-workplace-box">
-            <div class="job-workplace-row">
-              <span class="job-workplace__title">마감일</span>
-              <span class="job-workplace__subtitle">
+          <div className="divider divider--width-100"></div>
+          <section className="job-workplace-box">
+            <div className="job-workplace-row">
+              <span className="job-workplace__title">마감일</span>
+              <span className="job-workplace__subtitle">
                 {positionDetailObj.due}
               </span>
             </div>
-            <div class="job-workplace-row">
-              <span class="job-workplace__title">근무지역</span>
-              <span class="job-workplace__subtitle">{corpObj.workplace}</span>
+            <div className="job-workplace-row">
+              <span className="job-workplace__title">근무지역</span>
+              <span className="job-workplace__subtitle">
+                {corpObj.workplace}
+              </span>
             </div>
             {/* <div id="map"></div>
             <img
@@ -101,18 +107,18 @@ const JobDetailPage = () => {
               <NaverMapAPI className="job-workplace__map-img" />
             </RenderAfterNavermapsLoaded>
           </section>
-          <section class="job-info-corp-box">
-            <button class="job-info-corp-left-box">
-              <div class="job-info-corp__logo"></div>
+          <section className="job-info-corp-box">
+            <button className="job-info-corp-left-box">
+              <div className="job-info-corp__logo"></div>
               <div>
-                <p class="job-info-corp__corp-name">{corpObj.corpName}</p>
-                <p class="job-info-corp__corp-kind">{corpObj.corpKind}</p>
+                <p className="job-info-corp__corp-name">{corpObj.corpName}</p>
+                <p className="job-info-corp__corp-kind">{corpObj.corpKind}</p>
               </div>
             </button>
-            <button class="job-info-corp__follow-btn">팔로우</button>
+            <button className="job-info-corp__follow-btn">팔로우</button>
           </section>
-          <section class="job-info-warning-box">
-            <svg class="" width="24" height="24" viewBox="0 0 24 24">
+          <section className="job-info-warning-box">
+            <svg className="" width="24" height="24" viewBox="0 0 24 24">
               <g fill="currentColor" fill-rule="evenodd">
                 <path
                   fill-rule="nonzero"
@@ -126,22 +132,22 @@ const JobDetailPage = () => {
               </g>
             </svg>
 
-            <div class="job-info-warning-content-box">
-              <p class="job-info-warning__text">
+            <div className="job-info-warning-content-box">
+              <p className="job-info-warning__text">
                 본 채용정보는 원티드랩의 동의없이 무단전재, 재배포, 재가공할 수
                 없으며, 구직활동 이외의
                 <br />
                 용도로 사용할 수 없습니다.
               </p>
               <button>
-                <span class="material-icons">arrow_drop_down</span>
+                <span className="material-icons">arrow_drop_down</span>
               </button>
             </div>
           </section>
         </div>
-        <aside class="job-apply-box">
-          <h3 class="job-apply__title">채용보상금</h3>
-          <button class="job-apply__share-btn">
+        <aside className="job-apply-box">
+          <h3 className="job-apply__title">채용보상금</h3>
+          <button className="job-apply__share-btn">
             <svg
               xmlns="https://www.w3.org/2000/svg"
               xmlnsXlink="https://www.w3.org/1999/xlink"
@@ -161,38 +167,38 @@ const JobDetailPage = () => {
             </svg>
           </button>
 
-          <div class="job-apply-text-box-row">
-            <div class="job-apply-text-box">
-              <p class="job-apply__label">추천인</p>
-              <p class="job-apply__contents">
+          <div className="job-apply-text-box-row">
+            <div className="job-apply-text-box">
+              <p className="job-apply__label">추천인</p>
+              <p className="job-apply__contents">
                 {priceToString(positionDetailObj.rewards[0])}원
               </p>
             </div>
-            <div class="job-apply-text-box">
-              <p class="job-apply__label">지원자</p>
-              <p class="job-apply__contents">
+            <div className="job-apply-text-box">
+              <p className="job-apply__label">지원자</p>
+              <p className="job-apply__contents">
                 {priceToString(positionDetailObj.rewards[0])}원
               </p>
             </div>
           </div>
           <div>
-            <button class="job-apply__btn">
+            <button className="job-apply__btn">
               <img src="" alt="" />
               <span>북마크하기</span>
             </button>
-            <button class="job-apply__btn job-apply__btn--bg-col">
+            <button className="job-apply__btn job-apply__btn--bg-col">
               지원하기
             </button>
           </div>
-          <div class="job-apply-like-row">
-            <button class="job-apply-like-btn">
-              <span class="material-icons-outlined md-18">favorite</span>
-              <span class="job-apply-like-btn__text">
+          <div className="job-apply-like-row">
+            <button className="job-apply-like-btn">
+              <span className="material-icons-outlined md-18">favorite</span>
+              <span className="job-apply-like-btn__text">
                 {positionDetailObj.likeCnt}
               </span>
             </button>
-            <button class="job-apply-liked-list-btn">
-              <ul class="job-apply-liked-list-btn__list">
+            <button className="job-apply-liked-list-btn">
+              <ul className="job-apply-liked-list-btn__list">
                 {positionDetailObj.likedImgs.map((img) => (
                   <li
                     style={{
@@ -205,8 +211,8 @@ const JobDetailPage = () => {
           </div>
         </aside>
       </div>
-      <section class="contents-box">
-        <h5 class="postions-title">이 포지션을 찾고 계셨나요?</h5>
+      <section className="contents-box">
+        <h5 className="postions-title">이 포지션을 찾고 계셨나요?</h5>
         <PositionList />
       </section>
       <BottomBanner

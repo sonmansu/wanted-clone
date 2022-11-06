@@ -7,7 +7,7 @@ const LineBanner = ({ kind }) => {
     return (
       <div className="line-banner-btn">
         <span>직군/직무를 입력하면 관련 콘텐츠를 추천해드려요. 👀</span>
-        <i class="xi-angle-right-thin"></i>
+        <i className="xi-angle-right-thin"></i>
       </div>
     );
   else if (kind === 'seek-job')

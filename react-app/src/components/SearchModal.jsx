@@ -74,7 +74,7 @@ const SearchModal = ({ setSearchModalOn }) => {
               <h4 className="search-text">추천태그로 검색해보세요</h4>
               <Link className="search-link-btn">
                 기업태그 홈 이동하기
-                <span class="material-icons-round">chevron_right</span>
+                <span className="material-icons-round">chevron_right</span>
               </Link>
             </div>
             <div className="recommend-tags-row">

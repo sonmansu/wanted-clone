@@ -16,12 +16,12 @@ export default function InsightItem({
       <Link>
         <ContentThumbnail src={img} />
         <ContentTitle text={title} />
-        <div class="section-contents__desc">{desc}</div>
-        <div class="section-contents__writer">
-          <button class="section-contents__writer__button">
+        <div className="section-contents__desc">{desc}</div>
+        <div className="section-contents__writer">
+          <button className="section-contents__writer__button">
             <img src={platformIcon} alt="유튜브 버튼" />
           </button>
-          <span class="section-contents__writer__title">{author}</span>
+          <span className="section-contents__writer__title">{author}</span>
         </div>
       </Link>
     </li>

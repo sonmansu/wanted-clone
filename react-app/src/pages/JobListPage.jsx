@@ -61,8 +61,9 @@ const JobListPage = () => {
         <div className="hiring-corp-box">
           <h3 className="hiring-corp-title">적극 채용 중인 회사</h3>
           <ul className="hiring-corp-list">
-            {getHiringCorps().map((corp) => (
+            {getHiringCorps().map((corp, idx) => (
               <CorpItem
+                key={idx}
                 name={corp.corpName}
                 cnt={corp.positionCnt}
                 logoImg={corp.logo}

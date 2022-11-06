@@ -80,16 +80,16 @@
   text-align: center;
 }
 
-.login-modal__input__text {
+.input__label {
   font-size: 14px;
   font-weight: 400;
   color: #767676;
 }
 /* input 태그에 마진을 다니까 나중에 인풋 영역 가운데에 화살표를 넣고 싶을 때 마진까지 포함해서 영역이 잡혀 중앙 정렬이 잘 안돼서 input태그만을 감싸는 wrap을 따로 만듦 */
-.login-modal__input-wrap {
+.input-wrap {
   margin-top: 11px;
 }
-.login-modal__input {
+.input {
   width: 100%;
   height: 50px;
   border-radius: 5px;
@@ -104,7 +104,7 @@ input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.login-modal__input:focus-visible {
+.input:focus-visible {
   border: 1px solid #36f;
   outline: none;
 }

@@ -18,12 +18,12 @@ export default function ModalBodySignUp() {
   return (
     <div className="signUp-modal-body">
       <div className="login-modal-input-box">
-        <label className="login-modal__input__text">
+        <label className="input__label">
           이름
-          <div className="login-modal__input-wrap">
+          <div className="input-wrap">
             <input
               type="text"
-              className="login-modal__input"
+              className="input"
               placeholder="이름을 입력해 주세요."
               autofocus
             />
@@ -31,10 +31,10 @@ export default function ModalBodySignUp() {
         </label>
       </div>
       <div className="login-modal-input-box">
-        <label className="login-modal__input__text">휴대폰 번호</label>
+        <label className="input__label">휴대폰 번호</label>
         <div className="login-modal__select-box">
-          <div className="login-modal__input-wrap">
-            <select className="login-modal__input">
+          <div className="input-wrap">
+            <select className="input">
               <option value="+82">+82 South Korea</option>
               <option value="+81">+81 Japan</option>
               <option value="+886">+886 Taiwan</option>
@@ -45,30 +45,30 @@ export default function ModalBodySignUp() {
             chevron_right
           </span>
         </div>
-        <div className="login-modal__input-wrap login-modal__input-wrap--display">
+        <div className="input-wrap login-modal__input-wrap--display">
           <input
             type="number"
             id="phone-number-input"
-            className="login-modal__input"
+            className="input"
             placeholder="(예시) 01034567890"
             autofocus
           />
           <button className="login-modal__get-code-btn">인증번호 받기</button>
         </div>
-        <div className="login-modal__input-wrap">
+        <div className="input-wrap">
           <input
             type="text"
-            className="login-modal__input login-modal__input--bg-grey"
+            className="input login-modal__input--bg-grey"
             placeholder="인증번호를 입력해주세요."
           />
         </div>
       </div>
       <div className="login-modal-input-box">
-        <label className="login-modal__input__text">비밀번호</label>
-        <div className="login-modal__input-wrap">
+        <label className="input__label">비밀번호</label>
+        <div className="input-wrap">
           <input
             type="text"
-            className="login-modal__input"
+            className="input"
             placeholder="비밀번호를 입력해주세요."
           />
         </div>
@@ -78,11 +78,11 @@ export default function ModalBodySignUp() {
         </p>
       </div>
       <div className="login-modal-input-box">
-        <label className="login-modal__input__text">비밀번호 확인</label>
-        <div className="login-modal__input-wrap">
+        <label className="input__label">비밀번호 확인</label>
+        <div className="input-wrap">
           <input
             type="text"
-            className="login-modal__input"
+            className="input"
             placeholder="비밀번호를 다시 한번 입력해 주세요."
           />
         </div>

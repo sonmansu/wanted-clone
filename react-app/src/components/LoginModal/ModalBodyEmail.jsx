@@ -8,7 +8,6 @@ export default function ModalBodyEmail({ setEmailBodyOn, setSignUpBodyOn }) {
   };
   return (
     <div className="login-modal-body">
-      {/* <!-- <div className="login-modal-body" style="display: none;"> --> */}
       <h1 className="login-modal__title">
         직장인을 위한
         <br />
@@ -18,10 +17,9 @@ export default function ModalBodyEmail({ setEmailBodyOn, setSignUpBodyOn }) {
         커리어 성장과 행복을 위한 여정
         <br /> 지금 원티드에서 시작하세요.
       </h2>
-      {/* <!-- <div> --> */}
-      <label className="login-modal__input__text">
+      <label className="input__label">
         이메일
-        <div className="login-modal__input-wrap">
+        <div className="input-wrap">
           <input
             type="email"
             className="login-modal__input"

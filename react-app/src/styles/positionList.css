@@ -28,3 +28,9 @@
   font-weight: 500;
   margin-top: 10px;
 }
+
+.bottom {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}

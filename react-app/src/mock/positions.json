@@ -49,7 +49,6 @@
     "corpName": "킨다그로스",
     "location": "서울·한국",
     "response": "매우 높음",
-
     "rewards": [500000000, 500000000]
   },
   {
@@ -66,6 +65,310 @@
   },
   {
     "id": 5,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1886%2Ft2pmwnhoztxygq1x__400_400.jpg&w=400&q=75"
+    ],
+    "position": "UI/UX 기획 & 디자이너",
+    "corpId": 4,
+    "corpName": "하우스미디어",
+    "location": "서울·한국",
+    "response": "평균 이상",
+    "rewards": [80000000, 80000000]
+  },
+  {
+    "id": 6,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fhxpmymtkvrh2j0gp__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fdrampohrsuyyb3gv__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fppsxgdyzqwnyoh95__1080_790.jpg&w=1000&q=75"
+    ],
+    "position": "딥러닝 알고리즘 엔지니어",
+    "corpId": 0,
+    "corpName": "블루닷",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [500000, 500000]
+  },
+  {
+    "id": 7,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fdvcf627tgxatpg7v__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2F6kxgpommhvckijjr__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fvym9cwwcigp2tzbi__1080_790.jpg&w=1000&q=75"
+    ],
+    "position": "웹 프론트엔드 개발자(React)",
+    "corpId": 1,
+    "corpName": "블루비커",
+    "location": "서울·한국",
+    "response": "평균 이상",
+    "rewards": [500000, 500000]
+  },
+  {
+    "id": 8,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F33739%2Fo1muyet8rxgdo6bx__1080_790.jpg&w=520&q=100"
+    ],
+    "position": "디지털 광고 제작",
+    "corpId": 2,
+    "corpName": "테크트리컴퍼니",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [1000000000, 1000000000]
+  },
+  {
+    "id": 9,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F3843%2Fel1bersjpzir1u17__1080_790.jpg&w=520&q=100"
+    ],
+    "position": "콘텐츠 마케터 팀장",
+    "corpId": 3,
+    "corpName": "킨다그로스",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [500000000, 500000000]
+  },
+  {
+    "id": 10,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F29982%2Fzmeiefegac73kxqq__400_400.jpg&w=400&q=75"
+    ],
+    "position": "MD (파트장/팀장)",
+    "corpId": 3,
+    "corpName": "킨다그로스",
+    "location": "서울·한국",
+    "response": "높음",
+    "rewards": [100000000, 100000000]
+  },
+  {
+    "id": 11,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1886%2Ft2pmwnhoztxygq1x__400_400.jpg&w=400&q=75"
+    ],
+    "position": "UI/UX 기획 & 디자이너",
+    "corpId": 4,
+    "corpName": "하우스미디어",
+    "location": "서울·한국",
+    "response": "평균 이상",
+    "rewards": [80000000, 80000000]
+  },
+  {
+    "id": 12,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fhxpmymtkvrh2j0gp__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fdrampohrsuyyb3gv__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fppsxgdyzqwnyoh95__1080_790.jpg&w=1000&q=75"
+    ],
+    "position": "딥러닝 알고리즘 엔지니어",
+    "corpId": 0,
+    "corpName": "블루닷",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [500000, 500000]
+  },
+  {
+    "id": 13,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fdvcf627tgxatpg7v__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2F6kxgpommhvckijjr__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fvym9cwwcigp2tzbi__1080_790.jpg&w=1000&q=75"
+    ],
+    "position": "웹 프론트엔드 개발자(React)",
+    "corpId": 1,
+    "corpName": "블루비커",
+    "location": "서울·한국",
+    "response": "평균 이상",
+    "rewards": [500000, 500000]
+  },
+  {
+    "id": 14,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F33739%2Fo1muyet8rxgdo6bx__1080_790.jpg&w=520&q=100"
+    ],
+    "position": "디지털 광고 제작",
+    "corpId": 2,
+    "corpName": "테크트리컴퍼니",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [1000000000, 1000000000]
+  },
+  {
+    "id": 15,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F3843%2Fel1bersjpzir1u17__1080_790.jpg&w=520&q=100"
+    ],
+    "position": "콘텐츠 마케터 팀장",
+    "corpId": 3,
+    "corpName": "킨다그로스",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [500000000, 500000000]
+  },
+  {
+    "id": 16,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F29982%2Fzmeiefegac73kxqq__400_400.jpg&w=400&q=75"
+    ],
+    "position": "MD (파트장/팀장)",
+    "corpId": 3,
+    "corpName": "킨다그로스",
+    "location": "서울·한국",
+    "response": "높음",
+    "rewards": [100000000, 100000000]
+  },
+  {
+    "id": 17,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1886%2Ft2pmwnhoztxygq1x__400_400.jpg&w=400&q=75"
+    ],
+    "position": "UI/UX 기획 & 디자이너",
+    "corpId": 4,
+    "corpName": "하우스미디어",
+    "location": "서울·한국",
+    "response": "평균 이상",
+    "rewards": [80000000, 80000000]
+  },
+  {
+    "id": 18,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fhxpmymtkvrh2j0gp__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fdrampohrsuyyb3gv__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fppsxgdyzqwnyoh95__1080_790.jpg&w=1000&q=75"
+    ],
+    "position": "딥러닝 알고리즘 엔지니어",
+    "corpId": 0,
+    "corpName": "블루닷",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [500000, 500000]
+  },
+  {
+    "id": 19,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fdvcf627tgxatpg7v__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2F6kxgpommhvckijjr__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fvym9cwwcigp2tzbi__1080_790.jpg&w=1000&q=75"
+    ],
+    "position": "웹 프론트엔드 개발자(React)",
+    "corpId": 1,
+    "corpName": "블루비커",
+    "location": "서울·한국",
+    "response": "평균 이상",
+    "rewards": [500000, 500000]
+  },
+  {
+    "id": 20,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F33739%2Fo1muyet8rxgdo6bx__1080_790.jpg&w=520&q=100"
+    ],
+    "position": "디지털 광고 제작",
+    "corpId": 2,
+    "corpName": "테크트리컴퍼니",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [1000000000, 1000000000]
+  },
+  {
+    "id": 21,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F3843%2Fel1bersjpzir1u17__1080_790.jpg&w=520&q=100"
+    ],
+    "position": "콘텐츠 마케터 팀장",
+    "corpId": 3,
+    "corpName": "킨다그로스",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [500000000, 500000000]
+  },
+  {
+    "id": 22,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F29982%2Fzmeiefegac73kxqq__400_400.jpg&w=400&q=75"
+    ],
+    "position": "MD (파트장/팀장)",
+    "corpId": 3,
+    "corpName": "킨다그로스",
+    "location": "서울·한국",
+    "response": "높음",
+    "rewards": [100000000, 100000000]
+  },
+  {
+    "id": 23,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1886%2Ft2pmwnhoztxygq1x__400_400.jpg&w=400&q=75"
+    ],
+    "position": "UI/UX 기획 & 디자이너",
+    "corpId": 4,
+    "corpName": "하우스미디어",
+    "location": "서울·한국",
+    "response": "평균 이상",
+    "rewards": [80000000, 80000000]
+  },
+  {
+    "id": 24,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fhxpmymtkvrh2j0gp__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fdrampohrsuyyb3gv__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10037%2Fppsxgdyzqwnyoh95__1080_790.jpg&w=1000&q=75"
+    ],
+    "position": "딥러닝 알고리즘 엔지니어",
+    "corpId": 0,
+    "corpName": "블루닷",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [500000, 500000]
+  },
+  {
+    "id": 25,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fdvcf627tgxatpg7v__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2F6kxgpommhvckijjr__1080_790.jpg&w=1000&q=75",
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fvym9cwwcigp2tzbi__1080_790.jpg&w=1000&q=75"
+    ],
+    "position": "웹 프론트엔드 개발자(React)",
+    "corpId": 1,
+    "corpName": "블루비커",
+    "location": "서울·한국",
+    "response": "평균 이상",
+    "rewards": [500000, 500000]
+  },
+  {
+    "id": 26,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F33739%2Fo1muyet8rxgdo6bx__1080_790.jpg&w=520&q=100"
+    ],
+    "position": "디지털 광고 제작",
+    "corpId": 2,
+    "corpName": "테크트리컴퍼니",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [1000000000, 1000000000]
+  },
+  {
+    "id": 27,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F3843%2Fel1bersjpzir1u17__1080_790.jpg&w=520&q=100"
+    ],
+    "position": "콘텐츠 마케터 팀장",
+    "corpId": 3,
+    "corpName": "킨다그로스",
+    "location": "서울·한국",
+    "response": "매우 높음",
+    "rewards": [500000000, 500000000]
+  },
+  {
+    "id": 28,
+    "imgs": [
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F29982%2Fzmeiefegac73kxqq__400_400.jpg&w=400&q=75"
+    ],
+    "position": "MD (파트장/팀장)",
+    "corpId": 3,
+    "corpName": "킨다그로스",
+    "location": "서울·한국",
+    "response": "높음",
+    "rewards": [100000000, 100000000]
+  },
+  {
+    "id": 29,
     "imgs": [
       "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1886%2Ft2pmwnhoztxygq1x__400_400.jpg&w=400&q=75"
     ],

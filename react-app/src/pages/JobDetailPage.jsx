@@ -65,7 +65,7 @@ const JobDetailPage = () => {
           <ul className="job-info-tag-box">
             {positionDetailObj.tags.map((tag) => (
               <li className="job-info__tag-item">
-                <a className="job-info__tag">{tag}</a>
+                <Link className="job-info__tag">{tag}</Link>
               </li>
             ))}
           </ul>

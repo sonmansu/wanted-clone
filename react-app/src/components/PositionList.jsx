@@ -64,7 +64,7 @@ const PositionList = ({ searchKeyword, setPositionCnt }) => {
         // console.log('nextPositionList', nextPositionList);
         setPositionList((prevState) => [
           ...prevState,
-          positions.slice(prevState.length, prevState.length + 8),
+          ...positions.slice(prevState.length, prevState.length + 8),
         ]);
         console.log('positionList :>> ', positionList);
       }

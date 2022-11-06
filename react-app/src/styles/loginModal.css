@@ -108,7 +108,15 @@ input[type='number']::-webkit-inner-spin-button {
   border: 1px solid #36f;
   outline: none;
 }
-
+.input--border-red,
+.input--border-red:focus-visible {
+  border: 1px solid var(--red-color);
+}
+.input__errorMessage {
+  font-size: 13px;
+  color: var(--red-color);
+  margin-top: 8px;
+}
 .login-modal__email-login-btn {
   height: 54px;
   border-radius: 27px;
@@ -166,23 +174,24 @@ input[type='number']::-webkit-inner-spin-button {
 .login-modal__sns-btn--bg-yellow {
   background-color: yellow;
 }
-.login-modal__sns-btn--bg-yellow:hover {
-  background-color: #e4cd00;
-}
 .login-modal__sns-btn--bg-blue {
   background-color: #36f;
-}
-.login-modal__sns-btn--bg-blue:hover {
-  background-color: #156ad9;
 }
 .login-modal__sns-btn--border {
   border: 1px solid #e1e2e3;
 }
-.login-modal__sns-btn--border:hover {
-  background-color: #f5f5f5;
-}
 .login-modal__sns-btn--bg-black {
   background-color: black;
+}
+.login-modal__sns-btn:hover::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 56px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .login-modal__safe-text {

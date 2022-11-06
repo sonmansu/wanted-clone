@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import positionText from '../mock/positions.json';
 import ContentThumbnail from './ContentThumbnail';
 import ContentTitle from './ContentTitle';
@@ -10,19 +10,23 @@ import ResponseLevelLabel from './ResponseLevelLabel';
 import { useInView } from 'react-intersection-observer';
 
 const PositionList = ({ searchKeyword, setPositionCnt }) => {
-  // console.log('searchKeyword :>> ', searchKeyword);
-  const [positions, setPositions] = useState(positionText); // 더미데이터 받아온 것
   const [positionList, setPositionList] = useState([]); // 화면에 보여줄 리스트들
   // console.log('positionList', positionList);
-  const [bottom, setBottom] = useState(null);
-  const bottomRef = useRef(null);
-
   const [page, setPage] = useState(1);
   const [lastItemRef, lastItemInView] = useInView();
 
-  // const getList = useCallback(() => {
+  const getList = useCallback(() => {
+    console.log('page :>> ', page);
+    // page1 : 0~ 7, 8개 아이템/page2: 8~16
+    const nextList = positionText.slice(page * 8, page * 8 + 8);
+    console.log('nextList', nextList);
+    setPositionList((prevState) => [...prevState, ...nextList]);
+  }, [page]);
 
-  // }, [page]);
+  // `getList` 가 바뀔 때 마다 함수 실행
+  useEffect(() => {
+    getList();
+  }, [getList]);
 
   // 검색 키워드에 해당하는 리스트들 셋팅
   useEffect(() => {
@@ -39,58 +43,25 @@ const PositionList = ({ searchKeyword, setPositionCnt }) => {
       console.log('searchedList', searchedList);
       setPositionList(searchedList);
       setPositionCnt(searchedList.length);
-    } else {
-      console.log('no searchkeyword');
-      setPositionList(positions.slice(0, 8)); // 검색 키워드 없으면 더미데이터들 중 8개만 보여줄 예정
     }
+    // else {
+    //   console.log('no searchkeyword');
+    //   setPositionList(positions.slice(0, 8)); // 검색 키워드 없으면 더미데이터들 중 8개만 보여줄 예정
+    // }
   }, [searchKeyword]); //searchKeyword 안넣어주면 리랜더링안됨
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 1,
-    };
-    const observer = new IntersectionObserver((entries) => {
-      console.log(entries);
-      if (entries[0].isIntersecting) {
-        console.log('교차중!');
-
-        // console.log('old positionList :>> ', positionList);
-        // const nextPositionList = positionList.concat(
-        //   positions.slice(positionList.length, positionList.length + 8),
-        // );
-        // setPositionList(nextPositionList);
-        // console.log('nextPositionList', nextPositionList);
-        setPositionList((prevState) => [
-          ...prevState,
-          positions.slice(prevState.length, prevState.length + 8),
-        ]);
-        console.log('positionList :>> ', positionList);
-      }
-    }, options);
-
-    observer.observe(bottomRef.current);
-  }, [bottom]);
-
-  // const positionList = positionList.map((position) => (
-  //   <PositionItem
-  //     key={position.id}
-  //     id={position.id}
-  //     img={position.imgs[0]}
-  //     position={position.position}
-  //     corp={position.corpName}
-  //     response={position.response}
-  //     location={position.location}
-  //     reward={position.rewards[0]}
-  //   />
-  // ));
+    if (lastItemInView) {
+      setPage((prevState) => prevState + 1);
+    }
+  }, [lastItemInView]);
 
   return (
     <div>
       <ul className="section-contents__ul">
-        {positionList.map((position) => (
+        {positionList.map((position, idx) => (
           <PositionItem
+            // ref={positionList.length - 1 == idx ? lastItemRef : null}
             key={position.id}
             id={position.id}
             img={position.imgs[0]}
@@ -102,7 +73,7 @@ const PositionList = ({ searchKeyword, setPositionCnt }) => {
           />
         ))}
       </ul>
-      <div className="bottom" ref={bottomRef}></div>
+      <div className="bottom" ref={lastItemRef} />
     </div>
   );
 };

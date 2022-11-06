@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import 'styles/loginModal.css';
+import '../../styles/loginModal.css';
 import ModalBodyEmail from './ModalBodyEmail';
 import ModalBodySignUp from './ModalBodySignUp';
 

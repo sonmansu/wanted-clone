@@ -1,7 +1,22 @@
 import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function ModalBodyEmail({ setEmailBodyOn, setSignUpBodyOn }) {
+  const [email, setEmail] = useState('');
+  const [isValidEmail, setValidEmail] = useState('false');
+
+  const onChangeEmail = (e) => {
+    setEmail(e.target.value);
+    const regex =
+      /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+    if (regex.test(e.target.value)) {
+      setValidEmail(true);
+    } else {
+      setValidEmail(false);
+    }
+  };
+
   const onClickContinueBtn = () => {
     setEmailBodyOn(false);
     setSignUpBodyOn(true);
@@ -21,14 +36,24 @@ export default function ModalBodyEmail({ setEmailBodyOn, setSignUpBodyOn }) {
         이메일
         <div className="input-wrap">
           <input
+            className={
+              email.length > 0 && !isValidEmail
+                ? 'input input--border-red'
+                : 'input'
+            }
             type="email"
-            className="login-modal__input"
+            value={email}
+            onChange={onChangeEmail}
             placeholder="이메일을 입력해 주세요."
             autofocus
           />
         </div>
+        {email.length > 0 && !isValidEmail ? (
+          <div className="input__errorMessage">
+            올바른 이메일을 입력해주세요.
+          </div>
+        ) : null}
       </label>
-      {/* <!-- </div> --> */}
       <button
         className="login-modal__email-login-btn"
         onClick={onClickContinueBtn}

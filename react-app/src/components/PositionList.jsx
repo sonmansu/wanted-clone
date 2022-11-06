@@ -6,6 +6,7 @@ import '../styles/sectionBody.css';
 import '../styles/positionList.css';
 import { priceToString } from '../utils/priceToString';
 import { Link } from 'react-router-dom';
+import ResponseLevelLabel from './ResponseLevelLabel';
 
 const PositionList = ({ searchKeyword, setPositionCnt }) => {
   const [positions, setPositions] = useState(positionText);
@@ -35,6 +36,7 @@ const PositionList = ({ searchKeyword, setPositionCnt }) => {
       img={position.imgs[0]}
       position={position.position}
       corp={position.corpName}
+      response={position.response}
       location={position.location}
       reward={position.rewards[0]}
     />
@@ -43,7 +45,15 @@ const PositionList = ({ searchKeyword, setPositionCnt }) => {
   return <ul className="section-contents__ul">{positionList}</ul>;
 };
 
-const PositionItem = ({ id, img, position, corp, location, reward }) => {
+const PositionItem = ({
+  id,
+  img,
+  position,
+  response,
+  corp,
+  location,
+  reward,
+}) => {
   return (
     <li>
       <Link to={`/jobDetail/${id}`}>
@@ -75,6 +85,7 @@ const PositionItem = ({ id, img, position, corp, location, reward }) => {
         <div className="position-body">
           <ContentTitle text={position} />
           <p className="position-body__corp-name">{corp}</p>
+          <ResponseLevelLabel text={response} />
           <p className="position-body__locate">{location}</p>
           <p className="position-body__reward">
             채용보상금 {priceToString(reward)}원

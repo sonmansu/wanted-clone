@@ -7,7 +7,7 @@
   right: 8px;
 }
 .position-body > * {
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .position-body__pos-name {
   font-size: 18px;
@@ -16,12 +16,15 @@
 .position-body__corp-name {
   font-size: 14px;
   font-weight: 600;
+  margin-bottom: 4px;
 }
 .position-body__locate {
   font-size: 14px;
   color: #999999;
+  margin-top: 10px;
 }
 .position-body__reward {
   font-size: 14px;
   font-weight: 500;
+  margin-top: 10px;
 }

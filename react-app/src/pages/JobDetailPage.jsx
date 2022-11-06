@@ -10,6 +10,7 @@ import corpsText from '../mock/corps.json';
 import { priceToString } from '../utils/priceToString';
 import { RenderAfterNavermapsLoaded, NaverMap, Marker } from 'react-naver-maps'; // 패키지 불러오기
 import { NAVER_CLIENT_ID } from '../utils/credentials';
+import ResponseLevelLabel from 'components/ResponseLevelLabel';
 
 const JobDetailPage = () => {
   const { jobId } = useParams();
@@ -56,9 +57,7 @@ const JobDetailPage = () => {
             <a href="#" class="job-info-subtitle__corp-name">
               {corpObj.corpName}
             </a>
-            <span class="job-info-subtitle__response">
-              응답률 {positionDetailObj.response}
-            </span>
+            <ResponseLevelLabel text={positionDetailObj.response} />
             <span class="job-info-subtitle__locate">{corpObj.location}</span>
           </div>
           <ul class="job-info-tag-box">

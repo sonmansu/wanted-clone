@@ -10,6 +10,7 @@
     "corpId": 0,
     "corpName": "블루닷",
     "location": "서울·한국",
+    "response": "매우 높음",
     "rewards": [500000, 500000]
   },
   {
@@ -23,6 +24,7 @@
     "corpId": 1,
     "corpName": "블루비커",
     "location": "서울·한국",
+    "response": "평균 이상",
     "rewards": [500000, 500000]
   },
   {
@@ -34,6 +36,7 @@
     "corpId": 2,
     "corpName": "테크트리컴퍼니",
     "location": "서울·한국",
+    "response": "매우 높음",
     "rewards": [1000000000, 1000000000]
   },
   {
@@ -45,28 +48,32 @@
     "corpId": 3,
     "corpName": "킨다그로스",
     "location": "서울·한국",
+    "response": "매우 높음",
+
     "rewards": [500000000, 500000000]
   },
   {
     "id": 4,
     "imgs": [
-      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F33739%2Fo1muyet8rxgdo6bx__1080_790.jpg&w=520&q=100"
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F29982%2Fzmeiefegac73kxqq__400_400.jpg&w=400&q=75"
     ],
     "position": "MD (파트장/팀장)",
     "corpId": 3,
     "corpName": "킨다그로스",
     "location": "서울·한국",
+    "response": "높음",
     "rewards": [100000000, 100000000]
   },
   {
     "id": 5,
     "imgs": [
-      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F3843%2Fel1bersjpzir1u17__1080_790.jpg&w=520&q=100"
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1886%2Ft2pmwnhoztxygq1x__400_400.jpg&w=400&q=75"
     ],
     "position": "UI/UX 기획 & 디자이너",
     "corpId": 4,
     "corpName": "하우스미디어",
     "location": "서울·한국",
+    "response": "평균 이상",
     "rewards": [80000000, 80000000]
   }
 ]

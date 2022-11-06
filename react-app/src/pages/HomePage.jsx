@@ -4,7 +4,7 @@ import VodList from '../components/VodList';
 import LineBanner from '../components/LineBanner';
 import EventList from '../components/EventList';
 import SlideBanner from '../components/SlideBanner';
-import '../styles/home.css';
+import '../styles/homePage.css';
 import ListContainer from '../components/ListContainer2';
 import QuestionMarkIcon from 'assets/icons/QuestionMarkIcon';
 import insightArr from 'mock/insights.json';
@@ -13,7 +13,7 @@ import InsightCategoriesSlider from 'components/InsightCategoriesSlider';
 import InsightItem from 'components/ListItems/InsightItem';
 import Icon from 'assets/icons/SvgIcon';
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div>
       <SlideBanner />
@@ -150,4 +150,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

@@ -1,13 +1,13 @@
 import React from 'react';
 import BottomBanner from '../components/BottomBanner';
-import '../styles/jobList.css';
+import '../styles/jobListPage.css';
 import { useParams } from 'react-router-dom';
 import PositionList from '../components/PositionList';
 import corpsText from '../mock/corps.json';
 import CorpItem from '../components/CorpItem';
 import PositionFilter from '../components/PositionFilter';
 
-const JobList = () => {
+const JobListPage = () => {
   const { mainId, subId } = useParams();
   // console.log(mainId, subId);
 
@@ -71,13 +71,6 @@ const JobList = () => {
             ))}
           </ul>
         </div>
-        {/* <ul className="searched-corp-list">
-              <li>
-                  <a href="">
-                      <div></div>
-                  </a>
-              </li>
-          </ul>  */}
         <PositionList />
       </section>
       <BottomBanner text="이제 밤새워 채용 공고 보지 마세요." />
@@ -85,4 +78,4 @@ const JobList = () => {
   );
 };
 
-export default JobList;
+export default JobListPage;

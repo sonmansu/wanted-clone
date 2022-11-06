@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/jobDetail.css';
+import '../styles/jobDetailPage.css';
 import PositionList from '../components/PositionList';
 import BottomBanner from '../components/BottomBanner';
 import { useParams } from 'react-router-dom';
@@ -11,7 +11,7 @@ import { priceToString } from '../utils/priceToString';
 import { RenderAfterNavermapsLoaded, NaverMap, Marker } from 'react-naver-maps'; // 패키지 불러오기
 import { NAVER_CLIENT_ID } from '../utils/credentials';
 
-const JobDetail = () => {
+const JobDetailPage = () => {
   const { jobId } = useParams();
 
   const positionDetailObj = positionDetailsText[jobId];
@@ -223,5 +223,5 @@ const JobDetail = () => {
   );
 };
 
-export default JobDetail;
+export default JobDetailPage;
 // {positionDetailObj.likedImgs[0]}

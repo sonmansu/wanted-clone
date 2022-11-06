@@ -10,13 +10,12 @@
 .search-wrap {
   width: 1060px;
   margin: 0 auto;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
 }
 .search-job-box {
-  width: 1060px;
   height: 32px;
   display: flex;
-  margin: 40px auto;
+  margin-bottom: 40px;
 }
 .search-job-btn {
   display: flex;

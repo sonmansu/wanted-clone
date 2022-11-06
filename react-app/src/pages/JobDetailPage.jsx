@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/jobDetailPage.css';
 import PositionList from '../components/PositionList';
 import BottomBanner from '../components/BottomBanner';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 import positionDetailsText from '../mock/positionDetail.json';
 import corpsText from '../mock/corps.json';
@@ -54,9 +54,7 @@ const JobDetailPage = () => {
           </div>
           <h2 class="job-info__title">{positionDetailObj.position}</h2>
           <div class="job-info-subtitle">
-            <a href="#" class="job-info-subtitle__corp-name">
-              {corpObj.corpName}
-            </a>
+            <Link class="job-info-subtitle__corp-name">{corpObj.corpName}</Link>
             <ResponseLevelLabel text={positionDetailObj.response} />
             <span class="job-info-subtitle__locate">{corpObj.location}</span>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
@@ -10,8 +11,10 @@ export default function ModalBodySignUp() {
   const [isValidPw, setValidPw] = useState(false);
   const [isValidPwCheck, setValidPwCheck] = useState(false);
 
-  const checkPrivacyRef = useRef();
-  const checkAlarmRef = useRef();
+  // 각 체크 박스에 대한 state 변수 선언
+  const [isCheckAll, setCheckAll] = useState(false);
+  const [isCheckPrivacy, setCheckPrivacy] = useState(false);
+  const [isCheckAlarm, setCheckAlarm] = useState(false);
 
   const onChangePw = (e) => {
     setPw(e.target.value);
@@ -34,15 +37,31 @@ export default function ModalBodySignUp() {
       setValidPwCheck(false);
     }
   };
-  const onClickAgreeAll = (e) => {
+
+  // All 체크 박스 외의 체크박스들을 감시, 둘다 체크 돼있으면 All 체크박스도 체크시킴
+  useEffect(() => {
+    if (isCheckAlarm && isCheckPrivacy) setCheckAll(true);
+    else setCheckAll(false);
+  }, [isCheckAlarm, isCheckPrivacy]);
+
+  // 각 체크 박스 클릭에 대한 이벤트 헨들러
+  const onClickCheckAll = (e) => {
     if (e.target.checked) {
+      setCheckAll(true);
+      setCheckPrivacy(true);
+      setCheckAlarm(true);
       console.log('checked');
-      checkPrivacyRef.current.checked = true;
-      checkAlarmRef.current.checked = true;
     } else {
-      checkPrivacyRef.current.checked = false;
-      checkAlarmRef.current.checked = false;
+      setCheckAll(false);
+      setCheckPrivacy(false);
+      setCheckAlarm(false);
     }
+  };
+  const onClickCheckPrivacy = (e) => {
+    setCheckPrivacy(!isCheckPrivacy);
+  };
+  const onClickCheckAlarm = (e) => {
+    setCheckAlarm(!isCheckAlarm);
   };
   return (
     <div className="signUp-modal-body">
@@ -132,7 +151,12 @@ export default function ModalBodySignUp() {
       </div>
       <div className="login-modal-agree-box">
         <div className="login-modal-agree-row">
-          <input type="checkbox" id="agree-all" onClick={onClickAgreeAll} />
+          <input
+            type="checkbox"
+            id="agree-all"
+            checked={isCheckAll}
+            onClick={onClickCheckAll}
+          />
           <label
             className="login-modal__agree-text login-modal__agree-text--col-black"
             for="agree-all"
@@ -142,7 +166,12 @@ export default function ModalBodySignUp() {
         </div>
         <div className="divider divider--width-100 divider--margin-5"></div>
         <div className="login-modal-agree-row">
-          <input type="checkbox" id="agree-privacy" ref={checkPrivacyRef} />
+          <input
+            type="checkbox"
+            id="agree-privacy"
+            checked={isCheckPrivacy}
+            onClick={onClickCheckPrivacy}
+          />
           <div className="login-modal-agree-text-box">
             <label className="login-modal__agree-text " for="agree-privacy">
               개인정보 수집 및 이용 동의(필수)
@@ -151,7 +180,12 @@ export default function ModalBodySignUp() {
           </div>
         </div>
         <div className="login-modal-agree-row">
-          <input type="checkbox" id="agree-alarm" ref={checkAlarmRef} />
+          <input
+            type="checkbox"
+            id="agree-alarm"
+            checked={isCheckAlarm}
+            onClick={onClickCheckAlarm}
+          />
           <div className="login-modal-agree-text-box">
             <label className="login-modal__agree-text " for="agree-alarm">
               이벤트 소식 등 알림 정보 받기

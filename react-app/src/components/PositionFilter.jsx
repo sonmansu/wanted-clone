@@ -5,7 +5,7 @@ import searchTagsText from '../mock/searchTags.json';
 
 const PositionFilter = () => {
   return (
-    <div className>
+    <div>
       <div className="search-filter-box">
         <div>
           <button className="search-filter-btn">

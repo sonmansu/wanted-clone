@@ -8,7 +8,7 @@
   border: 1px solid var(--border-color);
   padding: 9px 22px;
   border-radius: 30px;
-  /* margin-right: 8px; */
+  margin-right: 8px;
   cursor: pointer;
 }
 .insight-categories__item:hover {

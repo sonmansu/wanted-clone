@@ -8,7 +8,14 @@ import LoginModal from 'components/LoginModal/LoginModal';
 
 const Layout = () => {
   const [isSearchModalOn, setSearchModalOn] = useState(false);
-  const [isLoginModalOn, setLoginModalOn] = useState(false);
+  // const [isLoginModalOn, setLoginModalOn] = useState(false);
+  const [activatedModal, setActivatedModal] = useState(0);
+  /**
+   * activatedModal === 0: default, all modals off
+   * activatedModal === 1: email modal on
+   * activatedModal === 2: signup modal on
+   * activatedModal === 3: password modal on
+   */
 
   const onClickSearchBtn = () => {
     if (isSearchModalOn) {
@@ -20,8 +27,10 @@ const Layout = () => {
 
   const onClickLoginBtn = () => {
     console.log('login btn');
-    if (isLoginModalOn) setLoginModalOn(false);
-    else setLoginModalOn(true);
+    // if (isLoginModalOn) setLoginModalOn(false);
+    // else setLoginModalOn(true);
+    if (activatedModal === 0) setActivatedModal(1);
+    else setActivatedModal(0);
   };
 
   return (
@@ -31,7 +40,14 @@ const Layout = () => {
         onClickLoginBtn={onClickLoginBtn}
       />
       {isSearchModalOn && <SearchModal setSearchModalOn={setSearchModalOn} />}
-      {isLoginModalOn && <LoginModal setLoginModalOn={setLoginModalOn} />}
+      {/* {isLoginModalOn && <LoginModal setLoginModalOn={setLoginModalOn} />} */}
+      {activatedModal !== 0 && (
+        <LoginModal
+          activatedModal={activatedModal}
+          setActivatedModal={setActivatedModal}
+        />
+      )}
+
       <main>
         <Outlet />
       </main>

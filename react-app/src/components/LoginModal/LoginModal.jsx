@@ -22,25 +22,6 @@ const LoginModal = ({ setLoginModalOn }) => {
       onClick={onClickModalWindow}
     >
       <div className="login-modal-box" ref={loginModalRef}>
-        <div className="login-modal-header">
-          <div className="icon-logo-box">
-            <i className="icon-logo logo-align-center"></i>
-          </div>
-          <span className="login-modal__signUp-title hidden">회원가입</span>
-          <button
-            className="login-modal__close-btn"
-            onClick={() => {
-              setLoginModalOn(false);
-            }}
-          >
-            <span className="material-icons-round">close</span>
-          </button>
-        </div>
-        {isEmailBodyOn && (
-          <ModalBodyEmail
-            setEmailBodyOn={setEmailBodyOn}
-            setSignUpBodyOn={setSignUpBodyOn}
-          />
         )}
         {isSignUpBodyOn && <ModalBodySignUp />}
       </div>

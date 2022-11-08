@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import './styles/layout.css';
 import SearchModal from './components/SearchModal';
 import { useState } from 'react';
-import LoginModal from 'components/LoginModal/LoginModal';
+import LoginSignUpModal from 'components/LoginModal/LoginSignUpModal';
 
 const Layout = () => {
   const [isSearchModalOn, setSearchModalOn] = useState(false);
@@ -42,7 +42,7 @@ const Layout = () => {
       {isSearchModalOn && <SearchModal setSearchModalOn={setSearchModalOn} />}
       {/* {isLoginModalOn && <LoginModal setLoginModalOn={setLoginModalOn} />} */}
       {activatedModal !== 0 && (
-        <LoginModal
+        <LoginSignUpModal
           activatedModal={activatedModal}
           setActivatedModal={setActivatedModal}
         />

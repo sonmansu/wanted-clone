@@ -6,7 +6,7 @@ import EmailModal from './EmailModal';
 import PasswordModal from './PasswordModal';
 import SignUpModal from './SignUpModal';
 
-const LoginModal = ({ activatedModal, setActivatedModal }) => {
+const LoginSignUpModal = ({ activatedModal, setActivatedModal }) => {
   // const [activatedModal, setActivatedModal] = useState(1);
 
   // const [isEmailModalOn, setEmailModalOn] = useState(true);
@@ -41,4 +41,4 @@ const LoginModal = ({ activatedModal, setActivatedModal }) => {
   );
 };
 
-export default LoginModal;
+export default LoginSignUpModal;

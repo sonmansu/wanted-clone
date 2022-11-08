@@ -11,7 +11,7 @@ import insightArr from 'mock/insights.json';
 import { Link } from 'react-router-dom';
 import InsightCategoriesSlider from 'components/InsightCategoriesSlider';
 import InsightItem from 'components/ListItems/InsightItem';
-import Icon from 'assets/icons/SvgIcon';
+import SvgIcon from 'assets/icons/SvgIcon';
 
 const HomePage = () => {
   return (
@@ -102,44 +102,44 @@ const HomePage = () => {
             <li className="section-recruit-ul__li">
               <Link>
                 <div className="section-recruit-ul__top">
-                  <Icon size={32} icon="magnifyingGlass" />
+                  <SvgIcon size={32} icon="magnifyingGlass" />
                 </div>
                 <div className="section-recruit-ul__bottom">
                   <span className="section-recruit-ul__text">채용공고</span>
-                  <Icon size={16} icon="arrowRight" />
+                  <SvgIcon size={16} icon="arrowRight" />
                 </div>
               </Link>
             </li>
             <li className="section-recruit-ul__li">
               <Link>
                 <div className="section-recruit-ul__top">
-                  <Icon size={32} icon="user" />
+                  <SvgIcon size={32} icon="user" />
                 </div>
                 <div className="section-recruit-ul__bottom">
                   <span className="section-recruit-ul__text">내 프로필</span>
-                  <Icon size={16} icon="arrowRight" />
+                  <SvgIcon size={16} icon="arrowRight" />
                 </div>
               </Link>
             </li>
             <li className="section-recruit-ul__li">
               <Link>
                 <div className="section-recruit-ul__top">
-                  <Icon size={32} icon="building" />
+                  <SvgIcon size={32} icon="building" />
                 </div>
                 <div className="section-recruit-ul__bottom">
                   <span className="section-recruit-ul__text">매치업</span>
-                  <Icon size={16} icon="arrowRight" />
+                  <SvgIcon size={16} icon="arrowRight" />
                 </div>
               </Link>
             </li>
             <li className="section-recruit-ul__li">
               <Link>
                 <div className="section-recruit-ul__top">
-                  <Icon size={32} icon="filter" />
+                  <SvgIcon size={32} icon="filter" />
                 </div>
                 <div className="section-recruit-ul__bottom">
                   <span className="section-recruit-ul__text">직군별 연봉</span>
-                  <Icon size={16} icon="arrowRight" />
+                  <SvgIcon size={16} icon="arrowRight" />
                 </div>
               </Link>
             </li>

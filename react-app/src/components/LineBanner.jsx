@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/lineBanner.css';
-import Icon from 'assets/icons/SvgIcon';
+import SvgIcon from 'assets/icons/SvgIcon';
 
 const LineBanner = ({ kind }) => {
   if (kind === 'recommend')
@@ -13,7 +13,11 @@ const LineBanner = ({ kind }) => {
   else if (kind === 'seek-job')
     return (
       <div className="line-banner-btn">
-        <Icon size={28} color={'rgb(255, 255, 255)'} icon="magnifyingGlass" />
+        <SvgIcon
+          size={28}
+          color={'rgb(255, 255, 255)'}
+          icon="magnifyingGlass"
+        />
         <span className="line-banner-btn__text">채용 중인 포지션 보러가기</span>
       </div>
     );

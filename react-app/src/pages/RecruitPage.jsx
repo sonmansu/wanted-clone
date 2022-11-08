@@ -6,7 +6,7 @@ import SlideBanner from 'components/SlideBanner';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/recruitPage.css';
-import Icon from 'assets/icons/SvgIcon';
+import SvgIcon from 'assets/icons/SvgIcon';
 
 export default function RecruitPage() {
   return (
@@ -47,13 +47,13 @@ export default function RecruitPage() {
         <ul className="nav-shortcut__list">
           <li className="nav-shortcut__profile-item align-center">
             <button className="align-center">
-              <Icon size={28} icon="user" />
+              <SvgIcon size={28} icon="user" />
               <span className="nav-shortcut__item-text">내 프로필</span>
             </button>
           </li>
           <li className="nav-shortcut__match-item align-center">
             <Link className="align-center">
-              <Icon size={28} icon="building" />
+              <SvgIcon size={28} icon="building" />
               <span className="nav-shortcut__item-text">매치업</span>
             </Link>
           </li>

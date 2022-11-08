@@ -1,6 +1,6 @@
 import { getIconName, iconSet } from './svgIconConstants';
 
-export default function Icon({ icon, size, color }) {
+export default function SvgIcon({ icon, size, color }) {
   if (!getIconName().includes(icon)) {
     console.log('ERROR, 아이콘 이름을 확인하세요', icon);
     return;
@@ -17,7 +17,7 @@ export default function Icon({ icon, size, color }) {
     </svg>
   );
 }
-Icon.defaultProps = {
+SvgIcon.defaultProps = {
   size: '28',
   color: 'rgb(0, 0, 0)',
 };

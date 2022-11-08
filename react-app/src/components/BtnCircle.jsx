@@ -1,4 +1,4 @@
-import Icon from 'assets/icons/SvgIcon';
+import SvgIcon from 'assets/icons/SvgIcon';
 import React from 'react';
 import '../styles/btnCircle.css';
 
@@ -7,7 +7,7 @@ const BtnCircle = ({ direction, onClick, style }) => {
     return (
       <div className="btn-gradient-bg" style={style}>
         <button className="arrow-btn-bg" onClick={onClick}>
-          <Icon size={18} icon="arrowLeft" />
+          <SvgIcon size={18} icon="arrowLeft" />
         </button>
       </div>
     );
@@ -15,7 +15,7 @@ const BtnCircle = ({ direction, onClick, style }) => {
     return (
       <div className="btn-gradient-bg btn-gradient-bg--right" style={style}>
         <button className="arrow-btn-bg" onClick={onClick}>
-          <Icon size={18} icon="arrowRight" />
+          <SvgIcon size={18} icon="arrowRight" />
         </button>
       </div>
     );

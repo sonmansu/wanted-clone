@@ -37,6 +37,10 @@
   padding: 20px;
   box-sizing: border-box;
 }
+.modal-title {
+  font-size: 18px;
+  font-weight: 600;
+}
 /* ? i 태그 중앙 정렬이 안됨 */
 .icon-logo-box {
   width: 100%;

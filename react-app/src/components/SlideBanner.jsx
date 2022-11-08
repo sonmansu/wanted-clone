@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import sliderListText from '../mock/sliderList.json';
 import SliderItem from './SliderItem';
 import '../styles/slideBanner.css';
+import SvgIcon from 'assets/icons/SvgIcon';
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -18,11 +19,7 @@ function NextArrow(props) {
       className="section-slider__btn section-slider__btn--right"
       onClick={onClick}
     >
-      <img
-        className="rotate-180"
-        src="https://img.icons8.com/external-outline-stroke-bomsymbols-/91/000000/external-arrow-digital-design-outline-set-2-outline-stroke-bomsymbols-.png"
-        alt="left button"
-      />
+      <SvgIcon icon="arrowRight" size={15} color={'#666666'} />
     </button>
   );
 }
@@ -31,10 +28,7 @@ function PrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <button className="section-slider__btn" onClick={onClick}>
-      <img
-        src="https://img.icons8.com/external-outline-stroke-bomsymbols-/91/000000/external-arrow-digital-design-outline-set-2-outline-stroke-bomsymbols-.png"
-        alt="right button"
-      />
+      <SvgIcon icon="arrowLeft" size={15} color={'#666666'} />
     </button>
   );
 }

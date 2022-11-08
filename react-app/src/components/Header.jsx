@@ -25,7 +25,6 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
             <Link
               to="/"
               className="wanted-logo"
-              onClick="location.href='home.html'"
               href="https://www.wanted.co.kr/"
             >
               <i className="icon-logo"></i>

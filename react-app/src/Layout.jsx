@@ -29,8 +29,8 @@ const Layout = () => {
     console.log('login btn');
     // if (isLoginModalOn) setLoginModalOn(false);
     // else setLoginModalOn(true);
-    if (activatedModal === 0) setActivatedModal(1);
-    else setActivatedModal(0);
+    if (activatedModal === 0) setActivatedModal(1); // 로그인 모달 on
+    else setActivatedModal(0); // off
   };
 
   return (

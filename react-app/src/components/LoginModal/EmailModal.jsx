@@ -6,7 +6,7 @@ import BlueRadiusBtn from 'components/BlueRadiusBtn';
 
 export default function EmailModal({ setActivatedModal }) {
   const [email, setEmail] = useState('');
-  const [isValidEmail, setValidEmail] = useState('false');
+  const [isValidEmail, setValidEmail] = useState(false);
 
   const onChangeEmail = (e) => {
     setEmail(e.target.value);
@@ -77,7 +77,11 @@ export default function EmailModal({ setActivatedModal }) {
             </div>
           ) : null}
         </label>
-        <BlueRadiusBtn onClick={onClickContinueBtn} text="이메일로 계속하기" />
+        <BlueRadiusBtn
+          onClick={onClickContinueBtn}
+          text="이메일로 계속하기"
+          className={isValidEmail ? '' : 'unactivated'}
+        />
         <div className="login-modal__or-divider">or</div>
         <div className="login-modal__sns-login-text">
           다음 계정으로 계속하기

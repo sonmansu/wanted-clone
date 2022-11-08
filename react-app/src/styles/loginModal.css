@@ -117,25 +117,6 @@ input[type='number']::-webkit-inner-spin-button {
   color: var(--red-color);
   margin-top: 8px;
 }
-.login-modal__email-login-btn {
-  height: 54px;
-  border-radius: 27px;
-  background-color: #36f;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 14px;
-}
-.login-modal__email-login-btn:hover {
-  background-color: #002fdb;
-  color: white;
-}
-.login-modal__email-login-btn__text {
-  margin-left: 10px;
-  font-size: 16px;
-  font-weight: 600;
-}
 
 .login-modal__or-divider {
   color: #969696;

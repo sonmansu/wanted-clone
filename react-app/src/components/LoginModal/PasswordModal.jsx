@@ -3,7 +3,7 @@ import React from 'react';
 import userArr from '../../mock/users.json';
 import { useState } from 'react';
 
-export default function PasswordModal({ setActivatedModal, setLogin }) {
+export default function PasswordModal({ setActivatedModal }) {
   const [pw, setPw] = useState('');
   const [isCorrectPw, setCorrectPw] = useState(false);
   const [isClickedNextBtn, setIsClickedNextBtn] = useState(false);
@@ -21,7 +21,6 @@ export default function PasswordModal({ setActivatedModal, setLogin }) {
       localStorage.setItem('email', inputEmail);
       localStorage.setItem('pw', pw);
       sessionStorage.removeItem('inputEmail');
-      setLogin(true);
     } else {
       setCorrectPw(false);
     }

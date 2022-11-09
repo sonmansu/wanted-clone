@@ -6,7 +6,7 @@ import EmailModal from './EmailModal';
 import PasswordModal from './PasswordModal';
 import SignUpModal from './SignUpModal';
 
-const LoginSignUpModal = ({ activatedModal, setActivatedModal, setLogin }) => {
+const LoginSignUpModal = ({ activatedModal, setActivatedModal }) => {
   // const [activatedModal, setActivatedModal] = useState(1);
 
   // const [isEmailModalOn, setEmailModalOn] = useState(true);
@@ -34,10 +34,7 @@ const LoginSignUpModal = ({ activatedModal, setActivatedModal, setLogin }) => {
           <SignUpModal setActivatedModal={setActivatedModal} />
         )}
         {activatedModal === 3 && (
-          <PasswordModal
-            setActivatedModal={setActivatedModal}
-            setLogin={setLogin}
-          />
+          <PasswordModal setActivatedModal={setActivatedModal} />
         )}
       </div>
     </div>

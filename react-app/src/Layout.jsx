@@ -8,7 +8,6 @@ import LoginSignUpModal from 'components/LoginModal/LoginSignUpModal';
 
 const Layout = () => {
   const [isSearchModalOn, setSearchModalOn] = useState(false);
-  const [isLogin, setLogin] = useState(false);
   const [activatedModal, setActivatedModal] = useState(0);
   /**
    * activatedModal === 0: default, all modals off
@@ -38,15 +37,12 @@ const Layout = () => {
       <Header
         onClickSearchBtn={onClickSearchBtn}
         onClickLoginBtn={onClickLoginBtn}
-        isLogin={isLogin}
-        setLogin={setLogin}
       />
       {isSearchModalOn && <SearchModal setSearchModalOn={setSearchModalOn} />}
       {activatedModal !== 0 && (
         <LoginSignUpModal
           activatedModal={activatedModal}
           setActivatedModal={setActivatedModal}
-          setLogin={setLogin}
         />
       )}
 

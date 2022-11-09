@@ -26,7 +26,7 @@ export default function EmailModal({ setActivatedModal }) {
     } else {
       setActivatedModal(3); // 비밀번호 모달창
     }
-    console.log('clidked');
+    sessionStorage.setItem('inputEmail', email);
   };
   return (
     <div>

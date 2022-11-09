@@ -114,13 +114,126 @@ header {
 .search-btn {
   width: 17px;
   height: 17px;
-  margin-right: 15px;
+  margin-right: 10px;
   cursor: pointer;
 }
-.search-btn > img {
-  max-width: 100%;
-  max-height: 100%;
+
+/** 로그인 해야만 보이는 아이콘들**/
+.logined-area {
+  display: flex;
 }
+.noti-btn {
+  margin: 5px 10px 0px;
+}
+.profile-btn {
+  /* background-color: #1c36fd; */
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  margin: 0px 0px 0px 15px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+.profile-btn--border-blue {
+  border-color: #36f;
+}
+.profile-btn__bg-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-image: url('https://static.wanted.co.kr/oneid-user/profile_default.png');
+  background-size: cover;
+}
+.profile-btn__new-icon {
+  background-color: #36f;
+  border-radius: 5px;
+  width: 13px;
+  height: 13px;
+  font-size: 5px;
+  color: white;
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** 유저 아이콘 버튼 눌렀을 때 뜨는 드롭 다운 영역 */
+.user-dropdown-wrap {
+  width: 194px;
+  height: 14px;
+  position: absolute;
+  top: 40px;
+  left: -30px;
+  /* background-color: aqua; */
+}
+.user-dropdown {
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  width: 194px;
+  border-radius: 10px;
+  border: 1px solid #cdcdcd;
+  background-color: white;
+  padding-top: 15px;
+  overflow: hidden;
+}
+.user-dropdown-balloon-tail {
+  position: absolute;
+  height: 14px;
+  overflow: hidden;
+  top: 0;
+  left: 36px;
+}
+.user-dropdown-balloon-tail::after {
+  content: '';
+  border-radius: 3px;
+  display: block;
+  height: 14px;
+  width: 14px;
+  transform: rotate(55deg) skew(20deg);
+  border: 1px solid #cdcdcd;
+  background-color: white;
+  margin-top: 6px;
+}
+.user-dropdown__list {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.user-dropdown__item {
+  margin: 0 7px;
+  height: 34px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-dropdown__logout-item {
+  margin: 8px 0 0 0;
+  border-radius: 0;
+  border-top: 1px solid #ececec;
+  height: 50px;
+  background-color: #f7f7f7;
+}
+.user-dropdown__divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ececec;
+  margin: 8px 0px;
+}
+.user-dropdown__item:hover {
+  background-color: #f7f7f7;
+}
+
 .vertical-line {
   border-left: 1px solid var(--border-color);
   height: 10px;

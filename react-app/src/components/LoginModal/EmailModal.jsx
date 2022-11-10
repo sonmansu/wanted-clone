@@ -29,7 +29,7 @@ export default function EmailModal({ setActivatedModal }) {
     sessionStorage.setItem('inputEmail', email);
   };
   return (
-    <div>
+    <div className="email-modal">
       <div className="login-modal-header">
         <div className="icon-logo-box">
           <i className="icon-logo logo-align-center"></i>
@@ -96,7 +96,7 @@ export default function EmailModal({ setActivatedModal }) {
             >
               <path
                 fill="#000"
-                fill-rule="nonzero"
+                fillRule="nonzero"
                 d="M11 0C5.242 0 0 3.823 0 8.539c0 2.932 1.904 5.519 4.804 7.056l-1.22 4.479c-.107.397.343.712.69.483l5.348-3.548c.452.044.91.069 1.377.069 6.076 0 11-3.823 11-8.54 0-4.715-4.924-8.538-11-8.538"
               ></path>
             </svg>
@@ -111,7 +111,7 @@ export default function EmailModal({ setActivatedModal }) {
             >
               <path
                 fill="#fff"
-                fill-rule="nonzero"
+                fillRule="nonzero"
                 d="M11.214 12.603l.622-4.055h-3.89V5.917c0-1.11.543-2.191 2.285-2.191H12V.274S10.395 0 8.86 0C5.656 0 3.562 1.942 3.562 5.458v3.09H0v4.055h3.562v9.802c.714.112 1.446.17 2.191.17.746 0 1.478-.058 2.192-.17v-9.802h3.269"
               ></path>
             </svg>
@@ -124,7 +124,7 @@ export default function EmailModal({ setActivatedModal }) {
               height="23"
               viewBox="0 0 23 23"
             >
-              <g fill="none" fill-rule="nonzero">
+              <g fill="none" fillRule="nonzero">
                 <path
                   fill="#EA4335"
                   d="M11.5 4.574c1.688 0 3.204.58 4.396 1.72l3.299-3.299C17.203 1.14 14.6 0 11.5 0 7.005 0 3.115 2.577 1.223 6.335l3.842 2.98c.905-2.718 3.44-4.741 6.435-4.741z"
@@ -155,7 +155,7 @@ export default function EmailModal({ setActivatedModal }) {
             >
               <path
                 fill="#fff"
-                fill-rule="nonzero"
+                fillRule="nonzero"
                 d="M15.868 12.55c.033 3.574 3.098 4.764 3.132 4.779-.026.084-.49 1.695-1.615 3.36-.972 1.439-1.982 2.872-3.572 2.902-1.562.03-2.065-.938-3.851-.938s-2.344.908-3.823.967c-1.535.059-2.704-1.556-3.684-2.99C.45 17.698-1.08 12.343.975 8.73c1.022-1.795 2.848-2.932 4.83-2.96 1.506-.03 2.929 1.026 3.85 1.026.921 0 2.65-1.27 4.467-1.083.761.032 2.897.31 4.268 2.343-.11.07-2.548 1.506-2.522 4.494m-2.936-8.777c.815-.999 1.363-2.389 1.213-3.772-1.174.048-2.594.792-3.437 1.79-.755.884-1.416 2.298-1.238 3.654 1.31.103 2.647-.673 3.462-1.672"
               ></path>
             </svg>

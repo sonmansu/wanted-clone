@@ -46,8 +46,8 @@ const JobDetailPage = () => {
       <div className="contents-wrap">
         <div className="job-info-box">
           <div className="job-info__img-slider">
-            {positionDetailObj.imgs.map((imgSrc) => (
-              <div className="job-info__img-box">
+            {positionDetailObj.imgs.map((imgSrc, idx) => (
+              <div key={idx} className="job-info__img-box">
                 <img src={imgSrc} alt="" />
               </div>
             ))}
@@ -63,8 +63,8 @@ const JobDetailPage = () => {
             </span>
           </div>
           <ul className="job-info-tag-box">
-            {positionDetailObj.tags.map((tag) => (
-              <li className="job-info__tag-item">
+            {positionDetailObj.tags.map((tag, idx) => (
+              <li key={idx} className="job-info__tag-item">
                 <a className="job-info__tag">{tag}</a>
               </li>
             ))}
@@ -75,8 +75,10 @@ const JobDetailPage = () => {
           ></p>
           <p className="job-info__skill-title">기술스택 ・ 툴</p>
           <div className="job-info-skill-box">
-            {positionDetailObj.skills.map((skill) => (
-              <span className="job-info__skill">{skill}</span>
+            {positionDetailObj.skills.map((skill, idx) => (
+              <span key={idx} className="job-info__skill">
+                {skill}
+              </span>
             ))}
           </div>
           <div className="divider divider--width-100"></div>
@@ -119,14 +121,14 @@ const JobDetailPage = () => {
           </section>
           <section className="job-info-warning-box">
             <svg className="" width="24" height="24" viewBox="0 0 24 24">
-              <g fill="currentColor" fill-rule="evenodd">
+              <g fill="currentColor" fillRule="evenodd">
                 <path
-                  fill-rule="nonzero"
+                  fillRule="nonzero"
                   d="M15.266 20.658A9.249 9.249 0 0112 21.25a9.25 9.25 0 010-18.5 9.21 9.21 0 016.54 2.71A9.217 9.217 0 0121.25 12a9.213 9.213 0 01-2.71 6.54.75.75 0 101.061 1.062A10.713 10.713 0 0022.75 12c0-2.89-1.146-5.599-3.149-7.601A10.717 10.717 0 0012 1.25C6.063 1.25 1.25 6.063 1.25 12S6.063 22.75 12 22.75c1.31 0 2.591-.235 3.794-.688a.75.75 0 10-.528-1.404z"
                 ></path>
                 <path d="M13 16a1 1 0 11-2 0 1 1 0 012 0"></path>
                 <path
-                  fill-rule="nonzero"
+                  fillRule="nonzero"
                   d="M11.25 7v5a.75.75 0 101.5 0V7a.75.75 0 10-1.5 0z"
                 ></path>
               </g>
@@ -199,8 +201,9 @@ const JobDetailPage = () => {
             </button>
             <button className="job-apply-liked-list-btn">
               <ul className="job-apply-liked-list-btn__list">
-                {positionDetailObj.likedImgs.map((img) => (
+                {positionDetailObj.likedImgs.map((img, idx) => (
                   <li
+                    key={idx}
                     style={{
                       backgroundImage: `url(${img}), url(${positionDetailObj.DefaultImg})`,
                     }}

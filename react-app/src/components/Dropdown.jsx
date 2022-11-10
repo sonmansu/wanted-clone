@@ -5,65 +5,50 @@ import '../styles/dropdown.css';
 import SubcategoryItem from './SubcategoryItem';
 import { Link } from 'react-router-dom';
 
-const Dropdown = ({ onDropdownLeave, isMenuHover }) => {
-  const { mainCategory, subCategory } = categoryList;
-  const [isMainHover, setMainHover] = useState(false);
-  const [subcategoryWidth, setSubcategoryWidth] = useState(0);
+const Dropdown = ({ setMenuDropdownOn }) => {
+  const [isMainMenuOn, setMainMenuOn] = useState(false);
+  const [subMenuWidth, setSubMenuWidth] = useState(0);
 
-  const [dropdownMainCategory, setDropdownMainCategory] =
-    useState(mainCategory);
-  const [dropdownSubCategory, setDropdownSubCategory] = useState([]);
+  // 더미 json 카테고리 텍스트들 읽어옴 (원랜 서버 작업)
+  const [categories, setCategories] = useState(categoryList.mainCategory);
+  // subcategory state (subcategory 내용이 바뀔 때마다 리랜더링 돼야함)
+  const [subcategories, setSubcategories] = useState([]);
 
-  const subCategoryRef = useRef();
-  const subCategoryItemRef = useRef();
-  const onMainOver = (e, mainId) => {
-    setMainHover(true);
-    console.log(e, mainId);
+  const subMenuRef = useRef();
+  const subMenuItemRef = useRef();
+
+  // 메인 메뉴 영역에 마우스 올렸을때 이벤트 핸들러
+  const onMainOver = (e, mainId, subcategoryArr) => {
     console.log('onMainOver');
-    console.dir(e.target);
-    // 개발에 관련된 sub category들을 subcategory list에 뿌려줌
-    if (subCategory[mainId]) {
-      // console.log('카테고리:', subCategory[mainId]);
-      const subcategoryText = subCategory[mainId]; //json파일에서 카테고리 텍스트 가져옴
-      subCategoryList = subcategoryText.map((item) => {
+    // 각 메인 카테고리에 해당하는 서브카테고리를 subcategory list에 뿌려줌
+    if (subcategoryArr) {
+      setMainMenuOn(true);
+      const $subCategories = subcategoryArr.map((item) => {
         return (
           <SubcategoryItem
+            key={item.subId}
             mainId={mainId}
             subId={item.subId}
             text={item.text}
-            ref={subCategoryItemRef}
+            ref={subMenuItemRef}
           />
         );
       });
-      //   console.log('subcategoryList :>> ', subCategoryList);
-      // setDropdownSubCategory(subcategoryText);
-      setDropdownSubCategory(subCategoryList);
-      // setSubcategoryWidth(calcSubcategoryWidth());
-      setSubCategoryListWidth();
+      console.log('$subCategories :>> ', $subCategories);
+      setSubcategories($subCategories); // 리랜더링
+      // setSubcategoryWidth(calcSubcategoryWidth()); // 여기서 호출하면 느리게 적용됨
+      // setSubCategoryListWidth();
+    } else {
+      setSubcategories([]);
     }
-
-    // if (subCategory[mainCategoryText]) {
-    //   // console.log('카테고리:', subCategory[mainCategoryText]);
-    //   subCategoryList = subCategory[mainCategoryText].map((item) => (
-    //     <SubcategoryItem
-    //       mainId={1}
-    //       subId={1}
-    //       text={item.text}
-    //       ref={subCategoryItemRef}
-    //     />
-    //   ));
-    //   setDropdownSubCategory(subCategoryList);
-    //   // setSubCategoryListWidth();
-    // }
-    // }
   };
 
-  const mainCategoryList = dropdownMainCategory.map((item) => (
+  const $maincategories = categories.map((item) => (
     <li
       className="dropdown-main-category__item"
       key={item.mainId}
       onMouseOver={(e) => {
-        onMainOver(e, item.mainId);
+        onMainOver(e, item.maidId, item.subCategory);
       }}
     >
       <Link
@@ -74,60 +59,47 @@ const Dropdown = ({ onDropdownLeave, isMenuHover }) => {
       </Link>
     </li>
   ));
-  let subCategoryList = [];
-  let $subcategoryList = [];
 
-  // function calcSubcategoryWidth() {
-  //   /* position: absolute 값 때문에 width값을 명시적으로 줘야함 */
-  //   const itemCnt = subCategoryRef.current.children.length;
-  //   const listHeight = subCategoryRef.current.clientHeight;
-  //   const itemHeight = subCategoryRef.current.children[0]?.offsetHeight; // 40, clientHeight는 38나옴
-  //   console.dir(subCategoryRef.current);
-  //   console.log('subCategoryItemRef.current', subCategoryItemRef.current);
-  //   const itemWidth = subCategoryRef.current?.children[0]?.offsetWidth; // 200, clientWidth는 198나옴
-  //   const itemCntPerLine = listHeight / itemHeight; // 18
-  //   const lineCnt = Math.ceil(itemCnt / itemCntPerLine); // 올림
-  //   return itemWidth * lineCnt;
-  // }
-  function setSubCategoryListWidth() {
+  function calcSubcategoryWidth() {
     /* position: absolute 값 때문에 width값을 명시적으로 줘야함 */
-    const itemCnt = subCategoryRef.current.children.length;
-    const listHeight = subCategoryRef.current.clientHeight;
-    const itemHeight = subCategoryRef.current.children[0]?.offsetHeight; // 40, clientHeight는 38나옴
-    console.dir(subCategoryRef.current);
-    console.log('subCategoryItemRef.current', subCategoryItemRef.current);
-    const itemWidth = subCategoryRef.current.children[0]?.offsetWidth; // 200, clientWidth는 198나옴
+    const itemCnt = subMenuRef.current.children.length;
+    const listHeight = subMenuRef.current.clientHeight;
+    const itemHeight = subMenuRef.current.children[0]?.offsetHeight; // 40, clientHeight는 38나옴
+    console.dir(subMenuRef.current);
+    console.log('subCategoryItemRef.current', subMenuItemRef.current);
+    const itemWidth = subMenuRef.current?.children[0]?.offsetWidth; // 200, clientWidth는 198나옴
     const itemCntPerLine = listHeight / itemHeight; // 18
     const lineCnt = Math.ceil(itemCnt / itemCntPerLine); // 올림
-    setSubcategoryWidth(itemWidth * lineCnt);
-    subCategoryRef.current.style.width = subcategoryWidth + 'px';
+    const result = itemWidth * lineCnt;
+    //   subCategoryRef.current.style.width = result + 'px';
+    //   setSubcategoryWidth(result);
+    return result;
   }
-  useEffect(setSubCategoryListWidth, [setDropdownSubCategory]);
+
+  useEffect(() => setSubMenuWidth(calcSubcategoryWidth()), [subcategories]);
 
   return (
     <div
-      className={isMenuHover ? 'dropdown-menu-box' : 'dropdown-menu-box hidden'}
+      className="dropdown-menu-box"
       onMouseLeave={() => {
-        onDropdownLeave();
-        setMainHover(false);
+        setMenuDropdownOn(false);
       }}
     >
       <nav>
-        <ul className="dropdown-main-category__list">{mainCategoryList}</ul>
+        <ul className="dropdown-main-category__list">{$maincategories}</ul>
       </nav>
       <nav className="dropdown-subcategory-nav">
         <ul
-          width="100px"
-          // width={subcategoryWidth + 'px'}
-          ref={subCategoryRef}
+          style={{ width: `${subMenuWidth}px` }}
+          ref={subMenuRef}
           className={
-            isMenuHover && isMainHover
+            isMainMenuOn
               ? 'dropdown-sub-category__list'
               : 'dropdown-sub-category__list hidden'
           }
         >
           {/* {subCategoryList} */}
-          {dropdownSubCategory}
+          {subcategories}
         </ul>
       </nav>
     </div>

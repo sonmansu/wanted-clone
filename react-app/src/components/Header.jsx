@@ -6,7 +6,7 @@ import SvgIcon from 'assets/icons/SvgIcon';
 
 const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
   const [isLogin, setLogin] = useState(false);
-  const [isMenuHover, setMenuHover] = useState(false);
+  const [isMenuDropdownOn, setMenuDropdownOn] = useState(false);
   const [isUserDropdownOn, setUserDropdownOn] = useState(false);
 
   // 다른 탭으로 들어가면 setLogin이 날아가므로 localStorage를 확인하여 로그인 상태 유지시킴
@@ -18,10 +18,7 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
     else setLogin(false);
   }, [user, setLogin]);
 
-  const onEnterMenu = () => setMenuHover(true);
-  const onDropdownLeave = () => {
-    setMenuHover(false);
-  };
+  const onEnterMenu = () => setMenuDropdownOn(true);
 
   const onClickLogout = () => {
     localStorage.removeItem('email');
@@ -208,7 +205,13 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
           <Link className="corp-service-btn">기업 서비스</Link>
         </div>
       </div>
-      <Dropdown onDropdownLeave={onDropdownLeave} isMenuHover={isMenuHover} />
+      {isMenuDropdownOn && (
+        <Dropdown
+          setMenuDropdownOn={setMenuDropdownOn}
+          // onDropdownLeave={onDropdownLeave}
+          // isMenuHover={isMenuDropdownOn}
+        />
+      )}
     </header>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/subcategoryItem.css';
+import '../../styles/subcategoryItem.css';
 import { Link } from 'react-router-dom';
 
 const SubcategoryItem = ({ mainId, subId, text }) => {

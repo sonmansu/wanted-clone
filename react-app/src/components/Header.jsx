@@ -18,7 +18,7 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
     else setLogin(false);
   }, [user, setLogin]);
 
-  const onMenuEnter = () => setMenuHover(true);
+  const onEnterMenu = () => setMenuHover(true);
   const onDropdownLeave = () => {
     setMenuHover(false);
   };
@@ -37,18 +37,14 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
     <header>
       <div className="header-wrap">
         <div className="left-btns-wrap">
-          <button className="menu-btn" onMouseEnter={onMenuEnter}>
+          <button className="menu-btn" onMouseEnter={onEnterMenu}>
             <img
               src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=undefined&q=75"
               alt="메뉴버튼"
             />
           </button>
           <h1>
-            <Link
-              to="/"
-              className="wanted-logo"
-              href="https://www.wanted.co.kr/"
-            >
+            <Link to="/" className="wanted-logo">
               <i className="icon-logo"></i>
             </Link>
           </h1>

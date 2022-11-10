@@ -28,7 +28,7 @@ export default function PasswordModal({ setActivatedModal }) {
   };
 
   return (
-    <div>
+    <div className="password-modal">
       <div className="login-modal-header">
         <span className="modal-title">이메일로 로그인</span>
         <button

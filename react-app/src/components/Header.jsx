@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import Dropdown from './Dropdown';
+import MenuDropdown from './MenuDropdown';
 import '../styles/header.css';
 import { Link } from 'react-router-dom';
 import SvgIcon from 'assets/icons/SvgIcon';
@@ -206,7 +206,7 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
         </div>
       </div>
       {isMenuDropdownOn && (
-        <Dropdown
+        <MenuDropdown
           setMenuDropdownOn={setMenuDropdownOn}
           // onDropdownLeave={onDropdownLeave}
           // isMenuHover={isMenuDropdownOn}

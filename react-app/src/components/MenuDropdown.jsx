@@ -5,7 +5,7 @@ import '../styles/dropdown.css';
 import SubcategoryItem from './SubcategoryItem';
 import { Link } from 'react-router-dom';
 
-const Dropdown = ({ setMenuDropdownOn }) => {
+const MenuDropdown = ({ setMenuDropdownOn }) => {
   const [isMainMenuOn, setMainMenuOn] = useState(false);
   const [subMenuWidth, setSubMenuWidth] = useState(0);
 
@@ -106,4 +106,4 @@ const Dropdown = ({ setMenuDropdownOn }) => {
   );
 };
 
-export default Dropdown;
+export default MenuDropdown;

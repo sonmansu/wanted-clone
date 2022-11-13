@@ -5,6 +5,7 @@ import JobListPage from './pages/JobListPage';
 import JobDetailPage from './pages/JobDetailPage';
 import SearchPage from './pages/SearchPage';
 import RecruitPage from 'pages/RecruitPage';
+import BookmarkPage from 'pages/BookmarkPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/jobDetail/:jobId' element={<JobDetailPage />} />
         <Route path='/search' element={<SearchPage />} />
         <Route path='/recruit' element={<RecruitPage />} />
+        <Route path='/profile/bookmarks' element={<BookmarkPage />} />
       </Route>
     </Routes>
   );

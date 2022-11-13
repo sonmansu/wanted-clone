@@ -30,7 +30,9 @@ export default function UserDropdown({ setLogin }) {
             <Link className="user-dropdown__item">좋아요</Link>
           </li>
           <li>
-            <Link className="user-dropdown__item">북마크</Link>
+            <Link to="/profile/bookmarks" className="user-dropdown__item">
+              북마크
+            </Link>
           </li>
           <div className="user-dropdown__divider"></div>
           <li>

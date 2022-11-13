@@ -1,11 +1,13 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import ContentThumbnail from './ContentThumbnail';
 import ContentTitle from './ContentTitle';
 import { Link } from 'react-router-dom';
 import { priceToString } from '../utils/priceToString';
 import ResponseLevelLabel from './ResponseLevelLabel';
 import { add, remove, toggle } from '../features/bookmark/bookmarkSlice';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 export default function PositionItem({
   id,
@@ -16,14 +18,21 @@ export default function PositionItem({
   location,
   reward,
 }) {
+  const [isBookmark, setIsBookmark] = useState(false);
   const dispatch = useDispatch();
+  const bookmarkIds = useSelector((state) => state.bookmark.positionId);
+  useEffect(() => {
+    if (bookmarkIds.includes(id)) setIsBookmark(true);
+    else setIsBookmark(false);
+  }, [bookmarkIds, id]);
 
   return (
     <li>
       <Link to={`/jobDetail/${id}`}>
         <div className="thumbnail-position-wrap">
           <ContentThumbnail src={img} />
-          <div
+          <button
+            type
             className="section-contents__bookmark-icon"
             onClick={() => dispatch(toggle(id))}
           >
@@ -42,11 +51,12 @@ export default function PositionItem({
               ></path>
               <path
                 d="M9.28812 12.7838C9.10961 12.681 8.89046 12.681 8.71195 12.7838L4.1613 15.4052V2.17067H9.00004H13.8387V15.4052L9.28812 12.7838Z"
-                fill="black"
-                fillOpacity="0.25"
+                {...(isBookmark
+                  ? { fill: '#36f' }
+                  : { fill: 'black', fillOpacity: '0.25' })}
               ></path>
             </svg>
-          </div>
+          </button>
         </div>
 
         <div className="position-body">

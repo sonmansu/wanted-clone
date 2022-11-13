@@ -11,9 +11,21 @@ import { priceToString } from '../utils/priceToString';
 import { RenderAfterNavermapsLoaded, NaverMap, Marker } from 'react-naver-maps'; // 패키지 불러오기
 import { NAVER_CLIENT_ID } from '../utils/credentials';
 import ResponseLevelLabel from 'components/ResponseLevelLabel';
+import { useDispatch, useSelector } from 'react-redux';
+import { add, remove, toggle } from '../features/bookmark/bookmarkSlice';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const JobDetailPage = () => {
-  const { jobId } = useParams();
+  const dispatch = useDispatch();
+  const jobId = +useParams().jobId;
+
+  const [isBookmark, setIsBookmark] = useState(false);
+  const bookmarkIds = useSelector((state) => state.bookmark.positionId);
+  useEffect(() => {
+    if (bookmarkIds.includes(jobId)) setIsBookmark(true);
+    else setIsBookmark(false);
+  }, [bookmarkIds, jobId]);
 
   const positionDetailObj = positionDetailsText[jobId];
   const corpId = positionDetailObj.corpId;
@@ -184,9 +196,12 @@ const JobDetailPage = () => {
             </div>
           </div>
           <div>
-            <button className="job-apply__btn">
+            <button
+              className="job-apply__btn"
+              onClick={() => dispatch(toggle(+jobId))}
+            >
               <img src="" alt="" />
-              <span>북마크하기</span>
+              {isBookmark ? <span>북마크 완료</span> : <span>북마크하기</span>}
             </button>
             <button className="job-apply__btn job-apply__btn--bg-col">
               지원하기

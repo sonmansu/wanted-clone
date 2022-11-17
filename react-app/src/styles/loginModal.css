@@ -93,6 +93,11 @@
 .input-wrap {
   margin-top: 11px;
 }
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .input {
   width: 100%;
   height: 50px;
@@ -103,18 +108,13 @@
   padding: 0 15px;
   box-sizing: border-box;
 }
-input[type='number']::-webkit-outer-spin-button,
-input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.input--border-red,
+.input--border-red:focus-visible {
+  border: 1px solid var(--red-color);
 }
 .input:focus-visible {
   border: 1px solid #36f;
   outline: none;
-}
-.input--border-red,
-.input--border-red:focus-visible {
-  border: 1px solid var(--red-color);
 }
 .input__errorMessage {
   font-size: 13px;

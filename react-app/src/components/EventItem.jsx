@@ -15,7 +15,7 @@ const EventItem = ({ img, kinds, title }) => {
           <img src={img} alt="콘텐츠 썸네일" />
         </ContentThumbnail>
         <div className="event-kinds-box">{eventKinds}</div>
-        <ContentTitle text={title} />
+        <ContentTitle>{title}</ContentTitle>
       </Link>
     </li>
   );

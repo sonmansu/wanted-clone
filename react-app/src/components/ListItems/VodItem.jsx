@@ -15,7 +15,7 @@ const VodItem = ({ img, playtime, author, title, desc }) => {
           <span className="section-contents__playtime">{playtime}</span>
         </div>
         <div className="section-contents__author">{author}</div>
-        <ContentTitle text={title} />
+        <ContentTitle>{title}</ContentTitle>
         <div className="section-contents__desc section-contents__desc--1line">
           {desc}
         </div>

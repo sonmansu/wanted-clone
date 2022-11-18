@@ -206,7 +206,9 @@ export default function SignUpModal({ setActivatedModal }) {
           </div>
         </div>
         <div className="login-modal-footer-box">
-          <BlueRadiusBtn text="회원가입하기" className="unactivated" />
+          <BlueRadiusBtn unactivated={true}>
+            <span>회원가입하기</span>
+          </BlueRadiusBtn>
           {/* <button className="login-modal__signUp-btn">회원가입하기</button> */}
         </div>
       </div>

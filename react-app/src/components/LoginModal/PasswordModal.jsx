@@ -64,11 +64,9 @@ export default function PasswordModal({ setActivatedModal }) {
             </div>
           ) : null}
         </div>
-        <BlueRadiusBtn
-          text="다음"
-          className={pw.length > 0 ? '' : 'unactivated'}
-          onClick={onClikNextBtn}
-        />
+        <BlueRadiusBtn onClick={onClikNextBtn} unactivated={pw.length === 0}>
+          <span>다음</span>
+        </BlueRadiusBtn>
         <button className="pw-change-btn">
           <span className="pw-change-btn__text">비밀번호 초기화/변경</span>
         </button>

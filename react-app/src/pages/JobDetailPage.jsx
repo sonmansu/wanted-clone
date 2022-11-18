@@ -70,7 +70,9 @@ const JobDetailPage = () => {
             <Link className="job-info-subtitle__corp-name">
               {corpObj.corpName}
             </Link>
-            <ResponseLevelLabel text={positionDetailObj.response} />
+            <ResponseLevelLabel>
+              응답률 {positionDetailObj.response}
+            </ResponseLevelLabel>
             <span className="job-info-subtitle__locate">
               {corpObj.location}
             </span>

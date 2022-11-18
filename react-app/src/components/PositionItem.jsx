@@ -48,7 +48,7 @@ export default function PositionItem({
         <div className="position-body">
           <ContentTitle text={position} />
           <p className="position-body__corp-name">{corp}</p>
-          <ResponseLevelLabel text={response} />
+          <ResponseLevelLabel>응답률 {response}</ResponseLevelLabel>
           <p className="position-body__locate">{location}</p>
           <p className="position-body__reward">
             채용보상금 {priceToString(reward)}원

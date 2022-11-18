@@ -9,7 +9,9 @@ const VodItem = ({ img, playtime, author, title, desc }) => {
     <li>
       <Link href="#">
         <div className="thumbnail-playtime-wrap">
-          <ContentThumbnail src={img} />
+          <ContentThumbnail>
+            <img src={img} alt="콘텐츠 썸네일" />
+          </ContentThumbnail>
           <span className="section-contents__playtime">{playtime}</span>
         </div>
         <div className="section-contents__author">{author}</div>

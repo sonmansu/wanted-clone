@@ -32,7 +32,9 @@ export default function PositionItem({
     <li>
       <Link to={`/jobDetail/${id}`}>
         <div className="thumbnail-position-wrap">
-          <ContentThumbnail src={img} />
+          <ContentThumbnail>
+            <img src={img} alt="콘텐츠 썸네일" />
+          </ContentThumbnail>
           <button
             type
             className="section-contents__bookmark-icon"

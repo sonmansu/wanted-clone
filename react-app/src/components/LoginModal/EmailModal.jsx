@@ -19,7 +19,11 @@ export default function EmailModal({ setActivatedModal }) {
     }
   };
 
-  const onClickContinueBtn = () => {
+  const onClickContinueBtn = (e) => {
+    if (!isValidEmail) {
+      e.preventDefault();
+      return;
+    }
     console.log('userArr', userArr);
     if (userArr.findIndex((user) => user.email === email) === -1) {
       setActivatedModal(2); // 회원가입 모달창
@@ -78,10 +82,13 @@ export default function EmailModal({ setActivatedModal }) {
           ) : null}
         </label>
         <BlueRadiusBtn
-          onClick={onClickContinueBtn}
-          text="이메일로 계속하기"
-          className={isValidEmail ? '' : 'unactivated'}
-        />
+          onClick={(e) => {
+            onClickContinueBtn(e);
+          }}
+          unactivated={!isValidEmail}
+        >
+          <span>이메일로 계속하기</span>
+        </BlueRadiusBtn>
         <div className="login-modal__or-divider">or</div>
         <div className="login-modal__sns-login-text">
           다음 계정으로 계속하기

@@ -14,8 +14,10 @@ export default function InsightItem({
   return (
     <li>
       <Link>
-        <ContentThumbnail src={img} />
-        <ContentTitle text={title} />
+        <ContentThumbnail>
+          <img src={img} alt="콘텐츠 썸네일" />
+        </ContentThumbnail>
+        <ContentTitle>{title}</ContentTitle>
         <div className="section-contents__desc">{desc}</div>
         <div className="section-contents__writer">
           <button className="section-contents__writer__button">

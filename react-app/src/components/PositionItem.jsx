@@ -32,7 +32,9 @@ export default function PositionItem({
     <li>
       <Link to={`/jobDetail/${id}`}>
         <div className="thumbnail-position-wrap">
-          <ContentThumbnail src={img} />
+          <ContentThumbnail>
+            <img src={img} alt="콘텐츠 썸네일" />
+          </ContentThumbnail>
           <button
             type
             className="section-contents__bookmark-icon"
@@ -46,9 +48,9 @@ export default function PositionItem({
         </div>
 
         <div className="position-body">
-          <ContentTitle text={position} />
+          <ContentTitle>{position}</ContentTitle>
           <p className="position-body__corp-name">{corp}</p>
-          <ResponseLevelLabel text={response} />
+          <ResponseLevelLabel>응답률 {response}</ResponseLevelLabel>
           <p className="position-body__locate">{location}</p>
           <p className="position-body__reward">
             채용보상금 {priceToString(reward)}원

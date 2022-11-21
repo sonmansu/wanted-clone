@@ -16,6 +16,7 @@ import { add, remove, toggle } from '../features/bookmark/bookmarkSlice';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import BookmarkBorderBlueIcon from 'assets/icons/BookmarkBorderBlueIcon';
+import BlueRadiusBtn from 'components/BlueRadiusBtn';
 
 const JobDetailPage = () => {
   const dispatch = useDispatch();
@@ -70,7 +71,9 @@ const JobDetailPage = () => {
             <Link className="job-info-subtitle__corp-name">
               {corpObj.corpName}
             </Link>
-            <ResponseLevelLabel text={positionDetailObj.response} />
+            <ResponseLevelLabel>
+              응답률 {positionDetailObj.response}
+            </ResponseLevelLabel>
             <span className="job-info-subtitle__locate">
               {corpObj.location}
             </span>
@@ -197,20 +200,13 @@ const JobDetailPage = () => {
             </div>
           </div>
           <div>
-            <button
-              className="job-apply__btn"
-              onClick={() => dispatch(toggle(+jobId))}
-            >
+            <BlueRadiusBtn bgWhite onClick={() => dispatch(toggle(+jobId))}>
               <BookmarkBorderBlueIcon isBookmark={isBookmark} />
-              {isBookmark ? (
-                <span className="job-apply__btn__text">북마크 완료</span>
-              ) : (
-                <span className="job-apply__btn__text">북마크하기</span>
-              )}
-            </button>
-            <button className="job-apply__btn job-apply__btn--bg-col">
-              지원하기
-            </button>
+              <span>{isBookmark ? '북마크 완료' : '북마크하기'}</span>
+            </BlueRadiusBtn>
+            <BlueRadiusBtn marginTop="10px">
+              <span>지원하기</span>
+            </BlueRadiusBtn>
           </div>
           <div className="job-apply-like-row">
             <button className="job-apply-like-btn">

@@ -8,8 +8,10 @@ const ArticleItem = ({ img, title, tag }) => {
   return (
     <li>
       <Link>
-        <ContentThumbnail src={img} />
-        <ContentTitle text={title} />
+        <ContentThumbnail>
+          <img src={img} alt="콘텐츠 썸네일" />
+        </ContentThumbnail>
+        <ContentTitle>{title}</ContentTitle>
         <div className="section-contents__tags">{tag}</div>
       </Link>
     </li>

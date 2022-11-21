@@ -1,0 +1,33 @@
+@use './variable' as var;
+@use 'sass:map';
+
+// mixin include시 breakpoint를 변수로 넘겨줘야해서 번거로움.
+// @mixin media-breakpoint-down($breakpoint) {
+//   @media (max-width: #{$breakpoint}) {
+//     @content;
+//   }
+// }
+
+// 데스크탑 기준 개발, 더 작은 화면으로 이동하는 미디어 쿼리
+
+@mixin media-breakpoint-lg {
+  @media (max-width: map.get(var.$breakpoints, xl)) {
+    @content;
+  }
+}
+@mixin media-breakpoint-md {
+  @media (max-width: map.get(var.$breakpoints, lg)) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-sm {
+  @media (max-width: map.get(var.$breakpoints, md)) {
+    @content;
+  }
+}
+@mixin media-breakpoint-xs {
+  @media (max-width: map.get(var.$breakpoints, sm)) {
+    @content;
+  }
+}

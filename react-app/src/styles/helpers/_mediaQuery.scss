@@ -1,5 +1,15 @@
 @use './variable' as var;
 @use 'sass:map';
+@use 'sass:list';
+
+/* _variable.scss에 breakpoint 변수 선언 */
+// $breakpoints: (
+//   xs: 0,
+//   sm: 320px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+// );
 
 // mixin include시 breakpoint를 변수로 넘겨줘야해서 번거로움.
 // @mixin media-breakpoint-down($breakpoint) {
@@ -29,5 +39,54 @@
 @mixin media-breakpoint-xs {
   @media (max-width: map.get(var.$breakpoints, sm)) {
     @content;
+  }
+}
+//여기서부터 작성
+// 현재 breakpoint의 다음 breakpoint 를 반환, 존재하지 않으면 null
+@function breakpoint-next($bp) {
+  $bp-keys: map.keys(var.$breakpoints);
+  $idx: list.index($bp-keys, $bp);
+  @if (list.length($bp-keys) < $idx + 1) {
+    @return null;
+  }
+  $next-bp: list.nth($bp-keys, $idx + 1);
+  @return $next-bp;
+}
+
+@mixin media-breakpoint-up($bp) {
+  @media (min-width: map.get(var.$breakpoints, #{$bp})) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($bp) {
+  @media (max-width: map.get(var.$breakpoints, #{$bp})) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-only($bp) {
+  $next-bp: breakpoint-next($bp);
+  @if $next-bp {
+    @media (min-width: map.get(var.$breakpoints, $bp)) and (max-width: map.get(var.$breakpoints, $next-bp)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: map.get(var.$breakpoints, $bp)) {
+      @content;
+    }
+  }
+}
+
+/* for test */
+.bg {
+  @include media-breakpoint-only(xl) {
+    color: red;
+  }
+  @include media-breakpoint-down(md) {
+    color: yellow;
+  }
+  @include media-breakpoint-up(xs) {
+    color: green;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/positionFilter.css';
+import '../styles/positionFilter.scss';
 import searchTagsText from '../mock/searchTags.json';
 import styled from 'styled-components';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import BottomBanner from '../components/BottomBanner';
-import '../styles/jobListPage.css';
+import '../styles/jobListPage.scss';
 import { useParams } from 'react-router-dom';
 import PositionList from '../components/PositionList';
 import corpsText from '../mock/corps.json';
@@ -31,7 +31,7 @@ const JobListPage = () => {
         <div className="search-wrap">
           <div className="search-job-box">
             <button className="search-job-btn">
-              <span className="search-job-btn__text search-job__btn-text--bold">
+              <span className="search-job-btn__text search-job-btn__text--bold">
                 개발
               </span>
               <span className="search-job-btn__more-btn">

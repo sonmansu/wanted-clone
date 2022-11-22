@@ -1,3 +1,5 @@
+@use './helpers' as *;
+
 /** Main - 직업 찾기 섹션 **/
 .search-section {
   /* background-color: #999999; */
@@ -8,9 +10,13 @@
   border-bottom: 1px solid var(--border-color);
 }
 .search-wrap {
-  width: 1060px;
+  max-width: 1060px;
   margin: 0 auto;
   /* background-color: yellowgreen; */
+
+  @include media-breakpoint-down(xl) {
+    width: 90%;
+  }
 }
 .search-job-box {
   height: 32px;
@@ -25,6 +31,10 @@
 .search-job-btn__text {
   font-size: 24px;
   margin-right: 16px;
+
+  @include media-breakpoint-down(md) {
+    font-size: 16px;
+  }
 }
 .search-job-btn__text--bold {
   font-weight: 700;
@@ -45,6 +55,11 @@
   font-size: 28px;
   margin: 3px 24px;
   color: #ececec;
+
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+    margin: 3px 14px;
+  }
 }
 
 /** Main - 콘텐츠 영역 **/

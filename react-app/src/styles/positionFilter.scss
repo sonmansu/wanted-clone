@@ -1,5 +1,5 @@
 .search-filter-box {
-  width: 1060px;
+  max-width: 1060px;
   margin: 10px auto 0 auto;
   height: 40px;
   display: flex;
@@ -34,11 +34,12 @@
       margin-right: 0; */
 }
 
-.divider--margin {
+.divider {
+  max-width: 100%;
   margin: 25px auto;
 }
 .search-tag-slider-box {
-  width: 1060px;
+  max-width: 1060px;
   height: 32px;
   margin: 0 auto 25px auto;
   /* background-color: yellow; */

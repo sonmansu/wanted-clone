@@ -127,14 +127,10 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
           <Link className="corp-service-btn visible-lg">기업 서비스</Link>
           <MoreIcon className="more-btn visible-md visible-sm" />
         </div>
+        {isMenuDropdownOn && (
+          <MenuDropdown setMenuDropdownOn={setMenuDropdownOn} />
+        )}
       </div>
-      {isMenuDropdownOn && (
-        <MenuDropdown
-          setMenuDropdownOn={setMenuDropdownOn}
-          // onDropdownLeave={onDropdownLeave}
-          // isMenuHover={isMenuDropdownOn}
-        />
-      )}
     </header>
   );
 };

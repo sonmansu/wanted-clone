@@ -1,7 +1,7 @@
 import React from 'react';
 import categoryList from '../../mock/categoryList.json'; // json파일을 subCategory란 이름으로 불러옴
 import { useState, useEffect, useRef } from 'react';
-import '../../styles/dropdown.css';
+import '../../styles/menuDropdown.css';
 import SubcategoryItem from './SubcategoryItem';
 import { Link } from 'react-router-dom';
 

@@ -11,13 +11,6 @@
 //   xl: 1200px,
 // );
 
-// mixin include시 breakpoint를 변수로 넘겨줘야해서 번거로움.
-// @mixin media-breakpoint-down($breakpoint) {
-//   @media (max-width: #{$breakpoint}) {
-//     @content;
-//   }
-// }
-
 // 데스크탑 기준 개발, 더 작은 화면으로 이동하는 미디어 쿼리
 
 @mixin media-breakpoint-lg {
@@ -41,7 +34,8 @@
     @content;
   }
 }
-//여기서부터 작성
+// 여기서부터 믹스인 새로 작성
+
 // 현재 breakpoint의 다음 breakpoint 를 반환, 존재하지 않으면 null
 @function breakpoint-next($bp) {
   $bp-keys: map.keys(var.$breakpoints);
@@ -54,13 +48,13 @@
 }
 
 @mixin media-breakpoint-up($bp) {
-  @media (min-width: map.get(var.$breakpoints, #{$bp})) {
+  @media (min-width: map.get(var.$breakpoints, $bp)) {
     @content;
   }
 }
 
 @mixin media-breakpoint-down($bp) {
-  @media (max-width: map.get(var.$breakpoints, #{$bp})) {
+  @media (max-width: map.get(var.$breakpoints, $bp)) {
     @content;
   }
 }

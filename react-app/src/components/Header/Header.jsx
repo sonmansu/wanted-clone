@@ -46,17 +46,14 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
             </h1>
           </div>
           {!isLogin && (
-            <button
-              className="login-btn-xs visible-md visible-sm"
-              onClick={onClickLoginBtn}
-            >
+            <button className="login-btn-xs md-down" onClick={onClickLoginBtn}>
               회원가입하기
             </button>
           )}
         </div>
         <nav className="header-nav">
           <ul className="header-nav-ul">
-            <li className="visible-sm">
+            <li className="md-down">
               <Link to="/">홈</Link>
             </li>
             <li>
@@ -65,22 +62,22 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
             <li>
               <Link>이벤트</Link>
             </li>
-            <li className="visible-md visible-lg">
+            <li className="md-up">
               <Link>직군별 연봉</Link>
             </li>
-            <li className="visible-md visible-lg">
+            <li className="md-up">
               <Link>이력서</Link>
             </li>
-            <li className="visible-md visible-lg">
+            <li className="md-up">
               <Link>
                 커뮤니티
                 <em className="footnote">New</em>
               </Link>
             </li>
-            <li className="visible-md visible-lg">
+            <li className="md-up">
               <Link>프리랜서</Link>
             </li>
-            <li className="visible-md visible-lg">
+            <li className="md-up">
               <Link>
                 AI 합격예측<em className="footnote">Beta</em>
               </Link>
@@ -99,8 +96,8 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
               <button
                 className={
                   isUserDropdownOn
-                    ? 'visible-lg profile-btn profile-btn--border-blue'
-                    : 'visible-lg profile-btn'
+                    ? 'lg-up profile-btn profile-btn--border-blue'
+                    : 'lg-up profile-btn'
                 }
                 onClick={onClickProfileBtn}
               >
@@ -119,13 +116,13 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
               </button>
             </div>
           ) : (
-            <button className="login-btn visible-lg" onClick={onClickLoginBtn}>
+            <button className="login-btn lg-up" onClick={onClickLoginBtn}>
               회원가입/로그인
             </button>
           )}
-          <div className="vertical-line visible-lg"></div>
-          <Link className="corp-service-btn visible-lg">기업 서비스</Link>
-          <MoreIcon className="more-btn visible-md visible-sm" />
+          <div className="vertical-line lg-up"></div>
+          <Link className="corp-service-btn lg-up">기업 서비스</Link>
+          <MoreIcon className="more-btn md-down" />
         </div>
         {isMenuDropdownOn && (
           <MenuDropdown setMenuDropdownOn={setMenuDropdownOn} />

@@ -66,7 +66,7 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
               <Link>직군별 연봉</Link>
             </li>
             <li className="md-up">
-              <Link>이력서</Link>
+              <Link to="/resume">이력서</Link>
             </li>
             <li className="md-up">
               <Link>

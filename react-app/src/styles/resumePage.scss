@@ -1,0 +1,79 @@
+@use './helpers' as *;
+
+.resume-page {
+  background-color: #f8f8f8;
+  .page-wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding-top: 25px;
+    @include media-breakpoint-down(xl) {
+      width: 90%;
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      margin: 0 10px 0px;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0 5px 0;
+    .title-text {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .link-text {
+      font-size: 16px;
+      font-weight: 600;
+      color: #36f;
+    }
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    .item {
+      height: 190px;
+      border: 1px solid #dbdbdb;
+      background-color: white;
+
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .item--btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .icon-wrap {
+        width: 74px;
+        height: 74px;
+        border-radius: 50%;
+        background-color: #36f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        .icon-new_resume:before {
+          font-size: 26px;
+          content: '\ea0e';
+          color: white;
+        }
+
+        .icon-upload_resume:before {
+          font-size: 26px;
+          color: #666;
+          content: '\e9c6';
+        }
+      }
+      .icon-wrap--bg-grey {
+        background-color: #e1e2d3;
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ import SearchPage from './pages/SearchPage';
 import RecruitPage from 'pages/RecruitPage';
 import BookmarkPage from 'pages/BookmarkPage';
 import KakaoRedirectHandler from 'pages/KakaoRedirectHandler';
+import ResumePage from 'pages/ResumePage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/recruit' element={<RecruitPage />} />
         <Route path='/profile/bookmarks' element={<BookmarkPage />} />
         <Route path="/kakaoLogin" element={<KakaoRedirectHandler />} />
+        <Route path="/resume" element={<ResumePage />} />
       </Route>
     </Routes>
   );

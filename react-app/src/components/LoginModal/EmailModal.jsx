@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import userArr from 'mock/users.json';
 import BlueRadiusBtn from 'components/BlueRadiusBtn';
+import { KAKAO_AUTH_URL } from '../../utils/kakaoLogin.js';
 
 export default function EmailModal({ setActivatedModal }) {
   const [email, setEmail] = useState('');
@@ -32,6 +33,7 @@ export default function EmailModal({ setActivatedModal }) {
     }
     sessionStorage.setItem('inputEmail', email);
   };
+
   return (
     <div className="email-modal">
       <div className="login-modal-header">
@@ -94,21 +96,23 @@ export default function EmailModal({ setActivatedModal }) {
           다음 계정으로 계속하기
         </div>
         <div className="login-modal-sns-list-box">
-          <button className="login-modal__sns-btn login-modal__sns-btn--bg-yellow">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="21"
-              viewBox="0 0 22 21"
-            >
-              <path
-                fill="#000"
-                fillRule="nonzero"
-                d="M11 0C5.242 0 0 3.823 0 8.539c0 2.932 1.904 5.519 4.804 7.056l-1.22 4.479c-.107.397.343.712.69.483l5.348-3.548c.452.044.91.069 1.377.069 6.076 0 11-3.823 11-8.54 0-4.715-4.924-8.538-11-8.538"
-              ></path>
-            </svg>
-            <p className="login-modal__sns-btn__text">Kakao</p>
-          </button>
+          <a href={KAKAO_AUTH_URL}>
+            <button className="login-modal__sns-btn login-modal__sns-btn--bg-yellow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="21"
+                viewBox="0 0 22 21"
+              >
+                <path
+                  fill="#000"
+                  fillRule="nonzero"
+                  d="M11 0C5.242 0 0 3.823 0 8.539c0 2.932 1.904 5.519 4.804 7.056l-1.22 4.479c-.107.397.343.712.69.483l5.348-3.548c.452.044.91.069 1.377.069 6.076 0 11-3.823 11-8.54 0-4.715-4.924-8.538-11-8.538"
+                ></path>
+              </svg>
+              <p className="login-modal__sns-btn__text">Kakao</p>
+            </button>
+          </a>
           <button className="login-modal__sns-btn login-modal__sns-btn--bg-blue">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -3,6 +3,7 @@
 .resume-page {
   background-color: #f8f8f8;
   .page-wrap {
+    // background-color: aqua;
     max-width: 1060px;
     margin: 0 auto;
     padding-top: 25px;
@@ -11,7 +12,7 @@
     }
     @include media-breakpoint-down(md) {
       width: 100%;
-      margin: 0 10px 0px;
+      padding: 0 10px 0px;
     }
   }
 
@@ -19,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     margin: 0px 0 5px 0;
+    padding: 15px 0;
     .title-text {
       font-size: 16px;
       font-weight: 600;
@@ -39,40 +41,95 @@
       border: 1px solid #dbdbdb;
       background-color: white;
 
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    .item--btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-
-      .icon-wrap {
-        width: 74px;
-        height: 74px;
-        border-radius: 50%;
-        background-color: #36f;
+      .btn-item {
+        font-size: 16px;
+        font-weight: 600;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
-        margin-bottom: 20px;
+        align-items: center;
 
-        .icon-new_resume:before {
-          font-size: 26px;
-          content: '\ea0e';
-          color: white;
+        input[type='file'] {
+          // 기본 file 업로드 버튼 제거
+          display: none;
         }
 
-        .icon-upload_resume:before {
-          font-size: 26px;
-          color: #666;
-          content: '\e9c6';
+        .icon-wrap {
+          width: 74px;
+          height: 74px;
+          border-radius: 50%;
+          background-color: #36f;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+
+          .icon-new_resume:before {
+            font-size: 26px;
+            content: '\ea0e';
+            color: white;
+          }
+
+          .icon-upload_resume:before {
+            font-size: 26px;
+            color: #666;
+            content: '\e9c6';
+          }
+        }
+        .icon-wrap--bg-grey {
+          background-color: #e1e2d3;
         }
       }
-      .icon-wrap--bg-grey {
-        background-color: #e1e2d3;
+
+      .resume-item {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .item-body {
+          flex-grow: 1;
+          margin: 20px 20px 0 20px;
+        }
+        .file-name {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        .upload-date {
+          margin-top: 5px;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .bottom-row {
+          height: 41px;
+          display: flex;
+          align-items: center;
+          border-top: 1px solid lightgrey;
+          padding: 0 12px 0 20px;
+          .file-icon {
+            border-radius: 2px;
+            border: 1px solid lightgrey;
+            font-size: 12px;
+            font-weight: 600;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .icon-more_vert:before {
+            content: '\e952';
+            font-size: 24px;
+          }
+
+          .upload-state {
+            font-size: 16px;
+            font-weight: 600;
+            flex-grow: 1;
+          }
+        }
       }
     }
   }

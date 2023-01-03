@@ -385,7 +385,7 @@ let mainQueries = json.map(obj => {
 let subQueries = json.map(obj => {
     let mainId = obj.mainId;
     let subCategoryArr = obj.subCategory;
-    let subQueryArr = subCategoryArr?.map(subObj => (
+    let subQueryArr = subCategoryArr?.filter(subObj => !subObj.text.includes('전체')).map(subObj => (
         `INSERT INTO SUB_CATEGORY(mainId, subText) VALUES(${mainId}, '${subObj.text}');`
     ))
     return subQueryArr?.join('\n');

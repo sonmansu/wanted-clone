@@ -7,11 +7,29 @@ import SvgIcon from 'assets/icons/SvgIcon';
 import { ReactComponent as MagnifyingGlassIcon } from './magnifyingGlassIcon.svg';
 import { ReactComponent as MoreIcon } from './moreIcon.svg';
 import { ReactComponent as NotificationIcon } from './notificationIcon.svg';
+import axios from 'axios';
 
 const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
   const [isLogin, setLogin] = useState(false);
   const [isMenuDropdownOn, setMenuDropdownOn] = useState(false);
   const [isUserDropdownOn, setUserDropdownOn] = useState(false);
+
+  const [categories, setCategories] = useState([]);
+
+  // 카테고리 조회 api 호출
+  const fetchCategories = async () => {
+    try {
+      const response = await axios.get('/wanted/home/categories');
+      setCategories(response.data.result);
+      console.log(response.data.result);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
 
   // 다른 탭으로 들어가면 setLogin이 날아가므로 localStorage를 확인하여 로그인 상태 유지시킴
   let user = localStorage.getItem('email');
@@ -125,7 +143,10 @@ const Header = ({ onClickSearchBtn, onClickLoginBtn }) => {
           <MoreIcon className="more-btn md-down" />
         </div>
         {isMenuDropdownOn && (
-          <MenuDropdown setMenuDropdownOn={setMenuDropdownOn} />
+          <MenuDropdown
+            setMenuDropdownOn={setMenuDropdownOn}
+            categories={categories}
+          />
         )}
       </div>
     </header>

@@ -4,13 +4,15 @@ import { useState, useEffect, useRef } from 'react';
 import '../../styles/menuDropdown.css';
 import SubcategoryItem from './SubcategoryItem';
 import { Link } from 'react-router-dom';
+import axios from '../../../node_modules/axios/index';
 
-const MenuDropdown = ({ setMenuDropdownOn }) => {
+const MenuDropdown = ({ categories, setMenuDropdownOn }) => {
   const [isMainMenuOn, setMainMenuOn] = useState(false);
   const [subMenuWidth, setSubMenuWidth] = useState(0);
 
   // 더미 json 카테고리 텍스트들 읽어옴 (원랜 서버 작업)
-  const [categories, setCategories] = useState(categoryList.mainCategory);
+  // const [categories, setCategories] = useState(categories);
+
   // subcategory state (subcategory 내용이 바뀔 때마다 리랜더링 돼야함)
   const [subcategories, setSubcategories] = useState([]);
 
@@ -34,7 +36,7 @@ const MenuDropdown = ({ setMenuDropdownOn }) => {
           />
         );
       });
-      console.log('$subCategories :>> ', $subCategories);
+      // console.log('$subCategories :>> ', $subCategories);
       setSubcategories($subCategories); // 리랜더링
       // setSubcategoryWidth(calcSubcategoryWidth()); // 여기서 호출하면 느리게 적용됨
       // setSubCategoryListWidth();
@@ -48,7 +50,7 @@ const MenuDropdown = ({ setMenuDropdownOn }) => {
       className="dropdown-main-category__item"
       key={item.mainId}
       onMouseOver={(e) => {
-        onMainOver(e, item.maidId, item.subCategory);
+        onMainOver(e, item.maidId, item.subCategories);
       }}
     >
       <Link
